@@ -1,0 +1,332 @@
+/* Alternative Button Styles for "Book Now" Button */
+
+/* Option 1: Gradient Button with Glow */
+.btn-gradient-glow {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-gradient-glow:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.6);
+    background: linear-gradient(135deg, #ff5252, #d63031);
+}
+
+/* Option 2: Outlined Button with Border Animation */
+.btn-outlined-animated {
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outlined-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.btn-outlined-animated:hover {
+    color: #e40404;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-outlined-animated:hover::before {
+    left: 0;
+}
+
+/* Option 3: 3D Button with Depth */
+.btn-3d {
+    background: #e40404;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 0 #b30000, 0 15px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    position: relative;
+    top: 0;
+}
+
+.btn-3d:hover {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #b30000, 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-3d:active {
+    transform: translateY(8px);
+    box-shadow: 0 0 0 #b30000, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Option 4: Minimalist Button with Underline */
+.btn-minimalist {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btn-minimalist::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.btn-minimalist:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-minimalist:hover::after {
+    transform: scaleX(1);
+}
+
+/* Option 5: Pill Button with Icon */
+.btn-pill-icon {
+    background: white;
+    color: #e40404;
+    border: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-pill-icon::before {
+    content: '→';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-pill-icon:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    padding-right: 55px;
+}
+
+.btn-pill-icon:hover::before {
+    right: 25px;
+}
+
+/* Option 6: Neon Glow Button */
+.btn-neon {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-neon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.btn-neon:hover {
+    color: #e40404;
+    text-shadow: none;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-neon:hover::before {
+    opacity: 1;
+}
+
+/* Option 7: Split Button Design */
+.btn-split {
+    background: white;
+    color: #e40404;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-split::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #e40404;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.btn-split:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-split:hover::before {
+    transform: translateX(0);
+}
+
+/* Option 8: Floating Action Button Style */
+.btn-floating {
+    background: #e40404;
+    color: white;
+    border: none;
+    padding: 20px 45px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 30px rgba(228, 4, 4, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-floating::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-floating:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(228, 4, 4, 0.6);
+}
+
+.btn-floating:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Option 9: Glassmorphism Button */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Option 10: Retro Button */
+.btn-retro {
+    background: #e40404;
+    color: white;
+    border: 3px solid #000;
+    padding: 18px 40px;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 4px 4px 0 #000;
+    transition: all 0.2s ease;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.btn-retro:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+.btn-retro:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 #000;
+} 
