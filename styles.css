@@ -574,6 +574,27 @@ html, body, * {
     background: none;
 }
 
+@media (min-width: 901px) {
+    .sidebar-logo {
+        width: 100% !important;
+        max-width: 156px !important;
+        margin: 0 auto 12px auto !important;
+    }
+
+    .sidebar-logo a {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .sidebar-logo-img,
+    .sidebar-logo a img {
+        width: 100% !important;
+        max-width: 156px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+}
+
 .sidebar-logo h2 {
     color: #2c3e50;
     font-weight: 700;
