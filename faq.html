@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="FAQ - WeGoInn" data-ko="자주묻는질문 - 위고인">FAQ - WeGoInn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Images -->
+    <div class="floating-image left-image">
+        <img src="images/redArtDemo.png" alt="Floating Left Image">
+    </div>
+    <div class="floating-image right-image">
+        <img src="images/redArtDemo.png" alt="Floating Right Image">
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <!-- Hamburger Button (mobile only) -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logoRed.png" alt="mainLogo" class="sidebar-logo-img">
+            </a>
+        </div>
+        
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button id="enBtn" class="language-btn" data-lang="en">
+                <span class="language-text">EN</span>
+            </button>
+            <button id="koBtn" class="language-btn" data-lang="ko">
+                <span class="language-text">KO</span>
+            </button>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="about.html" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
+            <li><a href="roomtype.html" class="sidebar-link" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
+            <li><a href="findus.html" class="sidebar-link" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
+            <li><a href="faq.html" class="sidebar-link active" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
+            <li><a href="facilities.html" class="sidebar-link" data-en="Facilities" data-ko="시설">Facilities</a></li>
+            <li><a href="contact.html" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
+            <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
+        </ul>
+        
+        <div class="sidebar-bottom-img">
+            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative" />
+        </div>
+    </aside>
+    
+    <div class="main-content">
+        <!-- Mobile Language Toggle -->
+        <div class="mobile-language-toggle">
+            <button id="mobileEnBtn" class="mobile-language-btn" data-lang="en">
+                <span class="mobile-language-text">EN</span>
+            </button>
+            <button id="mobileKoBtn" class="mobile-language-btn" data-lang="ko">
+                <span class="mobile-language-text">KO</span>
+            </button>
+        </div>
+        
+        <section class="faq">
+            <div class="container">
+                <h1 class="page-title" data-en="Frequently Asked Questions" data-ko="자주 묻는 질문">Frequently Asked Questions</h1>
+                
+                <div class="faq-container">
+                    <!-- FAQ ONE -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="EARLY CHECK-INS" data-ko="얼리 체크인">EARLY CHECK-INS</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <ul>
+                                    <li data-en="• Check-in starts at 4:00 PM" data-ko="• 체크인은 오후 4시부터 시작">• Check-in starts at 4:00 PM</li>
+                                    <li data-en="• Early check-in available up to 30 minutes (subject to availability)" data-ko="• 최대 30분까지 얼리 체크인 가능 (상황에 따라)">• Early check-in available up to 30 minutes (subject to availability)</li>
+                                    <li data-en="• Reception open: 9:00 AM - 10:00 PM" data-ko="• 리셉션 운영: 오전 9시 - 오후 10시">• Reception open: 9:00 AM - 10:00 PM</li>
+                                    <li data-en="• Luggage storage available before check-in" data-ko="• 체크인 전 짐 보관 가능">• Luggage storage available before check-in</li>
+                                </ul>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <div class="faq-image">
+                                <img src="images/slothOne.png" alt="Early Check-in Process">
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!-- FAQ TWO -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="LATE CHECK-INS" data-ko="늦은 체크인">LATE CHECK-INS</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <ul>
+                                    <li data-en="• Reception open: 9:00 AM - 10:00 PM" data-ko="• 리셉션 운영: 오전 9시 - 오후 10시">• Reception open: 9:00 AM - 10:00 PM</li>
+                                    <li data-en="• Self-check-in available after 10:00 PM" data-ko="• 오후 10시 이후 셀프 체크인 가능">• Self-check-in available after 10:00 PM</li>
+                                    <li data-en="• Self-check-in instructions sent before 10:00 PM" data-ko="• 셀프 체크인 안내는 오후 10시 이전 발송">• Self-check-in instructions sent before 10:00 PM</li>
+                                    <li data-en="• Back entrance only accessible after 10:00 PM" data-ko="• 오후 10시 이후 후문만 이용 가능">• Back entrance only accessible after 10:00 PM</li>
+                                </ul>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <!-- <div class="faq-image">
+                                <img src="images/late-checkin.jpg" alt="Late Check-in Process">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ THREE -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="EARLY CHECK-OUTS" data-ko="얼리 체크아웃">EARLY CHECK-OUTS</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <ul>
+                                    <li data-en="• Check-out time: 12:00 PM" data-ko="• 체크아웃 시간: 오후 12시">• Check-out time: 12:00 PM</li>
+                                    <li data-en="• Express check-out available before 9:00 AM" data-ko="• 오전 9시 이전 익스프레스 체크아웃 가능">• Express check-out available before 9:00 AM</li>
+                                    <li data-en="• Drop room key and wallet in box by back door" data-ko="• 후문 옆 박스에 객실 키와 지갑 넣기">• Drop room key and wallet in box by back door</li>
+                                    <li data-en="• Reception open: 9:00 AM - 10:00 PM" data-ko="• 리셉션 운영: 오전 9시 - 오후 10시">• Reception open: 9:00 AM - 10:00 PM</li>
+                                </ul>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <!-- <div class="faq-image">
+                                <img src="images/early-checkout.jpg" alt="Early Check-out Process">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ FOUR -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="LATE CHECK-OUTS" data-ko="늦은 체크아웃">LATE CHECK-OUTS</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <ul>
+                                    <li data-en="• Standard check-out: 12:00 PM" data-ko="• 기본 체크아웃: 오후 12시">• Standard check-out: 12:00 PM</li>
+                                    <li data-en="• Late check-out available until 2:00 PM" data-ko="• 늦은 체크아웃: 오후 2시까지 가능">• Late check-out available until 2:00 PM</li>
+                                    <li data-en="• Late check-out fee: 20,000 KRW per hour" data-ko="• 늦은 체크아웃 요금: 시간당 20,000원">• Late check-out fee: 20,000 KRW per hour</li>
+                                    <li data-en="• Subject to availability" data-ko="• 상황에 따라 가능">• Subject to availability</li>
+                                </ul>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <!-- <div class="faq-image">
+                                <img src="images/late-checkout.jpg" alt="Late Check-out Process">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ FIVE -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="AMENITIES" data-ko="편의시설">AMENITIES</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <div class="amenities-grid">
+                                    <div class="amenity-item">
+                                        <i class="fas fa-wifi"></i>
+                                        <span data-en="Free Wi-Fi" data-ko="무료 Wi-Fi">Free Wi-Fi</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-wind"></i>
+                                        <span data-en="Hair Dryer" data-ko="헤어드라이어">Hair Dryer</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-bath"></i>
+                                        <span data-en="Towels" data-ko="수건">Towels</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-bath"></i>
+                                        <span data-en="Bath Mat" data-ko="목욕 매트">Bath Mat</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-tint"></i>
+                                        <span data-en="Bottled Water" data-ko="생수">Bottled Water</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-tooth"></i>
+                                        <span data-en="Toothbrush & Toothpaste" data-ko="칫솔 & 치약">Toothbrush & Toothpaste</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-soap"></i>
+                                        <span data-en="Soap" data-ko="비누">Soap</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-volume-mute"></i>
+                                        <span data-en="Earplugs" data-ko="귀마개">Earplugs</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-pump-soap"></i>
+                                        <span data-en="Shampoo" data-ko="샴푸">Shampoo</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-pump-soap"></i>
+                                        <span data-en="Conditioner" data-ko="컨디셔너">Conditioner</span>
+                                    </div>
+                                    <div class="amenity-item">
+                                        <i class="fas fa-pump-soap"></i>
+                                        <span data-en="Body Wash" data-ko="바디워시">Body Wash</span>
+                                    </div>
+                                </div>
+                                <div class="amenities-note">
+                                    <p data-en="Hot water available at reception (9:00 AM - 10:00 PM). Please bring your own tumbler. No disposable cups provided." data-ko="뜨거운 물은 리셉션에서 이용 가능 (오전 9시 - 오후 10시). 개인 텀블러를 가져오세요. 일회용 컵은 제공하지 않습니다.">Hot water available at reception (9:00 AM - 10:00 PM). Please bring your own tumbler. No disposable cups provided.</p>
+                                </div>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <!-- <div class="faq-image">
+                                <img src="images/amenities.jpg" alt="Room Amenities">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ SIX -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="ADAPTERS" data-ko="어댑터">ADAPTERS</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <ul>
+                                    <li data-en="• Standard 220V voltage (South Korea standard)" data-ko="• 표준 220V 전압 (한국 표준)">• Standard 220V voltage (South Korea standard)</li>
+                                    <li data-en="• Adapters available for purchase: 5,000 KRW" data-ko="• 어댑터 구매 가능: 5,000원">• Adapters available for purchase: 5,000 KRW</li>
+                                    <li data-en="• Purchase location: Reception (1st floor, 9:00 AM - 10:00 PM)" data-ko="• 구매 장소: 리셉션 (1층, 오전 9시 - 오후 10시)">• Purchase location: Reception (1st floor, 9:00 AM - 10:00 PM)</li>
+                                    <li data-en="• Avoid high-power devices (hair straighteners, electric kettles)" data-ko="• 고전력 기기 사용 금지 (헤어스트레이트너, 전기주전자)">• Avoid high-power devices (hair straighteners, electric kettles)</li>
+                                    <li data-en="• Guests responsible for improper use damages" data-ko="• 부적절한 사용으로 인한 손해는 투숙객 책임">• Guests responsible for improper use damages</li>
+                                </ul>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <!-- <div class="faq-image">
+                                <img src="images/adapters.jpg" alt="Power Adapters">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- FAQ SEVEN -->
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFAQ(this)">
+                            <h3 class="faq-title" data-en="PARKING" data-ko="주차">PARKING</h3>
+                            <i class="faq-icon fas fa-plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-text">
+                                <ul>
+                                    <li data-en="• Location: Basement parking lot" data-ko="• 위치: 지하 주차장">• Location: Basement parking lot</li>
+                                    <li data-en="• Access: Via back entrance of hostel" data-ko="• 접근: 호스텔 후문을 통해">• Access: Via back entrance of hostel</li>
+                                    <li data-en="• Guest parking: 10,000 KRW per night" data-ko="• 투숙객 주차: 하루 10,000원">• Guest parking: 10,000 KRW per night</li>
+                                    <li data-en="• Access period: Check-in day 12:00 PM - Check-out day 12:00 PM" data-ko="• 이용 기간: 체크인일 오후 12시 - 체크아웃일 오후 12시">• Access period: Check-in day 12:00 PM - Check-out day 12:00 PM</li>
+                                    <li data-en="• Parking meter alternative: 2,000 KRW per 30 minutes" data-ko="• 주차 미터기 대안: 30분당 2,000원">• Parking meter alternative: 2,000 KRW per 30 minutes</li>
+                                </ul>
+                            </div>
+                            <!-- Optional: Add image here -->
+                            <!-- <div class="faq-image">
+                                <img src="images/parking.jpg" alt="Parking Area">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-business-info">
+                    <div class="footer-business-col">
+                        <div data-en="Company Name: Weegoland (WEEGOLAND)" data-ko="회사명 : 위고랜드 (WEEGOLAND)">Company Name: Weegoland (WEEGOLAND)</div>
+                        <div data-en="Representative: Jaehyun Yoon" data-ko="대표자 : 윤재현">Representative: Jaehyun Yoon</div>
+                        <div data-en="Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)" data-ko="주소 : 서울 서대문구 신촌로 141 (위고인 호스텔)">Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)</div>
+                        <div data-en="Email: wegoinnteam@gmail.com" data-ko="이메일 : wegoinnteam@gmail.com">Email: <a href="mailto:wegoinnteam@gmail.com">wegoinnteam@gmail.com</a></div>
+                    </div>
+                    <div class="footer-business-col">
+                        <div data-en="Phone: 02-393-9922" data-ko="전화 : 02-393-9922">Phone: 02-393-9922</div>
+                        <div data-en="Fax: 02-393-2229" data-ko="팩스 : 02-393-2229">Fax: 02-393-2229</div>
+                        <div data-en="Business Registration No.: 110-08-76462" data-ko="사업자등록번호 : 110-08-76462">Business Registration No.: 110-08-76462</div>
+                        <div data-en="E-commerce Registration: Not applicable" data-ko="통신판매업신고 : 해당없음">E-commerce Registration: Not applicable</div>
+                    </div>
+                </div>
+                <p>&copy; 2024 WeGoInn. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

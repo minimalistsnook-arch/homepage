@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Find Your Way To Us - WeGoInn" data-ko="오시는 길 - 위고인">Find Your Way To Us - WeGoInn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <!-- Hamburger Button (mobile only) -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logoRed.png" alt="mainLogo" class="sidebar-logo-img">
+            </a>
+        </div>
+        
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button id="enBtn" class="language-btn" data-lang="en">
+                <span class="language-text">EN</span>
+            </button>
+            <button id="koBtn" class="language-btn" data-lang="ko">
+                <span class="language-text">KO</span>
+            </button>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="about.html" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
+            <li><a href="roomtype.html" class="sidebar-link" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
+            <li><a href="findus.html" class="sidebar-link active" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
+            <li><a href="faq.html" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
+            <li><a href="facilities.html" class="sidebar-link" data-en="Facilities" data-ko="시설">Facilities</a></li>
+            <li><a href="contact.html" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
+            <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
+        </ul>
+        
+        <div class="sidebar-bottom-img">
+            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative" />
+        </div>
+    </aside>
+    
+    <div class="main-content">
+        <!-- Mobile Language Toggle -->
+        <div class="mobile-language-toggle">
+            <button id="mobileEnBtn" class="mobile-language-btn" data-lang="en">
+                <span class="mobile-language-text">EN</span>
+            </button>
+            <button id="mobileKoBtn" class="mobile-language-btn" data-lang="ko">
+                <span class="mobile-language-text">KO</span>
+            </button>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="findus-hero">
+            <div class="findus-hero-content">
+                <h1 class="about-hero-title-new" data-en="Find Your Way To Us!" data-ko="오시는 길!">Find Your Way To Us!</h1>
+                <p>enter slogan within this section</p>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                    <span data-en="Scroll Down To Explore" data-ko="아래로 스크롤하여 탐험하세요">Scroll Down To Explore</span>
+                </div>
+            </div>
+            <div class="hero-fixed-images">
+                <img src="images/groupArt.png" alt="Hero Image 1">
+            </div>
+        </section>
+
+        <!-- Address & Contact Info -->
+        <section class="findus-section address-section">
+            <div class="container">
+                <div class="address-content">
+                    <div class="address-image">
+                        <img src="images/infographicRed.png" alt="map">
+                    </div>
+                    <div class="infographic-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h2 data-en="Our Location" data-ko="위치">Our Location</h2>
+                        <div class="address-details">
+                            <p class="address-line" data-en="141, Sinchon-ro, Seodaemun-gu" data-ko="서울특별시 서대문구 신촌로 141">141, Sinchon-ro, Seodaemun-gu</p>
+                            <p class="address-line" data-en="Seoul, Republic of Korea" data-ko="대한민국 서울">Seoul, Republic of Korea</p>
+                            <p class="address-line" data-en="Reception 1F" data-ko="리셉션 1층">Reception 1F</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+82-2-393-9922</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span><a href="mailto:wegoinnteam@gmail.com">wegoinnteam@gmail.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transportation Options -->
+        <section class="findus-section transport-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Getting Here (Click For More!)" data-ko="오시는 방법 (클릭하세요!)">Getting Here</h2>
+                <div class="transport-grid">
+                    <!-- Subway -->
+                    <a href="#" class="transport-card subway-card" onclick="openTransportLink('subway')">
+                        <div class="transport-icon">
+                            <i class="fas fa-subway"></i>
+                        </div>
+                        <h3 data-en="By Subway" data-ko="지하철">By Subway</h3>
+                        <div class="transport-details">
+                            <p><strong data-en="Airport Railroad:" data-ko="2호선:">Line 2:</strong> <span data-en="Get off at Hongik Uiversity." data-ko="시청역 3번 출구에서 하차">Get off at City Hall Station (Exit 3)</span></p>
+                            <p><strong data-en="Transfer:" data-ko="4호선:">Line 4:</strong> <span data-en="Transfer to Line 2 (the green line)" data-ko="중앙역 1번 출구에서 하차">Get off at Central Station (Exit 1)</span></p>
+                            <p><strong data-en="Line 2:" data-ko="도보 시간:">Walking time:</strong> <span data-en="Get off at Sinchon station. " data-ko="각 역에서 5-7분">5-7 minutes from either station</span></p>
+                        </div>
+                        <div class="transport-tips">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-en="Tip: Follow the signs to 'City Center' after exiting" data-ko="팁: 출구에서 '시청' 표시를 따라가세요">Tip: Follow the signs to 'City Center' after exiting</span>
+                        </div>
+                    </a>
+
+                    <!-- Bus -->
+                    <a href="#" class="transport-card bus-card" onclick="openTransportLink('bus')">
+                        <div class="transport-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h3 data-en="By Bus" data-ko="버스">By Bus</h3>
+                        <div class="transport-details">
+                            <p><strong data-en="Bus 6002:" data-ko="6002번 버스:">Bus 100:</strong> <span data-en="Incheon Airport → Sinchon Station Line 2" data-ko="인천공항 → 신촌역2호선">City Hall → Sinchon Station  (2 stops)</span></p>
+                            <p><strong data-en="Walk For 5 Mins:" data-ko="200번 버스:">Bus 200:</strong> <span data-en="Ewha University Station Side" data-ko="중앙역 → 다운타운 (1정거장)">Central Station → Downtown (1 stop)</span></p>
+                            <p><strong data-en="Airport Bus:" data-ko="공항버스:">Airport Bus:</strong> <span data-en="Direct service from Incheon Airport, 17,000KRW" data-ko="인천공항에서 직행, 17,000원">Direct service from Incheon Airport</span></p>
+                        </div>
+                        <div class="transport-tips">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-en="Tip: Use T-money card for discounted fares" data-ko="팁: 할인 요금을 위해 티머니 카드를 사용하세요">Tip: Use T-money card for discounted fares</span>
+                        </div>
+                    </a>
+
+                    <!-- Taxi -->
+                    <a href="#" class="transport-card taxi-card" onclick="openTransportLink('taxi')">
+                        <div class="transport-icon">
+                            <i class="fas fa-taxi"></i>
+                        </div>
+                        <h3 data-en="By Taxi" data-ko="택시">By Taxi</h3>
+                        <div class="transport-details">
+                            <p><strong data-en="From Airport:" data-ko="공항에서:">From Airport:</strong> <span data-en="~60 minutes, ₩50,000-70,000" data-ko="약 60분, 50,000-70,000원">~60 minutes, ₩50,000-70,000</span></p>
+                            <p><strong data-en="From City Center:" data-ko="시청에서:">From City Center:</strong> <span data-en="~15 minutes, ₩8,000-12,000" data-ko="약 15분, 8,000-12,000원">~15 minutes, ₩8,000-12,000</span></p>
+                            <p><strong data-en="From Gangnam:" data-ko="강남에서:">From Gangnam:</strong> <span data-en="~30 minutes, ₩20,000-25,000" data-ko="약 30분, 20,000-25,000원">~30 minutes, ₩20,000-25,000</span></p>
+                        </div>
+                        <div class="transport-tips">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-en="Tip: If you need to reserve a taxi, contact the reception!" data-ko="팁: 택시를 예약하시려면 리셉션에 말씀해 주세요!">Tip: Show this address to your driver</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landmarks & Navigation -->
+        <!-- Accessibility Information (moved up) -->
+        <section class="findus-section accessibility-section">
+            <div class="container">
+                <h2 class="section-title">Accessibility</h2>
+                <div class="accessibility-grid">
+                    <div class="accessibility-item">
+                        <i class="fas fa-wheelchair"></i>
+                        <span>Wheelchair accessible entrance</span>
+                    </div>
+                    <div class="accessibility-item">
+                        <i class="fas fa-elevator"></i>
+                        <span>Elevator access to all floors</span>
+                    </div>
+                    <div class="accessibility-item">
+                        <i class="fas fa-blind"></i>
+                        <span>Braille signage available</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map Section -->
+        <section class="findus-section map-section">
+            <div class="container">
+                <h2 class="section-title">Interactive Map</h2>
+                <div class="map-with-images">
+                    <div class="map-image-left">
+                        <img src="images/lizardNewOne.png" alt="Location Image Left" class="map-flanking-image">
+                    </div>
+                    <div class="embedded-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.916909465066!2d126.93902587638554!3d37.557021372041014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9890cc37f7c5%3A0x63831590ea025ba8!2sWegoinn%20Hostel!5e0!3m2!1sen!2skr!4v1751524939296!5m2!1sen!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map-image-right">
+                        <img src="images/birdNewOne.png" alt="Location Image Right" class="map-flanking-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <!-- Accessibility Information -->
+        <!-- Footer -->
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-business-info">
+                    <div class="footer-business-col">
+                        <div data-en="Company Name: Weegoland (WEEGOLAND)" data-ko="회사명 : 위고랜드 (WEEGOLAND)">Company Name: Weegoland (WEEGOLAND)</div>
+                        <div data-en="Representative: Jaehyun Yoon" data-ko="대표자 : 윤재현">Representative: Jaehyun Yoon</div>
+                        <div data-en="Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)" data-ko="주소 : 서울 서대문구 신촌로 141 (위고인 호스텔)">Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)</div>
+                        <div data-en="Email: wegoinnteam@gmail.com" data-ko="이메일 : wegoinnteam@gmail.com">Email: <a href="mailto:wegoinnteam@gmail.com">wegoinnteam@gmail.com</a></div>
+                    </div>
+                    <div class="footer-business-col">
+                        <div data-en="Phone: 02-393-9922" data-ko="전화 : 02-393-9922">Phone: 02-393-9922</div>
+                        <div data-en="Fax: 02-393-2229" data-ko="팩스 : 02-393-2229">Fax: 02-393-2229</div>
+                        <div data-en="Business Registration No.: 110-08-76462" data-ko="사업자등록번호 : 110-08-76462">Business Registration No.: 110-08-76462</div>
+                        <div data-en="E-commerce Registration: Not applicable" data-ko="통신판매업신고 : 해당없음">E-commerce Registration: Not applicable</div>
+                    </div>
+                </div>
+                <p>&copy; 2024 WeGoInn. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

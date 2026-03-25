@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-en="Room Type - WeGoInn" data-ko="객실 유형 - 위고인">Room Type - WeGoInn</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="roomtype-page">
+<body>
+    <!-- Sidebar Navigation -->
+    <!-- Hamburger Button (mobile only) -->
     <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
     </button>
+    <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <aside class="sidebar" id="sidebar">
+    <aside class="sidebar">
         <div class="sidebar-logo">
-            <a href="/index.html">WeGoInn</a>
+            <a href="index.html">
+                <img src="images/logoRed.png" alt="mainLogo" class="sidebar-logo-img">
+            </a>
         </div>
-
+        
+        <!-- Language Toggle -->
         <div class="language-toggle">
             <button id="enBtn" class="language-btn" data-lang="en">
                 <span class="language-text">EN</span>
@@ -29,23 +35,24 @@
                 <span class="language-text">KO</span>
             </button>
         </div>
-
+        
         <ul class="sidebar-menu">
-            <li><a href="#" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
-            <li><a href="/roomtype.html" class="sidebar-link active" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
-            <li><a href="#" class="sidebar-link" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
-            <li><a href="#" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
-            <li><a href="#" class="sidebar-link" data-en="Facilities" data-ko="시설">Facilities</a></li>
-            <li><a href="#" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
+            <li><a href="about.html" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
+            <li><a href="roomtype.html" class="sidebar-link active" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
+            <li><a href="findus.html" class="sidebar-link" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
+            <li><a href="faq.html" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
+            <li><a href="facilities.html" class="sidebar-link" data-en="Facilities" data-ko="시설">Facilities</a></li>
+            <li><a href="contact.html" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
             <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
         </ul>
-
+        
         <div class="sidebar-bottom-img">
-            <div class="sidebar-mascot">WG</div>
+            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative" />
         </div>
     </aside>
-
+    
     <div class="main-content">
+        <!-- Mobile Language Toggle -->
         <div class="mobile-language-toggle">
             <button id="mobileEnBtn" class="mobile-language-btn" data-lang="en">
                 <span class="mobile-language-text">EN</span>
@@ -54,147 +61,439 @@
                 <span class="mobile-language-text">KO</span>
             </button>
         </div>
-
+        
         <section class="roomtype">
             <div class="container">
-                <h1 class="page-title" data-en="Our Room Types" data-ko="객실 안내">Our Room Types</h1>
-                <p class="page-subtitle" data-en="Find the right space for your stay" data-ko="여행에 꼭 맞는 공간을 선택하세요">Find the right space for your stay</p>
-
+                <h1 class="page-title" data-en="Our Room Types" data-ko="객실 안내"></h1>
+                <p class="page-subtitle" data-en="Find the right space for your stay" data-ko="여행에 꼭 맞는 공간을 선택하세요"></p>
+                
+                <!-- Single Room -->
                 <div class="room-category single-room-category">
                     <div class="room-header">
-                        <h2 class="room-title" data-en="Single Room" data-ko="싱글룸">Single Room</h2>
-                        <h3 class="room-subtitle" data-en="A Cozy Space for Solo Travelers" data-ko="솔로 여행자를 위한 아늑한 공간">A Cozy Space for Solo Travelers</h3>
+                        <h2 class="room-title" data-en="Single Room" data-ko="싱글룸"></h2>
+                        <h3 class="room-subtitle" data-en="A Cozy Space for Solo Travelers" data-ko="솔로 여행자를 위한 아늑한 공간"></h3>
                     </div>
                     <div class="room-content">
                         <div class="room-description">
-                            <p data-en="The Single Room is the perfect choice for those who want to enjoy a private trip. It comes with a comfortable single bed and a private bathroom, offering both privacy and comfort. Highly recommended for travelers who value peace, quiet, and their own personal space." data-ko="싱글룸은 혼자만의 여행을 즐기고 싶은 분께 안성맞춤인 객실입니다. 싱글 침대와 전용 욕실이 마련되어 있어 프라이버시와 편안함을 동시에 누릴 수 있습니다. 조용한 휴식과 나만의 시간을 원하는 여행자에게 특히 추천드립니다.">The Single Room is the perfect choice for those who want to enjoy a private trip. It comes with a comfortable single bed and a private bathroom, offering both privacy and comfort. Highly recommended for travelers who value peace, quiet, and their own personal space.</p>
+                            <p data-en="The Single Room is the perfect choice for those who want to enjoy a private trip. It comes with a comfortable single bed and a private bathroom, offering both privacy and comfort. Highly recommended for travelers who value peace, quiet, and their own personal space." 
+                            data-ko="싱글룸은 혼자만의 여행을 즐기고 싶은 분께 안성맞춤인 객실입니다. 싱글 침대와 전용 욕실이 마련되어 있어 프라이버시와 편안함을 동시에 누릴 수 있습니다. 조용한 휴식과 나만의 시간을 원하는 여행자에게 특히 추천드립니다."></p>
                             <ul class="room-features">
-                                <li data-en="Single bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 싱글베드">Single bed with premium bedding</li>
-                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li>
+                                <li data-en="Single bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 싱글베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
                             </ul>
                             <ul class="room-amenities">
-                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li>
-                                <li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li>
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
                             </ul>
                         </div>
                         <div class="room-images">
                             <div class="image-slider" id="single-slider">
                                 <div class="slider-container">
-                                    <img src="" alt="Single Room" class="slider-image" id="single-image">
+                                    <img src="images/placeholder.jpg" alt="Single Room" class="slider-image" id="single-image">
                                     <div class="slider-overlay">
-                                        <button class="slider-arrow slider-prev" data-room-type="single" data-direction="-1" aria-label="Previous single room image"><i class="fas fa-chevron-left"></i></button>
-                                        <button class="slider-arrow slider-next" data-room-type="single" data-direction="1" aria-label="Next single room image"><i class="fas fa-chevron-right"></i></button>
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('single', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('single', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
                                     <div class="image-counter" id="single-counter">1 / 1</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Solo</div></div>
+                    
+                    <!-- Hover Popup Image for Single Room -->
+                    <div class="hover-popup">
+                        <img src="images/slothOne.png" alt="Sloth Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Double Room -->
                 <div class="room-category double-room-category">
                     <div class="room-header">
-                        <h2 class="room-title" data-en="Double Room" data-ko="더블룸">Double Room</h2>
-                        <h3 class="room-subtitle" data-en="A Comfortable Space for Two" data-ko="둘만의 시간을 위한 편안한 객실">A Comfortable Space for Two</h3>
+                        <h2 class="room-title" data-en="Double Room" data-ko="더블룸"></h2>
+                        <h3 class="room-subtitle" data-en="A Comfortable Space for Two" data-ko="둘만의 시간을 위한 편안한 객실"></h3>
                     </div>
                     <div class="room-content">
                         <div class="room-description">
-                            <p data-en="The Double Room is ideal for couples or close friends traveling together. A spacious double bed and private bathroom create a warm and inviting atmosphere. Perfect for guests who want to relax and make lasting memories together." data-ko="더블룸은 커플이나 가까운 친구가 함께 묵기에 이상적인 공간입니다. 넓은 더블 침대와 전용 욕실이 따뜻하고 아늑한 분위기를 만들어줍니다. 둘만의 추억을 쌓으며 편안하게 머물고 싶은 여행객에게 잘 어울립니다.">The Double Room is ideal for couples or close friends traveling together. A spacious double bed and private bathroom create a warm and inviting atmosphere. Perfect for guests who want to relax and make lasting memories together.</p>
+                            <p data-en="The Double Room is ideal for couples or close friends traveling together. A spacious double bed and private bathroom create a warm and inviting atmosphere. Perfect for guests who want to relax and make lasting memories together." 
+                            data-ko="더블룸은 커플이나 가까운 친구가 함께 묵기에 이상적인 공간입니다. 넓은 더블 침대와 전용 욕실이 따뜻하고 아늑한 분위기를 만들어줍니다. 둘만의 추억을 쌓으며 편안하게 머물고 싶은 여행객에게 잘 어울립니다."></p>
                             <ul class="room-features">
-                                <li data-en="Double bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 더블베드">Double bed with premium bedding</li>
-                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li>
+                                <li data-en="Double bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 더블베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
                             </ul>
                             <ul class="room-amenities">
-                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li>
-                                <li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li>
-                                <li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li>
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
                             </ul>
                         </div>
-                        <div class="room-images"><div class="image-slider" id="double-slider"><div class="slider-container"><img src="" alt="Double Room" class="slider-image" id="double-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="double" data-direction="-1" aria-label="Previous double room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="double" data-direction="1" aria-label="Next double room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="double-counter">1 / 1</div></div></div></div>
+                        <div class="room-images">
+                            <div class="image-slider" id="double-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Double Room" class="slider-image" id="double-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('double', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('double', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="double-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Two</div></div>
+                    
+                    <!-- Hover Popup Image for Double Room -->
+                    <div class="hover-popup">
+                        <img src="images/birdOne.png" alt="Animal Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Handic Room -->
                 <div class="room-category handic-room-category">
                     <div class="room-header">
-                        <h2 class="room-title" data-en="Handic Room" data-ko="장애인 편의 객실">Handic Room</h2>
-                        <h3 class="room-subtitle" data-en="Accessible Accommodation" data-ko="모두를 위한 배려 있는 객실">Accessible Accommodation</h3>
+                        <h2 class="room-title" data-en="Handic Room" data-ko="장애인 편의 객실"></h2>
+                        <h3 class="room-subtitle" data-en="Accessible Accommodation" data-ko="모두를 위한 배려 있는 객실"></h3>
                     </div>
                     <div class="room-content">
                         <div class="room-description">
-                            <p data-en="This room has the same layout as the Double Room but is specially designed for wheelchair users and guests with mobility needs. The entrance and bathroom are barrier-free for easy access, and the bathroom features a wide sliding door for extra convenience. With a spacious bathroom and safe layout, every guest can feel comfortable and at ease." data-ko="더블룸과 같은 구조지만, 휠체어 이용객과 거동이 불편한 분들을 위해 특별히 설계된 객실입니다. 방과 화장실 입구에는 턱을 없애 이동이 자유롭고, 화장실 문은 넓은 슬라이딩 도어로 교체해 편리함을 더했습니다. 넓은 화장실과 안전한 동선으로 누구나 안심하고 편안하게 머물 수 있습니다.">This room has the same layout as the Double Room but is specially designed for wheelchair users and guests with mobility needs. The entrance and bathroom are barrier-free for easy access, and the bathroom features a wide sliding door for extra convenience. With a spacious bathroom and safe layout, every guest can feel comfortable and at ease.</p>
-                            <ul class="room-features"><li data-en="Double bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 더블베드">Double bed with premium bedding</li><li data-en="Private bathroom with a spacious, safe shower" data-ko="넓고 안전한 샤워시설이 있는 개인 욕실">Private bathroom with a spacious, safe shower</li></ul>
-                            <ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul>
+                            <p data-en="This room has the same layout as the Double Room but is specially designed for wheelchair users and guests with mobility needs. The entrance and bathroom are barrier-free for easy access, and the bathroom features a wide sliding door for extra convenience. With a spacious bathroom and safe layout, every guest can feel comfortable and at ease." 
+                            data-ko="더블룸과 같은 구조지만, 휠체어 이용객과 거동이 불편한 분들을 위해 특별히 설계된 객실입니다. 방과 화장실 입구에는 턱을 없애 이동이 자유롭고, 화장실 문은 넓은 슬라이딩 도어로 교체해 편리함을 더했습니다. 넓은 화장실과 안전한 동선으로 누구나 안심하고 편안하게 머물 수 있습니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Double bed with premium bedding " data-ko="프리미엄 침구가 갖춰진 더블베드"></li>
+                                <li data-en="Private bathroom with a spacious, safe shower" data-ko="넓고 안전한 샤워시설이 있는 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
                         </div>
-                        <div class="room-images"><div class="image-slider" id="handic-slider"><div class="slider-container"><img src="" alt="Handic Room" class="slider-image" id="handic-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="handic" data-direction="-1" aria-label="Previous accessible room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="handic" data-direction="1" aria-label="Next accessible room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="handic-counter">1 / 1</div></div></div></div>
+                        <div class="room-images">
+                            <div class="image-slider" id="handic-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Handic Room" class="slider-image" id="handic-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('handic', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('handic', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="handic-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Access</div></div>
+                    
+                      <!-- Hover Popup Image for Handic Room -->
+                    <div class="hover-popup">
+                        <img src="images/lizardPoint.png" alt="Lizard Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Twin Bunk Room -->
                 <div class="room-category twinbunk-room-category">
-                    <div class="room-header"><h2 class="room-title" data-en="Twin Bunk Room" data-ko="트윈벙크룸">Twin Bunk Room</h2><h3 class="room-subtitle" data-en="A Practical Bunk Bed Room" data-ko="실용적인 이층 침대 객실">A Practical Bunk Bed Room</h3></div>
-                    <div class="room-content">
-                        <div class="room-description"><p data-en="Equipped with bunk beds, the Twin Bunk Room makes efficient use of space while keeping things simple and clean. It is especially popular among budget-conscious travelers and long-term guests. Each bed provides independence, offering both privacy and affordability." data-ko="2층 침대가 배치된 트윈벙크룸은 공간 활용도가 높아 깔끔하고 효율적입니다. 가성비를 중시하는 여행자나 장기 체류객에게 특히 인기가 많습니다. 독립된 침대 구조로 개인 공간을 지키면서도 합리적인 숙박을 할 수 있습니다.">Equipped with bunk beds, the Twin Bunk Room makes efficient use of space while keeping things simple and clean. It is especially popular among budget-conscious travelers and long-term guests. Each bed provides independence, offering both privacy and affordability.</p><ul class="room-features"><li data-en="Bunk bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 벙크베드">Bunk bed with premium bedding</li><li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li></ul><ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul></div>
-                        <div class="room-images"><div class="image-slider" id="twinbunk-slider"><div class="slider-container"><img src="" alt="Twin Bunk Room" class="slider-image" id="twinbunk-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="twinbunk" data-direction="-1" aria-label="Previous twin bunk room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="twinbunk" data-direction="1" aria-label="Next twin bunk room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="twinbunk-counter">1 / 1</div></div></div></div>
+                    <div class="room-header">
+                        <h2 class="room-title" data-en="Twin Bunk Room" data-ko="트윈벙크룸"></h2>
+                        <h3 class="room-subtitle" data-en="A Practical Bunk Bed Room" data-ko="실용적인 이층 침대 객실"></h3>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Bunk</div></div>
+                    <div class="room-content">
+                        <div class="room-description">
+                            <p data-en="Equipped with bunk beds, the Twin Bunk Room makes efficient use of space while keeping things simple and clean. It is especially popular among budget-conscious travelers and long-term guests. Each bed provides independence, offering both privacy and affordability."
+                            data-ko="2층 침대가 배치된 트윈벙크룸은 공간 활용도가 높아 깔끔하고 효율적입니다. 가성비를 중시하는 여행자나 장기 체류객에게 특히 인기가 많습니다. 독립된 침대 구조로 개인 공간을 지키면서도 합리적인 숙박을 할 수 있습니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Bunk bed with premium bedding " data-ko="프리미엄 침구가 갖춰진 벙크베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
+                        </div>
+                        <div class="room-images">
+                            <div class="image-slider" id="twinbunk-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Twin Bunk Room" class="slider-image" id="twinbunk-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('twinbunk', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('twinbunk', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="twinbunk-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Popup Image for Twin Bunk Room -->
+                    <div class="hover-popup">
+                        <img src="images/slothOne.png" alt="Animal Avatar" class="popup-image">
+                    </div>
                 </div>
-
+                
+                <!-- Twin Room -->
                 <div class="room-category twin-room-category">
-                    <div class="room-header"><h2 class="room-title" data-en="Twin Room" data-ko="트윈룸">Twin Room</h2><h3 class="room-subtitle" data-en="Side by Side, Comfortable Rest" data-ko="친구와 나란히, 독립적인 휴식">Side by Side, Comfortable Rest</h3></div>
-                    <div class="room-content">
-                        <div class="room-description"><p data-en="The Twin Room features two single beds placed side by side, making it ideal for friends or travel companions. Its layout allows for a comfortable night’s sleep without disturbing each other. A popular choice for those who want to enjoy a relaxing evening with a companion." data-ko="싱글 침대 두 개가 나란히 배치되어 있어 친구나 동료와 함께 묵기에 좋은 객실입니다. 서로 간섭하지 않고 편안히 잘 수 있는 구조라 인기 있는 선택입니다. 편안한 동행과 함께 여유로운 밤을 보내고 싶다면 트윈룸이 잘 어울립니다.">The Twin Room features two single beds placed side by side, making it ideal for friends or travel companions. Its layout allows for a comfortable night’s sleep without disturbing each other. A popular choice for those who want to enjoy a relaxing evening with a companion.</p><ul class="room-features"><li data-en="Two single beds with premium bedding" data-ko="프리미엄 침구가 갖춰진 두 개의 싱글베드">Two single beds with premium bedding</li><li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li></ul><ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul></div>
-                        <div class="room-images"><div class="image-slider" id="twin-slider"><div class="slider-container"><img src="" alt="Twin Room" class="slider-image" id="twin-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="twin" data-direction="-1" aria-label="Previous twin room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="twin" data-direction="1" aria-label="Next twin room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="twin-counter">1 / 1</div></div></div></div>
+                    <div class="room-header">
+                        <h2 class="room-title" data-en="Twin Room" data-ko="트윈룸"></h2>
+                        <h3 class="room-subtitle" data-en="Side by Side, Comfortable Rest" data-ko="친구와 나란히, 독립적인 휴식"></h3>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Twin</div></div>
+                    <div class="room-content">
+                        <div class="room-description">
+                            <p data-en="The Twin Room features two single beds placed side by side, making it ideal for friends or travel companions. Its layout allows for a comfortable night’s sleep without disturbing each other. A popular choice for those who want to enjoy a relaxing evening with a companion." 
+                            data-ko="싱글 침대 두 개가 나란히 배치되어 있어 친구나 동료와 함께 묵기에 좋은 객실입니다. 서로 간섭하지 않고 편안히 잘 수 있는 구조라 인기 있는 선택입니다. 편안한 동행과 함께 여유로운 밤을 보내고 싶다면 트윈룸이 잘 어울립니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Two Single beds with premium bedding " data-ko="프리미엄 침구가 갖춰진 두 개의 싱글베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
+                        </div>
+                        <div class="room-images">
+                            <div class="image-slider" id="twin-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Twin Room" class="slider-image" id="twin-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('twin', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('twin', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="twin-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Popup Image for Twin Room -->
+                    <div class="hover-popup">
+                        <img src="images/birdOne.png" alt="Animal Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Triple Room -->
                 <div class="room-category triple-room-category">
-                    <div class="room-header"><h2 class="room-title" data-en="Triple Room" data-ko="트리플룸">Triple Room</h2><h3 class="room-subtitle" data-en="Perfect for Small Groups" data-ko="소규모 그룹에게 완벽한 객실">Perfect for Small Groups</h3></div>
-                    <div class="room-content">
-                        <div class="room-description"><p data-en="The Triple Room includes one single bed and one double bed, making it a practical and spacious option. It’s well-suited for three friends, family members, or companions traveling together. A great choice for those who want to share a room without giving up comfort." data-ko="트리플룸은 싱글 침대 1개와 더블 침대 1개로 구성된 실용적인 객실입니다. 친구, 가족, 지인 3명이 함께 여행할 때 편안하고 알맞은 공간을 제공합니다. 여럿이 함께 머물면서도 넉넉하고 아늑한 휴식을 원하는 분께 추천합니다.">The Triple Room includes one single bed and one double bed, making it a practical and spacious option. It’s well-suited for three friends, family members, or companions traveling together. A great choice for those who want to share a room without giving up comfort.</p><ul class="room-features"><li data-en="Single + double bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 한 개의 싱글베드와 한 개의 더블베드">Single + double bed with premium bedding</li><li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li></ul><ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul></div>
-                        <div class="room-images"><div class="image-slider" id="triple-slider"><div class="slider-container"><img src="" alt="Triple Room" class="slider-image" id="triple-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="triple" data-direction="-1" aria-label="Previous triple room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="triple" data-direction="1" aria-label="Next triple room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="triple-counter">1 / 1</div></div></div></div>
+                    <div class="room-header">
+                        <h2 class="room-title" data-en="Triple Room" data-ko="트리플룸"></h2>
+                        <h3 class="room-subtitle" data-en="Perfect for Small Groups" data-ko="소규모 그룹에게 완벽한 객실"></h3>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">3P</div></div>
+                    <div class="room-content">
+                        <div class="room-description">
+                            <p data-en="The Triple Room includes one single bed and one double bed, making it a practical and spacious option. It’s well-suited for three friends, family members, or companions traveling together. A great choice for those who want to share a room without giving up comfort." 
+                            data-ko="트리플룸은 싱글 침대 1개와 더블 침대 1개로 구성된 실용적인 객실입니다. 친구, 가족, 지인 3명이 함께 여행할 때 편안하고 알맞은 공간을 제공합니다. 여럿이 함께 머물면서도 넉넉하고 아늑한 휴식을 원하는 분께 추천합니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Single + Double bed with premium bedding" data-ko="프리미엄 침구가 갖춰진 한 개의 싱글베드와 한 개의 더블베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
+                        </div>
+                        <div class="room-images">
+                            <div class="image-slider" id="triple-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Triple Room" class="slider-image" id="triple-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('triple', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('triple', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="triple-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Popup Image for Triple Room -->
+                    <div class="hover-popup">
+                        <img src="images/lizardPoint.png" alt="Lizard Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Quadruple Room -->
                 <div class="room-category fourbunk-room-category">
-                    <div class="room-header"><h2 class="room-title" data-en="Quadruple Room" data-ko="쿼드러플룸">Quadruple Room</h2><h3 class="room-subtitle" data-en="Privacy and Value for Groups" data-ko="프라이버시와 가성비를 모두 잡은 객실">Privacy and Value for Groups</h3></div>
-                    <div class="room-content">
-                        <div class="room-description"><p data-en="The Quadruple Room features two bunk bed sets, accommodating up to four guests. It is ideal for groups of friends or companions traveling together, with efficient use of space. A smart option for group travelers who want both privacy and affordability." data-ko="2층 침대 2세트로 최대 4명이 함께 머물 수 있는 실용적인 객실입니다. 친구나 지인 그룹이 함께 여행할 때 알맞으며, 공간을 효율적으로 활용할 수 있습니다. 프라이버시와 합리적인 가격을 동시에 원하는 단체 여행객에게 좋은 선택입니다.">The Quadruple Room features two bunk bed sets, accommodating up to four guests. It is ideal for groups of friends or companions traveling together, with efficient use of space. A smart option for group travelers who want both privacy and affordability.</p><ul class="room-features"><li data-en="Two bunk beds with premium bedding" data-ko="프리미엄 침구가 갖춰진 두 개의 벙크베드">Two bunk beds with premium bedding</li><li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li></ul><ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul></div>
-                        <div class="room-images"><div class="image-slider" id="fourbunk-slider"><div class="slider-container"><img src="" alt="Four Bunk Room" class="slider-image" id="fourbunk-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="fourbunk" data-direction="-1" aria-label="Previous quadruple room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="fourbunk" data-direction="1" aria-label="Next quadruple room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="fourbunk-counter">1 / 1</div></div></div></div>
+                    <div class="room-header">
+                        <h2 class="room-title" data-en="Quadruple Room" data-ko="쿼드러플룸"></h2>
+                        <h3 class="room-subtitle" data-en="Privacy and Value for Groups" data-ko="프라이버시와 가성비를 모두 잡은 객실"></h3>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">4P</div></div>
+                    <div class="room-content">
+                        <div class="room-description">
+                            <p data-en="The Quadruple Room features two bunk bed sets, accommodating up to four guests. It is ideal for groups of friends or companions traveling together, with efficient use of space. A smart option for group travelers who want both privacy and affordability." 
+                            data-ko="2층 침대 2세트로 최대 4명이 함께 머물 수 있는 실용적인 객실입니다. 친구나 지인 그룹이 함께 여행할 때 알맞으며, 공간을 효율적으로 활용할 수 있습니다. 프라이버시와 합리적인 가격을 동시에 원하는 단체 여행객에게 좋은 선택입니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Two Bunk beds with premium bedding " data-ko="프리미엄 침구가 갖춰진 두 개의 벙크베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
+                        </div>
+                        <div class="room-images">
+                            <div class="image-slider" id="fourbunk-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Four Bunk Room" class="slider-image" id="fourbunk-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('fourbunk', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('fourbunk', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="fourbunk-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hover Popup Image for Four Bunk Room -->
+                    <div class="hover-popup">
+                        <img src="images/slothOne.png" alt="Sloth Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Standard Family Room -->
                 <div class="room-category standardfamily-room-category">
-                    <div class="room-header"><h2 class="room-title" data-en="Standard Family Room" data-ko="스탠다드 패밀리룸">Standard Family Room</h2><h3 class="room-subtitle" data-en="A Room Made for Sharing" data-ko="함께 머물기에 딱 좋은 객실">A Room Made for Sharing</h3></div>
-                    <div class="room-content">
-                        <div class="room-description"><p data-en="With two double beds, this spacious room comfortably accommodates up to four guests. It’s a great choice not only for families but also for groups of friends traveling together. Enjoy a cozy and convenient stay with your loved ones." data-ko="더블 침대 2개가 준비된 넓은 공간으로, 네 명이 편안히 이용할 수 있습니다. 가족뿐 아니라 친구 그룹이 이용하기 좋습니다. 소중한 사람들과 함께 머무르며 편리함과 아늑함을 동시에 느낄 수 있는 객실입니다.">With two double beds, this spacious room comfortably accommodates up to four guests. It’s a great choice not only for families but also for groups of friends traveling together. Enjoy a cozy and convenient stay with your loved ones.</p><ul class="room-features"><li data-en="Two double beds with premium bedding" data-ko="프리미엄 침구가 갖춰진 두 개의 더블베드">Two double beds with premium bedding</li><li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실">Private bathroom with shower</li></ul><ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul></div>
-                        <div class="room-images"><div class="image-slider" id="standardfamily-slider"><div class="slider-container"><img src="" alt="Standard Family Room" class="slider-image" id="standardfamily-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="standardfamily" data-direction="-1" aria-label="Previous standard family room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="standardfamily" data-direction="1" aria-label="Next standard family room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="standardfamily-counter">1 / 1</div></div></div></div>
+                    <div class="room-header">
+                        <h2 class="room-title" data-en="Standard Family Room" data-ko="스탠다드 패밀리룸"></h2>
+                        <h3 class="room-subtitle" data-en="A Room Made for Sharing" data-ko="함께 머물기에 딱 좋은 객실"></h3>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Family</div></div>
+                    <div class="room-content">
+                        <div class="room-description">
+                            <p data-en="With two double beds, this spacious room comfortably accommodates up to four guests. It’s a great choice not only for families but also for groups of friends traveling together. Enjoy a cozy and convenient stay with your loved ones." 
+                            data-ko="더블 침대 2개가 준비된 넓은 공간으로, 네 명이 편안히 이용할 수 있습니다. 가족뿐 아니라 친구 그룹이 이용하기 좋습니다. 소중한 사람들과 함께 머무르며 편리함과 아늑함을 동시에 느낄 수 있는 객실입니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Two Double beds with premium bedding" data-ko="프리미엄 침구가 갖춰진 두 개의 더블베드"></li>
+                                <li data-en="Private bathroom with shower" data-ko="샤워시설이 있는 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
+                        </div>
+                        <div class="room-images">
+                            <div class="image-slider" id="standardfamily-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Standard Family Room" class="slider-image" id="standardfamily-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('standardfamily', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('standardfamily', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="standardfamily-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Popup Image for Standard Family Room -->
+                    <div class="hover-popup">
+                        <img src="images/birdOne.png" alt="Animal Avatar" class="popup-image">
+                    </div>
                 </div>
 
+                <!-- Deluxe Family Room -->
                 <div class="room-category deluxefamily-room-category">
-                    <div class="room-header"><h2 class="room-title" data-en="Deluxe Family Room" data-ko="디럭스 패밀리룸">Deluxe Family Room</h2><h3 class="room-subtitle" data-en="Spacious Comfort with a View" data-ko="여유와 전망을 갖춘 프리미엄 객실">Spacious Comfort with a View</h3></div>
-                    <div class="room-content">
-                        <div class="room-description"><p data-en="The Deluxe Family Room is our largest and most comfortable option, offering stylish interiors and a wide open view. Its generous space is suitable for families, groups of friends, or anyone looking for something extra special. Ideal for guests who want to enjoy both relaxation and the atmosphere of their trip until the very end." data-ko="호스텔에서 가장 넓고 쾌적한 객실로, 시원하게 트인 전망을 자랑합니다. 여유로운 공간 덕분에 가족 단위는 물론, 친구 그룹이나 특별한 시간을 보내고 싶은 동행자에게도 알맞습니다. 잠들기 전까지도 여행의 감동을 느끼고 싶은 분께 추천드립니다.">The Deluxe Family Room is our largest and most comfortable option, offering stylish interiors and a wide open view. Its generous space is suitable for families, groups of friends, or anyone looking for something extra special. Ideal for guests who want to enjoy both relaxation and the atmosphere of their trip until the very end.</p><ul class="room-features"><li data-en="Two double beds with premium bedding" data-ko="프리미엄 침구가 갖춰진 두 개의 더블베드">Two double beds with premium bedding</li><li data-en="Private bathroom with spacious shower" data-ko="샤워시설이 있는 넓은 개인 욕실">Private bathroom with spacious shower</li></ul><ul class="room-amenities"><li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이">Free Wi-Fi</span></li><li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실">Non-smoking</span></li><li class="room-feature-icon"><i class="fas fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방">A/C & Heating</span></li><li class="room-feature-icon"><i class="fas fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기">Air purifier</span></li><li class="room-feature-icon"><i class="fas fa-bolt"></i><span data-en="USB & Outlets (220V)" data-ko="USB & 콘센트(220V)">USB & Outlets (220V)</span></li><li class="room-feature-icon"><i class="far fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고">Mini fridge</span></li></ul></div>
-                        <div class="room-images"><div class="image-slider" id="deluxefamily-slider"><div class="slider-container"><img src="" alt="Deluxe Family Room" class="slider-image" id="deluxefamily-image"><div class="slider-overlay"><button class="slider-arrow slider-prev" data-room-type="deluxefamily" data-direction="-1" aria-label="Previous deluxe family room image"><i class="fas fa-chevron-left"></i></button><button class="slider-arrow slider-next" data-room-type="deluxefamily" data-direction="1" aria-label="Next deluxe family room image"><i class="fas fa-chevron-right"></i></button></div><div class="image-counter" id="deluxefamily-counter">1 / 1</div></div></div></div>
+                    <div class="room-header">
+                        <h2 class="room-title" data-en="Deluxe Family Room" data-ko="디럭스 패밀리룸"></h2>
+                        <h3 class="room-subtitle" data-en="Spacious Comfort with a View" data-ko="여유와 전망을 갖춘 프리미엄 객실"></h3>
                     </div>
-                    <div class="hover-popup"><div class="popup-badge">Deluxe</div></div>
+                    <div class="room-content">
+                        <div class="room-description">
+                            <p data-en="The Deluxe Family Room is our largest and most comfortable option, offering stylish interiors and a wide open view. Its generous space is suitable for families, groups of friends, or anyone looking for something extra special. Ideal for guests who want to enjoy both relaxation and the atmosphere of their trip until the very end." 
+                            data-ko="호스텔에서 가장 넓고 쾌적한 객실로, 시원하게 트인 전망을 자랑합니다. 여유로운 공간 덕분에 가족 단위는 물론, 친구 그룹이나 특별한 시간을 보내고 싶은 동행자에게도 알맞습니다. 잠들기 전까지도 여행의 감동을 느끼고 싶은 분께 추천드립니다."></p>
+                            <ul class="room-features">
+                                <li data-en="Two Double beds with premium bedding " data-ko="프리미엄 침구가 갖춰진 두 개의 더블베드"></li>
+                                <li data-en="Private bathroom with spacious shower" data-ko="샤워시설이 있는 넓은 개인 욕실"></li>
+                            </ul>
+                            <ul class="room-amenities">
+                                <li class="room-feature-icon"><i class="fas fa-wifi"></i><span data-en="Free Wi-Fi" data-ko="무료 와이파이"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-smoking-ban"></i><span data-en="Non-smoking" data-ko="금연객실"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-light fa-temperature-low"></i><span data-en="A/C & Heating" data-ko="에어컨 & 난방"></span></li>
+                                <li class="room-feature-icon"><i class="fas fa-regular fa-wind"></i><span data-en="Air purifier" data-ko="공기청정기"></span></li>
+                                <li class="room-feature-icon"><i class="fa-solid fa-bolt"></i><span data-en="USB&Outlets(220V)" data-ko="USB & 콘센트(220V)"></span></li>
+                                <li class="room-feature-icon"><i class="fa-regular fa-snowflake"></i><span data-en="Mini fridge" data-ko="미니냉장고"></span></li>
+                            </ul>
+                        </div>
+                        <div class="room-images">
+                            <div class="image-slider" id="deluxefamily-slider">
+                                <div class="slider-container">
+                                    <img src="images/placeholder.jpg" alt="Deluxe Family Room" class="slider-image" id="deluxefamily-image">
+                                    <div class="slider-overlay">
+                                        <button class="slider-arrow slider-prev" onclick="changeImage('deluxefamily', -1)">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="slider-arrow slider-next" onclick="changeImage('deluxefamily', 1)">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="image-counter" id="deluxefamily-counter">1 / 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Popup Image for Deluxe Family Room -->
+                    <div class="hover-popup">
+                        <img src="images/lizardPoint.png" alt="Lizard Avatar" class="popup-image">
+                    </div>
                 </div>
             </div>
         </section>
-
+        
+        <!-- Footer -->
+                <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="footer-business-info">
@@ -216,6 +515,6 @@
         </footer>
     </div>
 
-    <script defer src="/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

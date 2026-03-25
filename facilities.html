@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Facilities - WeGoInn" data-ko="시설 - 위고인">Facilities - WeGoInn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* New Color Palette Overrides for Facilities Page */
+        /* Palette: #e40404 (red), #BB8377 (warm tan), #FFF5F0 (light cream), #4A271F (deep brown) */
+        
+        /* Main background - soft cream */
+        body {
+            background-color: #FFF5F0;
+        }
+        
+        /* Hero section - company red background */
+        .facilities-hero-section {
+            background-color: #e40404;
+            padding: 80px 0;
+        }
+        
+        /* Main title - white for contrast against tan background */
+        .facilities-hero-title {
+            color: #FFF5F0 !important;
+        }
+        
+        /* Headlines - white for contrast against tan background */
+        .facilities-hero-headline {
+            color: #FFF5F0 !important;
+        }
+        
+        /* Subheadline - light cream for subtle contrast */
+        .facilities-hero-subheadline {
+            color: #FFF5F0 !important;
+        }
+        
+        /* Service numbers - company red for accent */
+        .service-number {
+            color: #e40404 !important;
+        }
+        
+        /* Service titles - deep brown */
+        .service-title {
+            color: #4A271F !important;
+        }
+        
+        /* Service descriptions - white for contrast against red background */
+        .service-desc {
+            color: #FFF5F0 !important;
+        }
+        
+        /* Facility section backgrounds - alternating cream and tan */
+        .facility-section {
+            background-color: #FFF5F0;
+            padding: 80px 0;
+        }
+        
+        .facility-section:nth-child(even) {
+            background-color: #BB8377;
+        }
+        
+        /* Section titles - deep brown */
+        .facility-section h2 {
+            color: #4A271F !important;
+        }
+        
+        /* Section descriptions - warm tan */
+        .section-description {
+            color: #BB8377 !important;
+        }
+        
+        /* Image scroll containers - clean styling */
+        .image-scroll-container {
+            background-color: #FFF5F0;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            position: relative; /* Added for positioning arrows */
+            overflow: visible; /* Ensure arrows are not clipped */
+            min-height: 80px; /* Ensure enough height for arrows */
+        }
+        
+        /* Scroll images - enhanced borders */
+        .scroll-image {
+            border: 3px solid #BB8377;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            display: inline-block; /* Ensure images are inline */
+            margin-right: 10px; /* Space between images */
+        }
+        
+        .scroll-image:hover {
+            border-color: #e40404;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(228, 4, 4, 0.2);
+        }
+
+        /* Scroll arrow styles */
+        .scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #BB8377;
+            color: #FFF5F0;
+            border: 2px solid #FFF5F0;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000; /* Ensure arrows are above images */
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            font-size: 1.5rem;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+        .scroll-arrow:hover {
+            background: #e40404;
+            color: #FFF5F0;
+            border: 2px solid #e40404;
+        }
+
+        .scroll-arrow.left {
+            left: 10px;
+        }
+
+        .scroll-arrow.right {
+            right: 10px;
+        }
+        .image-scroll-container:hover .scroll-arrow,
+        .image-scroll-container:focus-within .scroll-arrow {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        /* Footer - deep brown background */
+        .footer {
+            background-color: #4A271F !important;
+            color: #FFF5F0 !important;
+        }
+        
+        /* Mobile language toggle - warm tan background */
+        .mobile-language-toggle {
+            background-color: #BB8377;
+            border-radius: 25px;
+            padding: 8px;
+        }
+        
+        .mobile-language-btn {
+            background-color: #FFF5F0;
+            color: #4A271F;
+        }
+        
+        .mobile-language-btn.active {
+            background-color: #e40404;
+            color: #FFF5F0;
+        }
+        
+        /* Facility Header with Instagram Link */
+        .facility-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .facility-header h2 {
+            margin: 0;
+        }
+        
+        .instagram-link {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            background: #4A271F;
+            color: #FFF5F0;
+            text-decoration: none;
+            border: 1px solid #4A271F;
+            border-radius: 15px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+        
+        .instagram-link:hover {
+            background: #FFF5F0;
+            color: #4A271F;
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+        
+        .instagram-link i {
+            font-size: 1rem;
+        }
+        
+        .instagram-link span {
+            font-size: 0.8rem;
+        }
+        
+        /* Sloth Illustration Positioning */
+        .facilities-hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .facilities-hero-sloth {
+            position: absolute;
+            bottom: 40px;
+            right: 350px;
+            z-index: 10;
+        }
+        
+        .sloth-illustration {
+            width: 220px;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+        
+        /* Responsive design for facility header */
+        @media (max-width: 768px) {
+            .facility-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+            
+            .facility-header h2 {
+                margin-bottom: 0;
+            }
+            
+            .instagram-link {
+                padding: 0.35rem 0.7rem;
+            }
+            
+            .instagram-link i {
+                font-size: 0.9rem;
+            }
+            
+            .instagram-link span {
+                font-size: 0.75rem;
+            }
+            
+            .sloth-illustration {
+                width: 160px;
+            }
+            
+            .facilities-hero-sloth {
+                bottom: 30px;
+                right: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .facility-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+            
+            .instagram-link {
+                padding: 0.35rem 0.7rem;
+                width: auto;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <!-- Hamburger Button (mobile only) -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logoRed.png" alt="mainLogo" class="sidebar-logo-img">
+            </a>
+        </div>
+        
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button id="enBtn" class="language-btn" data-lang="en">
+                <span class="language-text">EN</span>
+            </button>
+            <button id="koBtn" class="language-btn" data-lang="ko">
+                <span class="language-text">KO</span>
+            </button>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="about.html" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
+            <li><a href="roomtype.html" class="sidebar-link" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
+            <li><a href="findus.html" class="sidebar-link" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
+            <li><a href="faq.html" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
+            <li><a href="facilities.html" class="sidebar-link active" data-en="Facilities" data-ko="시설">Facilities</a></li>
+            <li><a href="contact.html" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
+            <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
+        </ul>
+        
+        <div class="sidebar-bottom-img">
+            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative" />
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+        <!-- Mobile Language Toggle -->
+        <div class="mobile-language-toggle">
+            <button id="mobileEnBtn" class="mobile-language-btn" data-lang="en">
+                <span class="mobile-language-text">EN</span>
+            </button>
+            <button id="mobileKoBtn" class="mobile-language-btn" data-lang="ko">
+                <span class="mobile-language-text">KO</span>
+            </button>
+        </div>
+        
+        <!-- Facilities Section - Text Only -->
+        <section class="facilities-hero-section">
+            <div class="facilities-hero-container">
+                <div class="facilities-hero-left">
+                    <h2 class="facilities-hero-title" data-en="Facilities" data-ko="시설">Facilities</h2>
+                    <div class="facilities-hero-headline">
+                        <span data-en="3 Special Services!" data-ko="3가지 특별한 서비스!">3 Special Services!</span><br>
+                        <span data-en="Only available in Wegoinn." data-ko="위고인에서만 이용 가능합니다.">Only available in Wegoinn.</span>
+                    </div>
+                    <div class="facilities-hero-subheadline" data-en="We promise you a comfortable stay experience." data-ko="편안한 투숙 경험을 약속드립니다.">
+                        We promise you a comfortable stay experience.
+                    </div>
+                </div>
+                <div class="facilities-hero-right">
+                    <div class="service-list-horizontal">
+                        <div class="service-item-horizontal">
+                            <div class="service-number">01</div>
+                            <div class="service-title" data-en="Cafe" data-ko="카페">Cafe</div>
+                            <div class="service-desc" data-en="With flavorful coffee and sweet desserts, we make visitors' rest even more comfortable." data-ko="향긋한 커피와 달콤한 디저트로 방문객의 휴식을 더욱 편안하게 만들어드립니다.">With flavorful coffee and sweet desserts, we make visitors' rest even more comfortable.</div>
+                        </div>
+                        <div class="service-item-horizontal">
+                            <div class="service-number">02</div>
+                            <div class="service-title" data-en="Izakaya" data-ko="이자카야">Izakaya</div>
+                            <div class="service-desc" data-en="Kuriya is a Japanese-style izakaya where you can taste Japanese cuisine in Korea." data-ko="구리야는 한국에서 일본 요리를 맛볼 수 있는 일본식 이자카야입니다.">Kuriya is a Japanese-style izakaya where you can taste Japanese cuisine in Korea.</div>
+                        </div>
+                    </div>
+                    <div class="service-list-horizontal-bottom">
+                        <div class="service-item-horizontal">
+                            <div class="service-number">03</div>
+                            <div class="service-title" data-en="Rooftop Bar" data-ko="루프탑 바">Rooftop Bar</div>
+                            <div class="service-desc" data-en="Rooftop Bar: a harmony of daily music, night views, and a cocktail. End your day at the rooftop bar." data-ko="루프탑 바: 일상의 음악, 야경, 그리고 칵테일의 조화. 루프탑 바에서 하루를 마무리하세요.">Rooftop Bar: a harmony of daily music, night views, and a cocktail. End your day at the rooftop bar.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sloth Illustration positioned in bottom right corner -->
+                <div class="facilities-hero-sloth">
+                    <img src="images/slothRecline.png" alt="Relaxed Sloth" class="sloth-illustration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Libertree Cafe Section -->
+        <section class="facility-section libertree-section">
+            <div class="container">
+                <div class="facility-header">
+                    <h2 data-en="Libertree Cafe" data-ko="리버트리 카페">Libertree Cafe</h2>
+                    <a href="https://www.instagram.com/libertree_wegoinn_/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Follow Libertree Cafe on Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span data-en="Follow us" data-ko="팔로우하기">Follow us</span>
+                    </a>
+                </div>
+                <p class="section-description" data-en="A cozy cafe serving delicious coffee, fresh pastries, and light meals in a relaxed atmosphere." data-ko="편안한 분위기에서 맛있는 커피, 신선한 페이스트리, 가벼운 식사를 제공하는 아늑한 카페입니다.">A cozy cafe serving delicious coffee, fresh pastries, and light meals in a relaxed atmosphere.</p>
+                
+                <div class="image-scroll-container">
+                    <button class="scroll-arrow left" onclick="scrollImages('libertree-scroll', -1)">&#8592;</button>
+                    <div class="image-scroll-wrapper" id="libertree-scroll">
+                        <div class="scroll-image">
+                            <img src="images/libertreeOne.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeThree.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeFour.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeFive.png" alt="Libertree Cafe">
+                        </div> 
+                        <div class="scroll-image">
+                            <img src="images/libertreeSix.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeSeven.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeEight.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeNine.png" alt="Libertree Cafe">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/libertreeTen.png" alt="Libertree Cafe">
+                        </div>
+                    </div>
+                    <button class="scroll-arrow right" onclick="scrollImages('libertree-scroll', 1)">&#8594;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Izakaya Section -->
+        <section class="facility-section izakaya-section">
+            <div class="container">
+                <div class="facility-header">
+                    <h2 data-en="Izakaya Lakidon" data-ko="이자카야 라키돈">Izakaya Lakidon</h2>
+                    <a href="https://www.instagram.com/libertree_wegoinn_/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Follow Izakaya Lakidon on Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span data-en="Follow us" data-ko="팔로우하기">Follow us</span>
+                    </a>
+                </div>
+                <p class="section-description" data-en="Authentic Japanese dining experience with traditional izakaya dishes and a warm, welcoming atmosphere." data-ko="전통적인 이자카야 요리와 따뜻하고 환영하는 분위기로 진정한 일본식 다이닝 경험을 제공합니다.">Authentic Japanese dining experience with traditional izakaya dishes and a warm, welcoming atmosphere.</p>
+                <div class="image-scroll-container">
+                    <button class="scroll-arrow left" onclick="scrollImages('izakaya-scroll', -1)">&#8592;</button>
+                    <div class="image-scroll-wrapper" id="izakaya-scroll">
+                        <div class="scroll-image">
+                            <img src="images/izaOne.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaTwo.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaThree.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaFour.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaFive.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaSix.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaSeven.png" alt="Izakaya Interior">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/izaEight.png" alt="Izakaya Interior">
+                        </div>
+                    </div>
+                    <button class="scroll-arrow right" onclick="scrollImages('izakaya-scroll', 1)">&#8594;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooftop Bar Section -->
+        <section class="facility-section rooftop-section">
+            <div class="container">
+                <div class="facility-header">
+                    <h2 data-en="Rooftop Bar" data-ko="루프탑 바">Rooftop Bar</h2>
+                    <a href="https://www.instagram.com/libertree_wegoinn_/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Follow Rooftop Bar on Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span data-en="Follow us" data-ko="팔로우하기">Follow us</span>
+                    </a>
+                </div>
+                <p class="section-description" data-en="Enjoy stunning city views while sipping on craft cocktails and socializing with fellow travelers." data-ko="크래프트 칵테일을 마시며 멋진 도시 전경을 감상하고 동료 여행자들과 교류하세요.">Enjoy stunning city views while sipping on craft cocktails and socializing with fellow travelers.</p>
+                
+                <div class="image-scroll-container">
+                    <button class="scroll-arrow left" onclick="scrollImages('rooftop-scroll', -1)">&#8592;</button>
+                    <div class="image-scroll-wrapper" id="rooftop-scroll">
+                        <div class="scroll-image">
+                            <img src="images/nineEleven.jpg" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineTwelve.jpg" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineThirteen.jpg" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineFour.png" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineFive.png" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineSix.png" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineSeven.png" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineEight.png" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineNine.png" alt="Rooftop Bar">
+                        </div>
+                        <div class="scroll-image">
+                            <img src="images/nineTen.png" alt="Rooftop Bar">
+                        </div>
+                    </div>
+                    <button class="scroll-arrow right" onclick="scrollImages('rooftop-scroll', 1)">&#8594;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-business-info">
+                    <div class="footer-business-col">
+                        <div data-en="Company Name: Weegoland (WEEGOLAND)" data-ko="회사명 : 위고랜드 (WEEGOLAND)">Company Name: Weegoland (WEEGOLAND)</div>
+                        <div data-en="Representative: Jaehyun Yoon" data-ko="대표자 : 윤재현">Representative: Jaehyun Yoon</div>
+                        <div data-en="Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)" data-ko="주소 : 서울 서대문구 신촌로 141 (위고인 호스텔)">Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)</div>
+                        <div data-en="Email: wegoinnteam@gmail.com" data-ko="이메일 : wegoinnteam@gmail.com">Email: <a href="mailto:wegoinnteam@gmail.com">wegoinnteam@gmail.com</a></div>
+                    </div>
+                    <div class="footer-business-col">
+                        <div data-en="Phone: 02-393-9922" data-ko="전화 : 02-393-9922">Phone: 02-393-9922</div>
+                        <div data-en="Fax: 02-393-2229" data-ko="팩스 : 02-393-2229">Fax: 02-393-2229</div>
+                        <div data-en="Business Registration No.: 110-08-76462" data-ko="사업자등록번호 : 110-08-76462">Business Registration No.: 110-08-76462</div>
+                        <div data-en="E-commerce Registration: Not applicable" data-ko="통신판매업신고 : 해당없음">E-commerce Registration: Not applicable</div>
+                    </div>
+                </div>
+                <p>&copy; 2024 WeGoInn. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="About Us - WeGoInn" data-ko="위고인 소개">About Us - WeGoInn</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <!-- Hamburger Button (mobile only) -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="images/logoRed.png" alt="mainLogo" class="sidebar-logo-img">
+            </a>
+        </div>
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button id="enBtn" class="language-btn" data-lang="en">
+                <span class="language-text">EN</span>
+            </button>
+            <button id="koBtn" class="language-btn" data-lang="ko">
+                <span class="language-text">KO</span>
+            </button>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li><a href="about.html" class="sidebar-link active" data-en="About us" data-ko="소개">About us</a></li>
+            <li><a href="roomtype.html" class="sidebar-link" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
+            <li><a href="findus.html" class="sidebar-link" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
+            <li><a href="faq.html" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
+            <li><a href="facilities.html" class="sidebar-link" data-en="Facilities" data-ko="시설">Facilities</a></li>
+            <li><a href="contact.html" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
+            <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
+        </ul>
+        
+        <div class="sidebar-bottom-img">
+            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative" />
+        </div>
+    </aside>
+    
+    <div class="main-content">
+        <!-- Mobile Language Toggle -->
+        <div class="mobile-language-toggle">
+            <button id="mobileEnBtn" class="mobile-language-btn" data-lang="en">
+                <span class="mobile-language-text">EN</span>
+            </button>
+            <button id="mobileKoBtn" class="mobile-language-btn" data-lang="ko">
+                <span class="mobile-language-text">KO</span>
+            </button>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="about-hero-new">
+            <div class="about-hero-background">
+                <div class="about-hero-overlay"></div>
+            </div>
+            <div class="about-hero-content-new">
+                <!-- Top Right Corner Image -->
+                <div class="about-hero-corner-image">
+                    <img src="images/lizardNewOne.png" alt="Decorative Clip Art" class="corner-image">
+                </div>
+                <!-- Top Left Corner Image -->
+                <div class="about-hero-corner-image-top-left">
+                    <img src="images/slothJoy.png" alt="Decorative Clip Art" class="corner-image">
+                </div>
+                <!-- Bottom Left Corner Image -->
+                <div class="about-hero-corner-image-bottom">
+                    <img src="images/birdOne.png" alt="Decorative Clip Art" class="corner-image">
+                </div>
+                <div class="about-hero-text">
+                    <h1 class="about-hero-title-new" data-en="WE GO? INN!" data-ko="WE GO? INN!">WE? GO IN<span class="fade-letter">N</span>?</h1>
+                    <p class="about-hero-subtitle" data-en="Your casual seoul, wegoinn hostel" data-ko="Your casual seoul, wegoinn hostel">Your casual seoul, wegoinn hostel</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-mission">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h2 class="mission-title" data-en="Begin your story here" data-ko="Begin your story here">Our Mission</h2>
+                        <p class="mission-description" data-en="The first excitement of travel always begins where you stay. At Wegoinn, we create a place where your Seoul story can unfold into comfort, warmth, and lasting memories." 
+                        data-ko="여행의 첫 설렘은 언제나 머무는 공간에서 시작됩니다. 당신의 서울 이야기가 특별한 기억으로 이어질 수 있도록, 위고인은 편안한 머무름과 따뜻한 순간을 준비했습니다."></p>
+                    </div>
+                    <div class="mission-visual">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="about-story-new">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2 class="story-title" data-en="Wegoinn Story" data-ko="Wegoinn Story">The WeGoInn Story</h2>
+                        <div class="story-timeline-wrapper" style="width: 90%; max-width: 500px;">
+                            <div class="story-timeline" style="margin-left:-80px;">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 data-en="2019" data-ko="2019">The Beginning</h3>
+                                        <p data-en="A place where journeys begin, Wegoinn Hostel Opened" data-ko="여행이 시작되는 공간, 위고인 호스텔 오픈">Founded by passionate explorers, WeGoInn started as a dream to create a place where people from all walks of life could connect and share their journeys.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 data-en="2022" data-ko="2022">Growth & Community</h3>
+                                        <p data-en="KCIA 한국소비자산업평가" data-ko="KCIA 한국소비자산업평가"></p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 data-en="2022-2023-2024" data-ko="2022-2023-2024">Our Promise</h3>
+                                        <p data-en="Agoda Gold Circle Award" data-ko="Agoda Gold Circle Award">'Your Home Away From Home' is more than a slogan—it's our promise to every guest who walks through our doors.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h3 data-en="2022-2023-2024" data-ko="2022-2023-2024">Our Promise</h3>
+                                        <p data-en="Award Customer Review Award" data-ko="Award Customer Review Award">'Your Home Away From Home' is more than a slogan—it's our promise to every guest who walks through our doors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <div class="story-photos-container story-photo-grid">
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidOne.jpg" alt="WeGoInn Story Photo 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-users"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidTwo.png" alt="WeGoInn Story Photo 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-heart"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidThree.png" alt="WeGoInn Story Photo 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-star"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidFour.jpg" alt="WeGoInn Story Photo 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-smile"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidFive.jpg" alt="WeGoInn Story Photo 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidSix.jpg" alt="WeGoInn Story Photo 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidSeven.jpg" alt="WeGoInn Story Photo 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidEight.jpg" alt="WeGoInn Story Photo 8" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Add your photo here</p>
+                                </div>
+                            </div>
+                            <div class="story-photo-grid-item">
+                                <img src="images/polaroidNine.jpg" alt="WeGoInn Story Photo 9" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="story-photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="about-values">
+            <div class="container">
+                <h2 class="values-title" data-en="Our Core Values" data-ko="Our Core Values">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-en="Casual" data-ko="Casual">Authenticity</h3>
+                        <p data-en="We create a relaxed, unpretentious space where staying in Seoul feels simple and natural." 
+                        data-ko="편안하고 꾸밈없는, 형식보다 진심을 담은 공간을 지향합니다.">We believe in genuine connections and authentic experiences that reflect the true spirit of hospitality.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 data-en="Friendly" data-ko="Friendly">Community</h3>
+                        <p data-en="We make your stay in Seoul warmer, with a team that truly cares." 
+                        data-ko="당신의 서울이 따뜻해질 수 있도록, 다정한 스탭들이 함께합니다.">Creating spaces where travelers from around the world can connect, share stories, and build lasting friendships.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 data-en="Reasonable" data-ko="Reasonable">Excellence</h3>
+                        <p data-en="We focus on comfort and service that matter, delivering true value at a fair price." 
+                        data-ko="합리적인 가격으로 필요한 것에 충실한 머무름을 제공합니다.">Committed to providing exceptional service and memorable experiences that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speech Bubbles Section -->
+        <section class="about-speech-bubbles">
+            <div class="container">
+                <!-- Top Image and Text Section -->
+                <div class="speech-bubbles-header">
+                    <div class="header-image">
+                        <img src="images/redArtDemo.png" alt="Header Image" class="header-img">
+                    </div>
+                    <div class="header-text">
+                        <h3 data-en="The Beginning of Every Journey" data-ko="The Beginning of Every Journey">Welcome to Our Community</h3>
+                        <p data-en="Wegoinn was born from seven years of exploring hostels across Asia and Europe. We built the place we once dreamed of staying in." data-ko="7년간 아시아와 유럽 곳곳의 호스텔을 여행하며, ‘언젠가 머물고 싶은 공간’을 직접 만들었습니다.">Discover what our guests have to say about their experiences at WeGoInn</p>
+                    </div>
+                </div>
+                
+                <div class="text-content-container">
+                    <div class="text-content-item">
+                        <div class="character character-sloth">
+                            <img src="images/slothRed.png" alt="Sloth Character" class="character-img">
+                        </div>
+                        <div class="text-content">
+                            <h3 data-en="Not just a stay, Wegoinn" data-ko="Not just a stay, Wegoinn">WeGoInn is more than just a place to stay</h3>
+                            <p data-en="A good hostel is more than a bed. It’s where your favorite travel story begins." data-ko="좋은 호스텔은 단순한 숙소 이상입니다. 여행의 가장 좋은 기억이 시작되는 곳이죠.">It's where friendships are born and memories are made!</p>
+                        </div>
+                    </div>
+
+                    <div class="text-content-item">
+                        <div class="character character-dragon">
+                            <img src="images/lizardProudRed.png" alt="Dragon Character" class="character-img">
+                        </div>
+                        <div class="text-content">
+                            <h3 data-en="Where Strangers Become Friends" data-ko="Where Strangers Become Friends">The atmosphere here is incredible</h3>
+                            <p data-en="Our diverse team creates a space where travelers connect and new friendships begin." data-ko="친절한 다국적 스태프와 함께, 낯선 고객이 아닌 여행 파트너가 되는 공간.">Everyone is so friendly and welcoming. I felt at home from the moment I arrived.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-content-item">
+                        <div class="character character-bird">
+                            <img src="images/birdNewRed.png" alt="Bird Character" class="character-img">
+                        </div>
+                        <div class="text-content">
+                            <h3 data-en="Wegoinn, Casual Comfort in Seoul" data-ko="Wegoinn, Casual Comfort in Seoul">Best hostel experience ever</h3>
+                            <p data-en="Modern, clean, and welcoming. Designed like a hotel, lived like a home. Seoul feels lighter, warmer, and more familiar here." data-ko="모던하고 깔끔하지만, 언제나 따뜻한 공간. 호텔처럼 세련되지만 집처럼 편안한 곳, 서울의 중심에서 만나는 위고인입니다.">Clean rooms, great location, and the staff went above and beyond to help us explore Seoul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Bar -->
+        <div class="section-divider"></div>
+
+        <!-- Call to Action -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title" data-en="Welcome to WEGOINN HOSTEL." data-ko="Welcome to WEGOINN HOSTEL.">Ready to Experience WeGoInn?</h2>
+                    <p class="cta-description" data-en="Ready to Experience WeGoInn?" data-ko="함께 웃고, 함께 나누며, 함께 여행하는 곳. 위고인에서의 경험을 지금 시작하새요.">Join our community of travelers and create your own unforgettable story with us.</p>
+                    <div class="cta-buttons">
+                        <a href="https://booking-engine.onda.me/wegoinn" class="cta-btn primary" target="_blank" rel="noopener noreferrer" data-en="Book Your Stay" data-ko="숙박 예약하기">Book Your Stay</a>
+                        <a href="contact.html" class="cta-btn secondary" data-en="Get in Touch" data-ko="문의하기">Get in Touch</a>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-business-info">
+                    <div class="footer-business-col">
+                        <div data-en="Company Name: Weegoland (WEEGOLAND)" data-ko="회사명 : 위고랜드 (WEEGOLAND)">Company Name: Weegoland (WEEGOLAND)</div>
+                        <div data-en="Representative: Jaehyun Yoon" data-ko="대표자 : 윤재현">Representative: Jaehyun Yoon</div>
+                        <div data-en="Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)" data-ko="주소 : 서울 서대문구 신촌로 141 (위고인 호스텔)">Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)</div>
+                        <div data-en="Email: wegoinnteam@gmail.com" data-ko="이메일 : wegoinnteam@gmail.com">Email: <a href="mailto:wegoinnteam@gmail.com">wegoinnteam@gmail.com</a></div>
+                    </div>
+                    <div class="footer-business-col">
+                        <div data-en="Phone: 02-393-9922" data-ko="전화 : 02-393-9922">Phone: 02-393-9922</div>
+                        <div data-en="Fax: 02-393-2229" data-ko="팩스 : 02-393-2229">Fax: 02-393-2229</div>
+                        <div data-en="Business Registration No.: 110-08-76462" data-ko="사업자등록번호 : 110-08-76462">Business Registration No.: 110-08-76462</div>
+                        <div data-en="E-commerce Registration: Not applicable" data-ko="통신판매업신고 : 해당없음">E-commerce Registration: Not applicable</div>
+                    </div>
+                </div>
+                <p>&copy; 2024 WeGoInn. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
