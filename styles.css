@@ -6837,3 +6837,253 @@ body.menu-open {
         font-size: clamp(1.9rem, 7.8vw, 2.6rem) !important;
     }
 }
+
+/* Modern mobile refresh */
+@media (max-width: 900px) {
+    body {
+        background:
+            radial-gradient(circle at top right, rgba(228, 4, 4, 0.10), transparent 28%),
+            linear-gradient(180deg, #fffaf8 0%, #f5f7fb 42%, #eef2f7 100%) !important;
+        color: #16202a !important;
+    }
+
+    .main-content {
+        position: relative !important;
+    }
+
+    .main-content::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background:
+            radial-gradient(circle at 12% 10%, rgba(228, 4, 4, 0.12), transparent 18%),
+            radial-gradient(circle at 88% 18%, rgba(255, 190, 92, 0.15), transparent 18%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .main-content > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hamburger-btn {
+        background: rgba(255, 255, 255, 0.88) !important;
+        backdrop-filter: blur(16px) saturate(160%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.85) !important;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16) !important;
+    }
+
+    .mobile-language-btn {
+        background: rgba(255, 255, 255, 0.82) !important;
+        backdrop-filter: blur(16px) saturate(160%) !important;
+        border-color: rgba(255, 255, 255, 0.85) !important;
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12) !important;
+    }
+
+    .sidebar {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.98) 100%) !important;
+        backdrop-filter: blur(20px) saturate(160%) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 24px 0 48px rgba(15, 23, 42, 0.16) !important;
+    }
+
+    .sidebar-link {
+        background: rgba(255, 255, 255, 0.72) !important;
+        border: 1px solid rgba(226, 232, 240, 0.95) !important;
+        box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06) !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.01em !important;
+    }
+
+    .sidebar-link:hover,
+    .sidebar-link:focus,
+    .sidebar-link.active,
+    .sidebar-link.active:hover,
+    .sidebar-link.active:focus {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+        border-color: transparent !important;
+        box-shadow: 0 16px 28px rgba(220, 38, 38, 0.24) !important;
+        color: #fff !important;
+    }
+
+    .hero-content,
+    .about-hero-content-new,
+    .findus-hero-content,
+    .facilities-hero-left,
+    .contact-modern-card,
+    .contact-modern-form,
+    .mission-text,
+    .story-content,
+    .footer-business-info,
+    .faq-item,
+    .room-category,
+    .facility-card,
+    .transport-card,
+    .service-card {
+        background: rgba(255, 255, 255, 0.82) !important;
+        backdrop-filter: blur(18px) saturate(160%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.92) !important;
+        box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08) !important;
+        border-radius: 24px !important;
+    }
+
+    .hero-content,
+    .about-hero-content-new,
+    .findus-hero-content,
+    .facilities-hero-left,
+    .mission-text,
+    .story-content {
+        padding: 1.15rem !important;
+    }
+
+    .footer-business-info,
+    .contact-modern-card,
+    .contact-modern-form,
+    .faq-item,
+    .room-category,
+    .facility-card,
+    .transport-card,
+    .service-card {
+        padding: 1rem !important;
+    }
+
+    .image-slider,
+    .slider-container,
+    .embedded-map iframe,
+    .map-embed iframe,
+    .image-placeholder,
+    .hero-image img,
+    .image-placeholder img,
+    .booking-image {
+        border-radius: 24px !important;
+        overflow: hidden !important;
+    }
+
+    .booking-image {
+        filter: drop-shadow(0 16px 30px rgba(127, 29, 29, 0.18)) !important;
+    }
+
+    .hero-image,
+    .image-placeholder {
+        padding-bottom: 8px !important;
+    }
+
+    .hero-image img,
+    .image-placeholder img,
+    .sidebar-bottom-img img,
+    .corner-image,
+    .character-img,
+    .map-flanking-image,
+    .sloth-illustration,
+    .popup-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+    }
+
+    .sidebar-bottom-img {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .sidebar-bottom-img img {
+        max-width: 104px !important;
+    }
+
+    .hero-image img,
+    .image-placeholder img {
+        max-height: 46vh !important;
+    }
+
+    .character-img,
+    .map-flanking-image,
+    .sloth-illustration,
+    .corner-image {
+        max-height: 220px !important;
+    }
+
+    .room-description,
+    .room-images,
+    .contact-modern-info,
+    .contact-modern-form,
+    .story-image,
+    .mission-visual {
+        min-width: 0 !important;
+    }
+
+    .room-content,
+    .mission-content,
+    .story-grid,
+    .contact-modern-grid,
+    .map-with-images,
+    .footer-business-info {
+        gap: 1.15rem !important;
+    }
+
+    .page-title,
+    .contact-hero-title,
+    .findus-hero-content h1,
+    .facilities-hero-headline,
+    .values-title,
+    .story-title,
+    .cta-title,
+    .about-hero-title-new,
+    .hero-content h1,
+    .hero-content h1[data-ko] {
+        letter-spacing: -0.03em !important;
+    }
+
+    .page-subtitle,
+    .hero-content p,
+    .mission-description,
+    .story-content p,
+    .facility-description,
+    .faq-answer,
+    .room-description p,
+    .contact-modern-item,
+    .footer-business-col div {
+        color: #475569 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content,
+    .about-hero-content-new,
+    .findus-hero-content,
+    .facilities-hero-left,
+    .contact-modern-card,
+    .contact-modern-form,
+    .mission-text,
+    .story-content,
+    .footer-business-info,
+    .faq-item,
+    .room-category,
+    .facility-card,
+    .transport-card,
+    .service-card {
+        border-radius: 22px !important;
+        box-shadow: 0 16px 34px rgba(15, 23, 42, 0.09) !important;
+    }
+
+    .hero-image img,
+    .image-placeholder img {
+        max-height: 40vh !important;
+    }
+
+    .character-img,
+    .map-flanking-image,
+    .sloth-illustration,
+    .corner-image,
+    .sidebar-bottom-img img {
+        max-width: min(100%, 170px) !important;
+        margin-inline: auto !important;
+    }
+
+    .booking-image-link,
+    .booking-image {
+        width: min(100%, 290px) !important;
+    }
+}
