@@ -586,8 +586,8 @@ html, body, * {
         width: 100% !important;
     }
 
-    .sidebar-logo-img,
-    .sidebar-logo a img {
+    .sidebar .sidebar-logo-img,
+    .sidebar .sidebar-logo a img {
         width: 100% !important;
         max-width: 156px !important;
         height: auto !important;
