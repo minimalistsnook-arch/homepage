@@ -28,12 +28,20 @@
     <main class="main">
         <section class="panel">
             <h2 class="section-title" data-ko="찾아오시는 길" data-en="Location">찾아오시는 길</h2>
-            <p class="section-sub" data-ko="인천공항에서 신촌역 7/8번 출구까지 경로를 순차형으로 정리했습니다." data-en="Sequential route from Incheon Airport to Sinchon Exit 7/8.">인천공항에서 신촌역 7/8번 출구까지 경로를 순차형으로 정리했습니다.</p>
-            <div class="location-flow">
-                <div class="flow-item"><div class="dot">1</div><div><h4>Subway</h4><p data-ko="공항철도 탑승 후 홍대입구 환승, 신촌역 이동" data-en="Airport railroad -> transfer -> Sinchon station">공항철도 탑승 후 홍대입구 환승, 신촌역 이동</p></div></div>
-                <div class="flow-item"><div class="dot">2</div><div><h4>Bus 6002</h4><p data-ko="공항버스 6002 탑승 후 신촌 정류장 하차" data-en="Take airport bus 6002 to Sinchon stop">공항버스 6002 탑승 후 신촌 정류장 하차</p></div></div>
-                <div class="flow-item"><div class="dot">3</div><div><h4>Taxi</h4><p data-ko="위고인 호스텔(신촌로 141) 목적지로 이동" data-en="Taxi to Wegoinn Hostel, Sinchon-ro 141">위고인 호스텔(신촌로 141) 목적지로 이동</p></div></div>
+            <p class="section-sub" data-ko="아래 탭을 누르면 원본 웹페이지처럼 관련 외부 사이트로 이동합니다." data-en="Tap each transport tab to open the related external guide.">아래 탭을 누르면 원본 웹페이지처럼 관련 외부 사이트로 이동합니다.</p>
+
+            <div class="transport-tabs-mobile">
+                <button type="button" onclick="openTransportLink('subway')" data-ko="지하철" data-en="Subway">지하철</button>
+                <button type="button" onclick="openTransportLink('bus')" data-ko="버스" data-en="Bus">버스</button>
+                <button type="button" onclick="openTransportLink('taxi')" data-ko="택시" data-en="Taxi">택시</button>
             </div>
+
+            <div class="location-flow">
+                <div class="flow-item" onclick="openTransportLink('subway')"><div class="dot">1</div><div><h4 data-ko="지하철" data-en="Subway">지하철</h4><p data-ko="인천공항 → 공항철도 탑승 → 홍대입구 환승 → 신촌역 7/8번 출구" data-en="Incheon Airport -> Airport Railroad -> transfer -> Sinchon Exit 7/8">인천공항 → 공항철도 탑승 → 홍대입구 환승 → 신촌역 7/8번 출구</p></div></div>
+                <div class="flow-item" onclick="openTransportLink('bus')"><div class="dot">2</div><div><h4 data-ko="버스" data-en="Bus">버스</h4><p data-ko="공항리무진 6002번 탑승 후 신촌역 인근 정류장 하차" data-en="Take Airport Limousine 6002 and get off near Sinchon">공항리무진 6002번 탑승 후 신촌역 인근 정류장 하차</p></div></div>
+                <div class="flow-item" onclick="openTransportLink('taxi')"><div class="dot">3</div><div><h4 data-ko="택시" data-en="Taxi">택시</h4><p data-ko="기사님께 '서울 서대문구 신촌로 141 위고인 호스텔' 주소 제시" data-en="Show driver: 141, Sinchon-ro, Seodaemun-gu, Seoul">기사님께 '서울 서대문구 신촌로 141 위고인 호스텔' 주소 제시</p></div></div>
+            </div>
+
             <div class="map-box">
                 <img src="images/infographicRed.png" alt="map" style="width:100%;border-radius:10px;display:block;">
                 <a target="_blank" rel="noopener" href="https://maps.google.com/?q=141+Sinchon-ro+Seodaemun-gu+Seoul">Open in Maps (길찾기)</a>
@@ -50,5 +58,17 @@
     </nav>
 </div>
 <script src="mobile-red-city.js"></script>
+<script>
+function openTransportLink(type) {
+    const links = {
+        subway: 'https://www.airport.kr/ap_en/1512/subview.do',
+        bus: 'https://airportlimousine.co.kr/en/sub/sub01.php?cat_no=2',
+        taxi: 'https://xn--ob0bj92bdidosgv4fhzh.org/index#%EB%AC%B8%EC%9D%98%ED%95%98%EA%B8%B0'
+    };
+    if (links[type]) {
+        window.open(links[type], '_blank');
+    }
+}
+</script>
 </body>
 </html>

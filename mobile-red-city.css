@@ -694,3 +694,157 @@ body {
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
+
+/* About page long-form readability */
+.about-hero-mobile {
+    background: linear-gradient(180deg, #fff6f8 0%, #ffffff 100%);
+}
+
+.about-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid #f2d5db;
+    display: block;
+}
+
+.about-long-copy {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.62;
+    color: #434b5a;
+}
+
+.story-timeline-mobile {
+    display: grid;
+    gap: 10px;
+}
+
+.story-node {
+    border-left: 4px solid #ffd4dc;
+    padding: 8px 0 8px 10px;
+}
+
+.story-node strong {
+    color: #b50f2a;
+    font-size: 0.86rem;
+}
+
+.story-node p {
+    margin: 3px 0 0;
+    font-size: 0.82rem;
+    color: #51596a;
+    line-height: 1.5;
+}
+
+.value-grid-mobile {
+    display: grid;
+    gap: 8px;
+}
+
+.value-grid-mobile article {
+    border: 1px solid #edf0f5;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+}
+
+.value-grid-mobile h4 {
+    margin: 0 0 4px;
+    color: #c40f2c;
+    font-size: 0.9rem;
+}
+
+.value-grid-mobile p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #525a6b;
+}
+
+.about-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+
+.about-photo-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #e9edf4;
+}
+
+.about-cta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.about-cta-row a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid #ffd3dc;
+    color: #be0e2a;
+    background: #fff7f8;
+}
+
+/* Rooms detail cards */
+.detailed-rooms .room-card img {
+    height: 146px;
+}
+
+.room-subline {
+    margin: 0 0 6px;
+    font-size: 0.78rem;
+    color: #bd0e2b;
+    font-weight: 700;
+}
+
+.room-desc {
+    margin: 0;
+    font-size: 0.79rem;
+    color: #505868;
+    line-height: 1.5;
+}
+
+.amenity-chips {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.amenity-chips span {
+    border: 1px solid #f0dbe0;
+    background: #fff8f9;
+    color: #5a6272;
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 0.69rem;
+    font-weight: 600;
+}
+
+/* Location transport tabs */
+.transport-tabs-mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.transport-tabs-mobile button {
+    border: 1px solid #ffd5de;
+    background: #fff7f9;
+    color: #c00f2b;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 9px 8px;
+    font-size: 0.8rem;
+}

@@ -28,12 +28,108 @@
     <main class="main">
         <section class="panel">
             <h2 class="section-title" data-ko="객실 유형" data-en="Room Types">객실 유형</h2>
-            <p class="section-sub" data-ko="roomtype.html의 정보를 카드 그리드로 단순화했습니다." data-en="Room list is converted into a vertical card grid.">roomtype.html의 정보를 카드 그리드로 단순화했습니다.</p>
-            <div class="rooms-grid">
-                <article class="room-card"><img src="images/singleNew.jpg" alt="Single"><div class="info"><h3>Single</h3><div class="room-meta"><span>🛏 1 Bed</span><span>👤 1</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
-                <article class="room-card"><img src="images/doubleOne.png" alt="Double"><div class="info"><h3>Double</h3><div class="room-meta"><span>🛏 1 Bed</span><span>👥 2</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
-                <article class="room-card"><img src="images/twinOne.png" alt="Bunk"><div class="info"><h3>Bunk</h3><div class="room-meta"><span>🛏 2 Beds</span><span>👥 2</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
-                <article class="room-card"><img src="images/familyNew.jpg" alt="Family"><div class="info"><h3>Family</h3><div class="room-meta"><span>🛏 Multi</span><span>👥 3-4</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
+            <p class="section-sub" data-ko="각 객실 설명과 비치 항목을 웹페이지 기준으로 정리했습니다." data-en="Room descriptions and amenities are aligned with the website.">각 객실 설명과 비치 항목을 웹페이지 기준으로 정리했습니다.</p>
+            <div class="rooms-grid detailed-rooms">
+
+                <article class="room-card">
+                    <img src="images/singleNew.jpg" alt="Single Room">
+                    <div class="info">
+                        <h3 data-ko="싱글룸" data-en="Single Room">싱글룸</h3>
+                        <p class="room-subline" data-ko="솔로 여행자를 위한 아늑한 공간" data-en="A Cozy Space for Solo Travelers">솔로 여행자를 위한 아늑한 공간</p>
+                        <p class="room-desc" data-ko="혼자만의 여행을 즐기고 싶은 분께 안성맞춤인 객실입니다. 싱글 침대와 전용 욕실이 마련되어 있어 프라이버시와 편안함을 동시에 누릴 수 있습니다." data-en="Perfect for private solo trips with a single bed and private bathroom.">혼자만의 여행을 즐기고 싶은 분께 안성맞춤인 객실입니다. 싱글 침대와 전용 욕실이 마련되어 있어 프라이버시와 편안함을 동시에 누릴 수 있습니다.</p>
+                        <div class="amenity-chips"><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🧼 욕실</span><span>🔌 220V</span><span>🧊 냉장고</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/doubleOne.png" alt="Double Room">
+                    <div class="info">
+                        <h3 data-ko="더블룸" data-en="Double Room">더블룸</h3>
+                        <p class="room-subline" data-ko="둘만의 시간을 위한 편안한 객실" data-en="A Comfortable Space for Two">둘만의 시간을 위한 편안한 객실</p>
+                        <p class="room-desc" data-ko="커플이나 친구가 함께 묵기에 이상적인 객실입니다. 넓은 더블 침대와 전용 욕실로 따뜻하고 아늑한 분위기를 제공합니다." data-en="Ideal for couples or friends with a spacious double bed and private bathroom.">커플이나 친구가 함께 묵기에 이상적인 객실입니다. 넓은 더블 침대와 전용 욕실로 따뜻하고 아늑한 분위기를 제공합니다.</p>
+                        <div class="amenity-chips"><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🫧 공기청정</span><span>🔌 220V</span><span>🧊 냉장고</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/handicOne.png" alt="Handic Room">
+                    <div class="info">
+                        <h3 data-ko="장애인 편의 객실" data-en="Handic Room">장애인 편의 객실</h3>
+                        <p class="room-subline" data-ko="모두를 위한 배려 있는 객실" data-en="Accessible Accommodation">모두를 위한 배려 있는 객실</p>
+                        <p class="room-desc" data-ko="휠체어 이용객을 고려해 턱을 줄이고 넓은 슬라이딩 도어를 적용한 객실입니다. 안전한 동선과 넓은 욕실을 제공합니다." data-en="Barrier-free room with wide sliding door and safer circulation.">휠체어 이용객을 고려해 턱을 줄이고 넓은 슬라이딩 도어를 적용한 객실입니다. 안전한 동선과 넓은 욕실을 제공합니다.</p>
+                        <div class="amenity-chips"><span>♿ Accessible</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🔌 220V</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/twinOne.png" alt="Twin Bunk Room">
+                    <div class="info">
+                        <h3 data-ko="트윈벙크룸" data-en="Twin Bunk Room">트윈벙크룸</h3>
+                        <p class="room-subline" data-ko="실용적인 이층 침대 객실" data-en="A Practical Bunk Bed Room">실용적인 이층 침대 객실</p>
+                        <p class="room-desc" data-ko="공간 활용도가 높아 가성비를 중시하는 여행자에게 인기 있는 객실입니다. 독립된 침대 구조로 프라이버시를 지켜줍니다." data-en="Efficient bunk layout with privacy and affordability.">공간 활용도가 높아 가성비를 중시하는 여행자에게 인기 있는 객실입니다. 독립된 침대 구조로 프라이버시를 지켜줍니다.</p>
+                        <div class="amenity-chips"><span>🛏 Bunk</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🧊 냉장고</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/twin.jpg" alt="Twin Room">
+                    <div class="info">
+                        <h3 data-ko="트윈룸" data-en="Twin Room">트윈룸</h3>
+                        <p class="room-subline" data-ko="친구와 나란히, 독립적인 휴식" data-en="Side by Side, Comfortable Rest">친구와 나란히, 독립적인 휴식</p>
+                        <p class="room-desc" data-ko="싱글 침대 2개가 나란히 배치되어 친구나 동료와 편하게 머물 수 있습니다. 서로 간섭 없이 쉬기 좋은 구조입니다." data-en="Two single beds side by side, ideal for companions.">싱글 침대 2개가 나란히 배치되어 친구나 동료와 편하게 머물 수 있습니다. 서로 간섭 없이 쉬기 좋은 구조입니다.</p>
+                        <div class="amenity-chips"><span>🛏🛏 Twin Beds</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🔌 220V</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/tripleOne.png" alt="Triple Room">
+                    <div class="info">
+                        <h3 data-ko="트리플룸" data-en="Triple Room">트리플룸</h3>
+                        <p class="room-subline" data-ko="소규모 그룹에게 완벽한 객실" data-en="Perfect for Small Groups">소규모 그룹에게 완벽한 객실</p>
+                        <p class="room-desc" data-ko="싱글 1개 + 더블 1개 구성으로 3인 여행에 적합합니다. 함께 머물면서도 편안함을 놓치지 않는 실용적인 선택입니다." data-en="Single + double bed setup for 3 guests.">싱글 1개 + 더블 1개 구성으로 3인 여행에 적합합니다. 함께 머물면서도 편안함을 놓치지 않는 실용적인 선택입니다.</p>
+                        <div class="amenity-chips"><span>👥 3 Guests</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🧼 욕실</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/familyOne.png" alt="Quadruple Room">
+                    <div class="info">
+                        <h3 data-ko="쿼드러플룸" data-en="Quadruple Room">쿼드러플룸</h3>
+                        <p class="room-subline" data-ko="프라이버시와 가성비를 모두 잡은 객실" data-en="Privacy and Value for Groups">프라이버시와 가성비를 모두 잡은 객실</p>
+                        <p class="room-desc" data-ko="2층 침대 2세트로 최대 4명까지 이용 가능하며, 친구 그룹 여행에 적합합니다." data-en="Two bunk sets for up to 4 guests.">2층 침대 2세트로 최대 4명까지 이용 가능하며, 친구 그룹 여행에 적합합니다.</p>
+                        <div class="amenity-chips"><span>👥 4 Guests</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🧊 냉장고</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/familyNew.jpg" alt="Standard Family Room">
+                    <div class="info">
+                        <h3 data-ko="스탠다드 패밀리룸" data-en="Standard Family Room">스탠다드 패밀리룸</h3>
+                        <p class="room-subline" data-ko="함께 머물기에 딱 좋은 객실" data-en="A Room Made for Sharing">함께 머물기에 딱 좋은 객실</p>
+                        <p class="room-desc" data-ko="더블 침대 2개가 준비된 넓은 객실로 가족과 친구 그룹이 함께 머물기 좋습니다." data-en="Two double beds for family or friend groups.">더블 침대 2개가 준비된 넓은 객실로 가족과 친구 그룹이 함께 머물기 좋습니다.</p>
+                        <div class="amenity-chips"><span>🛏🛏 Double Beds</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🔌 220V</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <img src="images/deluxeFamilyOne.jpg" alt="Deluxe Family Room">
+                    <div class="info">
+                        <h3 data-ko="디럭스 패밀리룸" data-en="Deluxe Family Room">디럭스 패밀리룸</h3>
+                        <p class="room-subline" data-ko="여유와 전망을 갖춘 프리미엄 객실" data-en="Spacious Comfort with a View">여유와 전망을 갖춘 프리미엄 객실</p>
+                        <p class="room-desc" data-ko="가장 넓고 쾌적한 객실로, 시원한 전망과 넉넉한 공간을 제공합니다." data-en="Largest room with a wide view and premium comfort.">가장 넓고 쾌적한 객실로, 시원한 전망과 넉넉한 공간을 제공합니다.</p>
+                        <div class="amenity-chips"><span>⭐ Premium</span><span>📶 Wi-Fi</span><span>🚭 Non-smoking</span><span>❄ A/C</span><span>🧼 넓은 욕실</span></div>
+                        <a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a>
+                    </div>
+                </article>
+
             </div>
         </section>
     </main>
