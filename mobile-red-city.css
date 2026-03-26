@@ -628,3 +628,36 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Home first-screen focus */
+.home-main {
+    padding: 0;
+}
+
+.home-hero-city {
+    height: calc(100vh - 72px - 60px);
+    border-radius: 0;
+}
+
+.home-hero-city .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 20px 16px 10px;
+    background: linear-gradient(180deg, rgba(120, 0, 12, 0.7) 0%, rgba(120, 0, 12, 0) 100%);
+}
+
+.home-hero-city .hero-city-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.home-book-now {
+    bottom: 62px;
+    z-index: 56;
+}
