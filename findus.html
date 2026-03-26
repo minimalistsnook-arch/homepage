@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var isMobile = window.matchMedia("(max-width: 900px)").matches;
+            if (!isMobile) return;
+            var path = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+            if (path.indexOf("mobile-") === 0) return;
+            window.location.replace("mobile-location.html" + window.location.search + window.location.hash);
+        })();
+    </script>
     <title data-en="Find Your Way To Us - WeGoInn" data-ko="오시는 길 - 위고인">Find Your Way To Us - WeGoInn</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="button-styles.css">

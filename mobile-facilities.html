@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wegoinn Mobile - Facilities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-red-city.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="mobile-header">
+        <a class="brand" href="mobile-home.html"><img src="images/logoRed.png" alt="Wegoinn"></a>
+        <div class="lang-toggle"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ko">KO</button></div>
+        <button class="menu-btn" aria-label="menu"><span></span><span></span><span></span></button>
+        <img class="corner-sloth" src="images/slothSit.png" alt="sloth">
+    </header>
+    <nav class="mobile-menu">
+        <a href="mobile-about.html" data-ko="소개" data-en="About">소개</a>
+        <a href="mobile-rooms.html" data-ko="객실 유형" data-en="Room Types">객실 유형</a>
+        <a href="mobile-location.html" data-ko="찾아오시는 길" data-en="Location">찾아오시는 길</a>
+        <a href="mobile-faq.html" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</a>
+        <a href="mobile-contact.html" data-ko="연락처" data-en="Contact">연락처</a>
+    </nav>
+
+    <main class="main">
+        <section class="panel">
+            <h2 class="section-title" data-ko="시설" data-en="Facilities">시설</h2>
+            <p class="section-sub" data-ko="facilities.html의 핵심 시설을 아이콘 카드로 재배치했습니다." data-en="Facilities are reflowed into icon cards.">facilities.html의 핵심 시설을 아이콘 카드로 재배치했습니다.</p>
+            <div class="grid-two">
+                <article class="facility-card"><h4>Cafe Liberty</h4><p data-ko="아침부터 저녁까지 이용 가능한 카페" data-en="All-day cafe for guests">아침부터 저녁까지 이용 가능한 카페</p></article>
+                <article class="facility-card"><h4>Ippon Rakkidon</h4><p data-ko="저녁 시간대 식사/주류 공간" data-en="Dinner-time food and drinks">저녁 시간대 식사/주류 공간</p></article>
+                <article class="facility-card"><h4>Rooftop Bar</h4><p data-ko="도심 뷰를 즐기는 루프탑" data-en="Rooftop city view spot">도심 뷰를 즐기는 루프탑</p></article>
+                <article class="facility-card"><h4>Common Lounge</h4><p data-ko="게스트 커뮤니티 라운지" data-en="Shared guest lounge">게스트 커뮤니티 라운지</p></article>
+                <article class="facility-card"><h4>Laundry</h4><p data-ko="장기 투숙을 위한 세탁 공간" data-en="Laundry for long stays">장기 투숙을 위한 세탁 공간</p></article>
+                <article class="facility-card"><h4>Luggage Storage</h4><p data-ko="체크인 전후 짐 보관" data-en="Storage before/after check-in">체크인 전후 짐 보관</p></article>
+            </div>
+            <div class="ig-row">
+                <a href="#">@libertree.cafe</a>
+                <a href="#">@ippon.rakkidon</a>
+            </div>
+        </section>
+    </main>
+
+    <nav class="mobile-bottom-nav">
+        <a href="mobile-home.html"><span class="icon">⌂</span><span data-ko="홈" data-en="Home">홈</span></a>
+        <a href="mobile-rooms.html"><span class="icon">🛏</span><span data-ko="객실" data-en="Rooms">객실</span></a>
+        <a class="active" href="mobile-facilities.html"><span class="icon">☕</span><span data-ko="시설" data-en="Facilities">시설</span></a>
+        <a href="mobile-location.html"><span class="icon">◎</span><span data-ko="위치" data-en="Location">위치</span></a>
+        <a href="mobile-reservations.html"><span class="icon">🗂</span><span data-ko="예약내역" data-en="Reservations">예약내역</span></a>
+    </nav>
+</div>
+<script src="mobile-red-city.js"></script>
+</body>
+</html>

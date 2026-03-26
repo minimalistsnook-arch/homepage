@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wegoinn Mobile - Rooms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-red-city.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="mobile-header">
+        <a class="brand" href="mobile-home.html"><img src="images/logoRed.png" alt="Wegoinn"></a>
+        <div class="lang-toggle"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ko">KO</button></div>
+        <button class="menu-btn" aria-label="menu"><span></span><span></span><span></span></button>
+        <img class="corner-sloth" src="images/slothOne.png" alt="sloth">
+    </header>
+    <nav class="mobile-menu">
+        <a href="mobile-about.html" data-ko="소개" data-en="About">소개</a>
+        <a href="mobile-facilities.html" data-ko="시설" data-en="Facilities">시설</a>
+        <a href="mobile-location.html" data-ko="찾아오시는 길" data-en="Location">찾아오시는 길</a>
+        <a href="mobile-faq.html" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</a>
+        <a href="mobile-contact.html" data-ko="연락처" data-en="Contact">연락처</a>
+    </nav>
+
+    <main class="main">
+        <section class="panel">
+            <h2 class="section-title" data-ko="객실 유형" data-en="Room Types">객실 유형</h2>
+            <p class="section-sub" data-ko="roomtype.html의 정보를 카드 그리드로 단순화했습니다." data-en="Room list is converted into a vertical card grid.">roomtype.html의 정보를 카드 그리드로 단순화했습니다.</p>
+            <div class="rooms-grid">
+                <article class="room-card"><img src="images/singleNew.jpg" alt="Single"><div class="info"><h3>Single</h3><div class="room-meta"><span>🛏 1 Bed</span><span>👤 1</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
+                <article class="room-card"><img src="images/doubleOne.png" alt="Double"><div class="info"><h3>Double</h3><div class="room-meta"><span>🛏 1 Bed</span><span>👥 2</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
+                <article class="room-card"><img src="images/twinOne.png" alt="Bunk"><div class="info"><h3>Bunk</h3><div class="room-meta"><span>🛏 2 Beds</span><span>👥 2</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
+                <article class="room-card"><img src="images/familyNew.jpg" alt="Family"><div class="info"><h3>Family</h3><div class="room-meta"><span>🛏 Multi</span><span>👥 3-4</span></div><a class="reserve-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">RESERVE</a></div></article>
+            </div>
+        </section>
+    </main>
+
+    <nav class="mobile-bottom-nav">
+        <a href="mobile-home.html"><span class="icon">⌂</span><span data-ko="홈" data-en="Home">홈</span></a>
+        <a class="active" href="mobile-rooms.html"><span class="icon">🛏</span><span data-ko="객실" data-en="Rooms">객실</span></a>
+        <a href="mobile-facilities.html"><span class="icon">☕</span><span data-ko="시설" data-en="Facilities">시설</span></a>
+        <a href="mobile-location.html"><span class="icon">◎</span><span data-ko="위치" data-en="Location">위치</span></a>
+        <a href="mobile-reservations.html"><span class="icon">🗂</span><span data-ko="예약내역" data-en="Reservations">예약내역</span></a>
+    </nav>
+</div>
+<script src="mobile-red-city.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wegoinn Mobile - Location</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-red-city.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="mobile-header">
+        <a class="brand" href="mobile-home.html"><img src="images/logoRed.png" alt="Wegoinn"></a>
+        <div class="lang-toggle"><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="ko">KO</button></div>
+        <button class="menu-btn" aria-label="menu"><span></span><span></span><span></span></button>
+        <img class="corner-sloth" src="images/slothRecline.png" alt="sloth">
+    </header>
+    <nav class="mobile-menu">
+        <a href="mobile-about.html" data-ko="소개" data-en="About">소개</a>
+        <a href="mobile-rooms.html" data-ko="객실 유형" data-en="Room Types">객실 유형</a>
+        <a href="mobile-facilities.html" data-ko="시설" data-en="Facilities">시설</a>
+        <a href="mobile-faq.html" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</a>
+        <a href="mobile-contact.html" data-ko="연락처" data-en="Contact">연락처</a>
+    </nav>
+
+    <main class="main">
+        <section class="panel">
+            <h2 class="section-title" data-ko="찾아오시는 길" data-en="Location">찾아오시는 길</h2>
+            <p class="section-sub" data-ko="인천공항에서 신촌역 7/8번 출구까지 경로를 순차형으로 정리했습니다." data-en="Sequential route from Incheon Airport to Sinchon Exit 7/8.">인천공항에서 신촌역 7/8번 출구까지 경로를 순차형으로 정리했습니다.</p>
+            <div class="location-flow">
+                <div class="flow-item"><div class="dot">1</div><div><h4>Subway</h4><p data-ko="공항철도 탑승 후 홍대입구 환승, 신촌역 이동" data-en="Airport railroad -> transfer -> Sinchon station">공항철도 탑승 후 홍대입구 환승, 신촌역 이동</p></div></div>
+                <div class="flow-item"><div class="dot">2</div><div><h4>Bus 6002</h4><p data-ko="공항버스 6002 탑승 후 신촌 정류장 하차" data-en="Take airport bus 6002 to Sinchon stop">공항버스 6002 탑승 후 신촌 정류장 하차</p></div></div>
+                <div class="flow-item"><div class="dot">3</div><div><h4>Taxi</h4><p data-ko="위고인 호스텔(신촌로 141) 목적지로 이동" data-en="Taxi to Wegoinn Hostel, Sinchon-ro 141">위고인 호스텔(신촌로 141) 목적지로 이동</p></div></div>
+            </div>
+            <div class="map-box">
+                <img src="images/infographicRed.png" alt="map" style="width:100%;border-radius:10px;display:block;">
+                <a target="_blank" rel="noopener" href="https://maps.google.com/?q=141+Sinchon-ro+Seodaemun-gu+Seoul">Open in Maps (길찾기)</a>
+            </div>
+        </section>
+    </main>
+
+    <nav class="mobile-bottom-nav">
+        <a href="mobile-home.html"><span class="icon">⌂</span><span data-ko="홈" data-en="Home">홈</span></a>
+        <a href="mobile-rooms.html"><span class="icon">🛏</span><span data-ko="객실" data-en="Rooms">객실</span></a>
+        <a href="mobile-facilities.html"><span class="icon">☕</span><span data-ko="시설" data-en="Facilities">시설</span></a>
+        <a class="active" href="mobile-location.html"><span class="icon">◎</span><span data-ko="위치" data-en="Location">위치</span></a>
+        <a href="mobile-reservations.html"><span class="icon">🗂</span><span data-ko="예약내역" data-en="Reservations">예약내역</span></a>
+    </nav>
+</div>
+<script src="mobile-red-city.js"></script>
+</body>
+</html>

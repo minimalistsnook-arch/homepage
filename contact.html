@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var isMobile = window.matchMedia("(max-width: 900px)").matches;
+            if (!isMobile) return;
+            var path = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+            if (path.indexOf("mobile-") === 0) return;
+            window.location.replace("mobile-contact.html" + window.location.search + window.location.hash);
+        })();
+    </script>
     <title data-en="Contact Us - WeGoInn" data-ko="위고인 연락처">Contact Us - WeGoInn</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="button-styles.css">
