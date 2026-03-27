@@ -18,12 +18,13 @@
         <img class="corner-sloth" src="images/slothJoy.png" alt="sloth">
     </header>
     <nav class="mobile-menu">
-        <a href="mobile-about.html" data-ko="소개" data-en="About">소개</a>
-        <a href="mobile-rooms.html" data-ko="객실 유형" data-en="Room Types">객실 유형</a>
-        <a href="mobile-facilities.html" data-ko="시설" data-en="Facilities">시설</a>
-        <a href="mobile-location.html" data-ko="찾아오시는 길" data-en="Location">찾아오시는 길</a>
-        <a href="mobile-faq.html" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</a>
-    </nav>
+            <a href="mobile-about.html" data-ko="소개" data-en="About">소개</a>
+            <a href="mobile-rooms.html" data-ko="객실 유형" data-en="Room Types">객실 유형</a>
+            <a href="mobile-facilities.html" data-ko="시설" data-en="Facilities">시설</a>
+            <a href="mobile-location.html" data-ko="찾아오시는 길" data-en="Location">찾아오시는 길</a>
+            <a href="mobile-faq.html" data-ko="자주 묻는 질문" data-en="FAQ">자주 묻는 질문</a>
+            <a href="mobile-contact.html" data-ko="연락처" data-en="Contact">연락처</a>
+        </nav>
 
     <main class="main">
         <section class="panel">
@@ -33,10 +34,13 @@
                 <a href="mailto:wegoinnteam@gmail.com">✉ Email Us</a>
                 <a href="https://maps.google.com/?q=141+Sinchon-ro+Seodaemun-gu+Seoul" target="_blank" rel="noopener">📍 Open in Maps</a>
             </div>
-            <form class="message-form" onsubmit="event.preventDefault();alert('Message submitted.');">
-                <input type="text" placeholder="Name">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Send</button>
+            <form class="message-form" action="https://formspree.io/f/xjgpkpny" method="POST">
+                <input type="hidden" name="_subject" value="[Wegoinn Mobile Contact] New Inquiry">
+                <input type="email" id="contactEmail" name="email" placeholder="Email (required)" required>
+                <input type="text" id="contactReservation" name="reservation" placeholder="Reservation Number (optional)">
+                <input type="text" id="contactName" name="name" placeholder="Name">
+                <textarea id="contactMessage" name="message" placeholder="Message" required></textarea>
+                <button type="submit">SEND</button>
             </form>
         </section>
     </main>
@@ -50,5 +54,26 @@
     </nav>
 </div>
 <script src="mobile-red-city.js"></script>
+
+<script id="formspree-submit-handler">
+(function () {
+  const forms = document.querySelectorAll('form[action="https://formspree.io/f/xjgpkpny"]');
+  forms.forEach((form) => {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+      } catch (_) {}
+      alert('제출되었습니다.');
+      form.reset();
+    });
+  });
+})();
+</script>
 </body>
 </html>

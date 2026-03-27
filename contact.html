@@ -91,9 +91,9 @@
         <ul class="sidebar-menu">
             <li><a href="about.html" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
             <li><a href="roomtype.html" class="sidebar-link" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
-            <li><a href="findus.html" class="sidebar-link" data-en="Find your way to us" data-ko="찾아오시는 길">Find your way to us</a></li>
-            <li><a href="faq.html" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
             <li><a href="facilities.html" class="sidebar-link" data-en="Facilities" data-ko="시설">Facilities</a></li>
+            <li><a href="findus.html" class="sidebar-link" data-en="Location" data-ko="찾아오시는 길">Location</a></li>
+            <li><a href="faq.html" class="sidebar-link" data-en="FAQ" data-ko="자주 묻는 질문">FAQ</a></li>
             <li><a href="contact.html" class="sidebar-link active" data-en="Contact us" data-ko="연락처">Contact us</a></li>
             <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
         </ul>
@@ -138,6 +138,22 @@
                 </div>
                 <div class="contact-modern-form">
                     <img src="images/groupOne.png" alt="Contact Form Image" class="contact-form-image">
+                    <form action="https://formspree.io/f/xjgpkpny" method="POST" class="contact-formspree">
+                        <input type="hidden" name="_subject" value="[Wegoinn Contact] New Inquiry">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email (required)" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="reservation" placeholder="Reservation Number (optional)">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-modern-btn">SEND</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -165,5 +181,26 @@
     </div>
 
     <script src="script.js"></script>
+
+<script id="formspree-submit-handler">
+(function () {
+  const forms = document.querySelectorAll('form[action="https://formspree.io/f/xjgpkpny"]');
+  forms.forEach((form) => {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+      } catch (_) {}
+      alert('제출되었습니다.');
+      form.reset();
+    });
+  });
+})();
+</script>
 </body>
 </html> 
