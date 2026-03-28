@@ -969,3 +969,139 @@ body {
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
+
+/* Home hero full-bleed rebuild (mobile-first) */
+.page-home {
+    --home-header-h: 72px;
+    --home-nav-h: 76px;
+}
+
+.page-home,
+.page-home body {
+    overflow: hidden;
+}
+
+.page-home .mobile-app {
+    max-width: 540px;
+    height: var(--app-vh, 100vh);
+    min-height: var(--app-vh, 100vh);
+    padding-top: var(--home-header-h);
+    padding-bottom: 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+.page-home .mobile-header,
+.page-home .mobile-menu,
+.page-home .mobile-bottom-nav {
+    max-width: 540px;
+}
+
+.page-home .home-main {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: var(--home-header-h);
+    bottom: calc(var(--home-nav-h) + env(safe-area-inset-bottom, 0px));
+    width: 100%;
+    max-width: 540px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #14070b;
+}
+
+.page-home .home-hero-city {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    background: #14070b;
+}
+
+.page-home .home-hero-city .hero-city-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 36%;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.page-home .home-hero-city::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.08) 45%, rgba(0, 0, 0, 0.24) 100%);
+    pointer-events: none;
+}
+
+.page-home .home-hero-city .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 24px 18px 12px;
+    background: linear-gradient(180deg, rgba(120, 0, 12, 0.66) 0%, rgba(120, 0, 12, 0) 100%);
+}
+
+.page-home .home-hero-city h1 {
+    margin: 0;
+    color: #fff;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-size: clamp(2.05rem, 7.2vw, 2.72rem);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
+}
+
+.page-home .home-hero-city p {
+    margin: 8px 0 0;
+    color: #fff;
+    font-size: clamp(0.98rem, 3.9vw, 1.16rem);
+    font-weight: 600;
+    line-height: 1.35;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+}
+
+.page-home .home-book-now {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(var(--home-nav-h) + env(safe-area-inset-bottom, 0px) + 12px);
+    width: calc(100% - 28px);
+    max-width: 512px;
+    z-index: 56;
+}
+
+.page-home .home-book-now a {
+    display: block;
+    text-align: center;
+    background: #fff;
+    color: #a90f29;
+    border: 2px solid #ffe4e9;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.02rem;
+    letter-spacing: 0.06em;
+    padding: 15px;
+    box-shadow: 0 16px 30px rgba(117, 8, 25, 0.28);
+}
+
+.page-home .mobile-bottom-nav {
+    height: calc(var(--home-nav-h) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    z-index: 60;
+}
+
+.page-home .home-reveal-photo,
+.page-home .home-rise-logo {
+    display: none;
+}
