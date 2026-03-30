@@ -67,7 +67,7 @@
         .home-book {
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) translateY(0);
             bottom: 40px;
             width: 85%;
             height: 68px;
@@ -83,8 +83,12 @@
             font-weight: 700;
             letter-spacing: 0.06em;
             z-index: 3;
+            transition: transform 0.24s ease;
         }
 
+        body:not(.home-nav-hidden) .home-book {
+            transform: translateX(-50%) translateY(-84px);
+        }
 
         .mobile-bottom-nav {
             transition: transform 0.24s ease, opacity 0.24s ease;
