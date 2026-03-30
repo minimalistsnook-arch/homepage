@@ -11,6 +11,7 @@
     <style>
         :root {
             --hero-height: clamp(30rem, 66vh, 37.5rem);
+            --header-height: 4.5rem;
             --copy-side: clamp(0.9rem, 5vw, 1.25rem);
             --copy-top: clamp(2rem, 8vh, 3.25rem);
             --book-bottom: clamp(1rem, 4.8vh, 2.5rem);
@@ -27,15 +28,22 @@
             overscroll-behavior: none;
         }
 
+        .mobile-app {
+            min-height: var(--app-vh, 100vh);
+            padding-bottom: 0;
+        }
+
         .home-main {
             padding: 0;
+            height: calc(var(--app-vh, 100vh) - var(--header-height));
+            min-height: calc(100vh - var(--header-height));
         }
 
         .home-hero {
             position: relative;
-            height: var(--hero-height);
-            min-height: 24rem;
-            max-height: 75vh;
+            height: 100%;
+            min-height: 0;
+            max-height: none;
             overflow: hidden;
             background: #cb0018;
         }
@@ -44,7 +52,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center top;
             display: block;
             user-select: none;
             pointer-events: none;
