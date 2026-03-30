@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobile-red-city.css">
     <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            overscroll-behavior: none;
+        }
+
         .home-main {
             padding: 0;
         }
@@ -135,9 +142,8 @@
     if (!nav) return;
 
     let hidden = true;
-    let lastScrollY = window.scrollY || 0;
     let touchY = null;
-    const threshold = 10;
+    const threshold = 2;
 
     function setHidden(nextHidden) {
         hidden = nextHidden;
@@ -145,19 +151,6 @@
     }
 
     setHidden(true);
-
-    window.addEventListener('scroll', function () {
-        const now = window.scrollY || 0;
-        const delta = now - lastScrollY;
-        if (Math.abs(delta) < 2) return;
-
-        if (delta < 0) {
-            setHidden(false);
-        } else {
-            setHidden(true);
-        }
-        lastScrollY = now;
-    }, { passive: true });
 
     window.addEventListener('touchstart', function (e) {
         if (!e.touches || !e.touches.length) return;
