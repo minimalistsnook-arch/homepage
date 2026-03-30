@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="mobile-red-city.css">
     <style>
         body.page-home {
-            min-height: 100vh;
             margin: 0;
-            background: #f5f5f5;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 24px 12px;
+            background: #efefef;
+            padding: 12px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .page-home .mobile-app {
@@ -24,59 +25,56 @@
             max-width: 100%;
             height: 844px;
             min-height: 844px;
-            border-radius: 36px;
-            border: 1px solid #e6e6e6;
-            box-shadow: 0 30px 56px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
             padding: 0;
+            border-radius: 0;
+            border: 1px solid #d7d7d7;
+            overflow: hidden;
             background: #fff;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         }
 
         .browser-top {
-            padding: 12px 14px 10px;
-            background: #f7f7f7;
-            border-bottom: 1px solid #e6e6e6;
+            background: #efefef;
+            border-bottom: 1px solid #dddddd;
+            padding: 8px 10px 6px;
         }
 
-        .browser-status {
+        .status-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #525252;
+            color: #555;
             font-size: 12px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            line-height: 1;
         }
 
-        .browser-url {
-            height: 44px;
-            border-radius: 16px;
-            border: 1px solid #e6e6e6;
-            background: #fff;
+        .url-bar {
+            height: 40px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            background: #f6f6f6;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            font-size: 18px;
+            font-size: 34px;
             font-weight: 700;
-            color: #262626;
+            color: #2f2f2f;
         }
 
-        .browser-url .left,
-        .browser-url .right {
+        .url-bar .left,
+        .url-bar .right {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            color: #9ca3af;
-            font-size: 18px;
+            color: #8d8d8d;
+            font-size: 20px;
         }
 
-        .browser-url .left {
-            left: 14px;
-        }
-
-        .browser-url .right {
-            right: 14px;
-        }
+        .url-bar .left { left: 12px; }
+        .url-bar .right { right: 12px; }
 
         .page-home .mobile-header {
             position: relative;
@@ -84,236 +82,236 @@
             left: auto;
             transform: none;
             max-width: none;
-            width: 100%;
-            height: auto;
-            padding: 14px;
-            display: flex;
+            height: 74px;
+            padding: 10px 14px;
+            border-bottom: 1px solid #ececec;
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 10px;
             align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #f0f0f0;
+            background: #fff;
         }
 
-        .brand-wordmark {
-            color: #ea2333;
-            line-height: 1;
-        }
-
-        .brand-wordmark .w1 {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .brand-wordmark .w2 {
-            margin-top: 4px;
-            font-size: 10px;
-            letter-spacing: 0.26em;
-            font-weight: 700;
+        .page-home .brand img {
+            width: 90px;
+            height: auto;
+            display: block;
         }
 
         .page-home .lang-toggle {
-            width: 104px;
-            height: 46px;
-            padding: 4px;
-            background: #eef0f4;
-            border-radius: 999px;
+            width: 102px;
+            height: 40px;
+            padding: 3px;
             border: 0;
+            border-radius: 999px;
+            background: #ebedf1;
+            display: inline-flex;
             gap: 4px;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
         }
 
         .page-home .lang-btn {
             flex: 1;
-            height: 100%;
-            padding: 0;
+            border: 0;
             border-radius: 999px;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #646b78;
+            background: transparent;
+            padding: 0;
+        }
+
+        .page-home .lang-btn.active {
+            background: #e91f3b;
+            color: #fff;
+            box-shadow: 0 6px 14px rgba(233, 31, 59, 0.3);
         }
 
         .page-home .menu-btn {
-            width: 52px;
-            height: 52px;
-            border-radius: 16px;
-            font-size: 26px;
-            line-height: 1;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #334155;
-            background: #fafafa;
+            width: 44px;
+            height: 44px;
+            border: 2px solid #dadde2;
+            border-radius: 12px;
+            background: #f8f8f8;
+            display: grid;
+            place-content: center;
+            gap: 4px;
+            justify-self: end;
         }
 
         .page-home .menu-btn span {
-            display: none;
+            width: 18px;
+            height: 2px;
+            background: #475569;
+            border-radius: 2px;
+            display: block;
         }
 
         .page-home .corner-sloth {
             position: absolute;
-            right: -12px;
-            top: 26px;
-            width: 34px;
-            z-index: 2;
+            right: -3px;
+            top: 43px;
+            width: 24px;
+            z-index: 5;
         }
 
         .page-home .mobile-menu {
-            top: 162px;
-            max-width: 390px;
-            z-index: 40;
+            top: 114px;
+            left: 0;
+            transform: translateY(-10px);
+            max-width: none;
+            width: 100%;
+            z-index: 45;
+        }
+
+        .page-home .mobile-menu.open {
+            transform: translateY(0);
         }
 
         .page-home .main {
             padding: 0;
         }
 
-        .hero-mock {
+        .hero {
             position: relative;
-            height: 580px;
+            height: 525px;
             overflow: hidden;
-            background: #d50000;
+            background: #ca0016;
         }
 
-        .hero-mock-bg {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(213, 0, 0, 0.78), rgba(213, 0, 0, 0.78)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
-        }
-
-        .hero-lines {
-            position: absolute;
-            inset: 0;
-            opacity: 0.3;
-        }
-
-        .hero-lines .line-box {
-            position: absolute;
-            border: 4px solid #ffd9c9;
-            border-radius: 2px;
-        }
-
-        .hero-lines .line-circle {
-            position: absolute;
-            border: 4px solid #ff9d6d;
-            border-radius: 999px;
-        }
-
-        .hero-lines .line-horizontal {
-            position: absolute;
-            left: 0;
+        .hero img {
             width: 100%;
-            border-top: 4px solid #ffd9c9;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
         }
 
-        .hero-lines .line-dash {
+        .hero-copy {
             position: absolute;
-            left: 0;
-            width: 100%;
-            border-top: 4px dashed #ffd9c9;
-        }
-
-        .hero-text {
-            position: relative;
-            z-index: 2;
+            left: 16px;
+            top: 12px;
+            right: 16px;
             color: #fff;
-            padding: 24px 20px 0;
+            z-index: 2;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
         }
 
-        .hero-text h1 {
+        .hero-copy h1 {
             margin: 0;
-            font-size: 30px;
-            line-height: 1.12;
-            letter-spacing: -0.03em;
+            font-size: 52px;
+            line-height: 1.08;
+            letter-spacing: -0.04em;
             font-weight: 700;
         }
 
-        .hero-text p {
-            margin: 12px 0 0;
-            font-size: 18px;
+        .hero-copy p {
+            margin: 8px 0 0;
+            font-size: 35px;
             font-weight: 500;
+            letter-spacing: -0.02em;
         }
 
-        .hero-book-btn {
+        .hero-book {
             position: absolute;
             left: 50%;
-            bottom: 128px;
             transform: translateX(-50%);
-            width: 86%;
-            height: 74px;
+            bottom: 8px;
+            width: calc(100% - 34px);
+            height: 58px;
             border-radius: 999px;
             background: #fff;
-            border: 2px solid #ececec;
-            color: #e31d39;
+            border: 2px solid #dadada;
+            color: #e91f3b;
             text-decoration: none;
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 0.06em;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
             z-index: 2;
-            box-shadow: 0 18px 28px rgba(0, 0, 0, 0.2);
         }
 
         .page-home .mobile-bottom-nav {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 64px;
+            bottom: 74px;
             transform: none;
             max-width: none;
             width: 100%;
-            height: 72px;
-            padding: 0 4px;
-            border-top: 1px solid #e5e7eb;
-            align-items: center;
-            background: #fff;
-        }
-
-        .page-home .mobile-bottom-nav .icon {
-            border: 0;
-            width: auto;
-            height: auto;
-            font-size: 20px;
-            background: transparent;
+            height: 62px;
+            padding: 5px 6px;
+            border-top: 1px solid #ececec;
+            background: #f8f8f8;
         }
 
         .page-home .mobile-bottom-nav a {
+            color: #717171;
+            font-size: 11px;
+            font-weight: 600;
             gap: 3px;
-            font-size: 12px;
-            font-weight: 500;
-            color: #6b7280;
         }
 
-        .page-home .mobile-bottom-nav a.active,
+        .page-home .mobile-bottom-nav .icon {
+            width: 21px;
+            height: 21px;
+            border-radius: 999px;
+            border: 1px solid #dedede;
+            font-size: 11px;
+            background: #fff;
+        }
+
+        .page-home .mobile-bottom-nav a.active {
+            color: #e91f3b;
+        }
+
         .page-home .mobile-bottom-nav a.active .icon {
-            color: #ec1d3b;
-            font-weight: 700;
+            color: #e91f3b;
+            border-color: #f2bac5;
+            background: #ffeef2;
         }
 
         .android-controls {
             position: absolute;
-            bottom: 0;
             left: 0;
             right: 0;
-            height: 64px;
-            border-top: 1px solid #e5e7eb;
-            background: #f7f7f7;
-            display: flex;
+            bottom: 0;
+            height: 74px;
+            border-top: 1px solid #d9d9d9;
+            background: #ededed;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
             align-items: center;
-            justify-content: space-around;
-            color: #374151;
-            font-size: 26px;
+            justify-items: center;
+            font-size: 31px;
+            color: #5f6368;
+        }
+
+        @media (max-width: 420px) {
+            .page-home .mobile-app {
+                width: 100%;
+                height: calc(100vh - 24px);
+                min-height: 740px;
+            }
+
+            .hero-copy h1 { font-size: 12.8vw; }
+            .hero-copy p { font-size: 8.7vw; }
+            .hero-book { font-size: 8.5vw; }
         }
     </style>
 </head>
 <body class="page-home">
     <div class="mobile-app">
         <div class="browser-top" aria-hidden="true">
-            <div class="browser-status">
-                <div>5:42</div>
-                <div>📶 65%</div>
+            <div class="status-row">
+                <span>5:42</span>
+                <span>◉ 65%</span>
             </div>
-            <div class="browser-url">
+            <div class="url-bar">
                 <span class="left">☆</span>
                 <span>wegoinn.com</span>
                 <span class="right">↻</span>
@@ -322,10 +320,7 @@
 
         <header class="mobile-header">
             <a class="brand" href="mobile-home.html" aria-label="Wegoinn home">
-                <div class="brand-wordmark">
-                    <div class="w1">wegoinn</div>
-                    <div class="w2">HOSTEL</div>
-                </div>
+                <img src="images/logoRed.png" alt="Wegoinn">
             </a>
 
             <div class="lang-toggle">
@@ -333,7 +328,7 @@
                 <button class="lang-btn" data-lang="ko">KO</button>
             </div>
 
-            <button class="menu-btn" aria-label="menu">☰</button>
+            <button class="menu-btn" aria-label="menu"><span></span><span></span><span></span></button>
             <img class="corner-sloth" src="images/slothHi.png" alt="sloth">
         </header>
 
@@ -347,48 +342,33 @@
         </nav>
 
         <main class="main home-main">
-            <section class="hero-mock">
-                <div class="hero-mock-bg"></div>
-
-                <div class="hero-lines" aria-hidden="true">
-                    <div class="line-box" style="left:16px;top:96px;width:112px;height:160px;"></div>
-                    <div class="line-box" style="left:48px;top:192px;width:64px;height:64px;"></div>
-                    <div class="line-box" style="right:40px;top:80px;width:128px;height:256px;"></div>
-                    <div class="line-box" style="right:80px;top:176px;width:20px;height:20px;"></div>
-                    <div class="line-box" style="right:80px;top:240px;width:20px;height:20px;"></div>
-                    <div class="line-box" style="right:80px;top:304px;width:20px;height:20px;"></div>
-                    <div class="line-horizontal" style="bottom:80px;height:24px;"></div>
-                    <div class="line-dash" style="bottom:40px;"></div>
-                    <div class="line-box" style="left:20px;bottom:112px;width:112px;height:80px;"></div>
-                    <div class="line-box" style="right:16px;bottom:96px;width:96px;height:112px;"></div>
-                    <div class="line-circle" style="left:32px;bottom:160px;width:56px;height:56px;"></div>
-                    <div class="line-circle" style="right:64px;bottom:144px;width:56px;height:56px;"></div>
-                </div>
-
-                <div class="hero-text">
+            <section class="hero">
+                <img src="image copy 4.png" alt="Red city cover" draggable="false">
+                <div class="hero-copy">
                     <h1 data-ko="위고인 호스텔" data-en="Wegoinn Hostel">위고인 호스텔</h1>
-                    <p data-ko="Your Casual Seoul, We Go? INN!" data-en="Your Casual Seoul, We Go? INN!">Your Casual Seoul, We Go? INN!</p>
+                    <p data-ko="Your Casual Seoul, We Go? INN&#33;" data-en="Your Casual Seoul, We Go? INN&#33;">Your Casual Seoul, We Go? INN&#33;</p>
                 </div>
-
-                <a class="hero-book-btn" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener" data-ko="예약하기" data-en="BOOK NOW">예약하기</a>
+                <a class="hero-book" href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener">BOOK NOW</a>
             </section>
         </main>
 
         <nav class="mobile-bottom-nav">
             <a class="active" href="mobile-home.html"><span class="icon">⌂</span><span data-ko="홈" data-en="Home">홈</span></a>
-            <a href="mobile-rooms.html"><span class="icon">🛏️</span><span data-ko="객실" data-en="Rooms">객실</span></a>
+            <a href="mobile-rooms.html"><span class="icon">🛏</span><span data-ko="객실" data-en="Rooms">객실</span></a>
             <a href="mobile-facilities.html"><span class="icon">☕</span><span data-ko="시설" data-en="Facilities">시설</span></a>
             <a href="mobile-location.html"><span class="icon">◎</span><span data-ko="위치" data-en="Location">위치</span></a>
-            <a href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener"><span class="icon">🗂️</span><span data-ko="예약하기" data-en="Book Now">예약하기</span></a>
+            <a href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener"><span class="icon">🗂</span><span data-ko="예약하기" data-en="Book Now">예약하기</span></a>
         </nav>
 
         <div class="android-controls" aria-hidden="true">
             <span>‹</span>
-            <span>◁</span>
-            <span>○</span>
+            <span>›</span>
+            <span>⌂</span>
+            <span>☞</span>
             <span>☰</span>
         </div>
     </div>
+
     <script src="mobile-red-city.js"></script>
 </body>
 </html>
