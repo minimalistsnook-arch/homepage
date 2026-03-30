@@ -77,9 +77,20 @@
             letter-spacing: 0.06em;
             z-index: 3;
         }
+
+
+        .mobile-bottom-nav {
+            transition: transform 0.24s ease, opacity 0.24s ease;
+        }
+
+        body.home-nav-hidden .mobile-bottom-nav {
+            transform: translateX(-50%) translateY(calc(100% + 8px));
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
-<body>
+<body class="home-nav-hidden">
 <div class="mobile-app">
     <header class="mobile-header">
         <a class="brand" href="mobile-home.html"><img src="images/logoRed.png" alt="Wegoinn"></a>
@@ -117,5 +128,61 @@
     </nav>
 </div>
 <script src="mobile-red-city.js"></script>
+
+<script>
+(function () {
+    const nav = document.querySelector('.mobile-bottom-nav');
+    if (!nav) return;
+
+    let hidden = true;
+    let lastScrollY = window.scrollY || 0;
+    let touchY = null;
+    const threshold = 10;
+
+    function setHidden(nextHidden) {
+        hidden = nextHidden;
+        document.body.classList.toggle('home-nav-hidden', hidden);
+    }
+
+    setHidden(true);
+
+    window.addEventListener('scroll', function () {
+        const now = window.scrollY || 0;
+        const delta = now - lastScrollY;
+        if (Math.abs(delta) < 2) return;
+
+        if (delta < 0) {
+            setHidden(false);
+        } else {
+            setHidden(true);
+        }
+        lastScrollY = now;
+    }, { passive: true });
+
+    window.addEventListener('touchstart', function (e) {
+        if (!e.touches || !e.touches.length) return;
+        touchY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', function (e) {
+        if (touchY === null || !e.touches || !e.touches.length) return;
+        const currentY = e.touches[0].clientY;
+        const deltaY = currentY - touchY;
+
+        if (Math.abs(deltaY) < threshold) return;
+
+        if (deltaY < 0) {
+            // swipe up: show categories
+            setHidden(false);
+        } else {
+            // swipe down: hide categories
+            setHidden(true);
+        }
+
+        touchY = currentY;
+    }, { passive: true });
+})();
+</script>
+
 </body>
 </html>
