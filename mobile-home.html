@@ -31,50 +31,6 @@
             padding: 0;
         }
 
-        .browser-top {
-            height: 72px;
-            background: #ececec;
-            border-bottom: 1px solid #dddddd;
-            padding: 8px 10px;
-        }
-
-        .status-row {
-            height: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-            color: #595959;
-        }
-
-        .url-bar {
-            height: 40px;
-            margin-top: 6px;
-            border: 1px solid #dfdfdf;
-            border-radius: 10px;
-            background: #f6f6f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            font-size: 27px;
-            font-weight: 700;
-            color: #2f2f2f;
-        }
-
-        .url-bar .left,
-        .url-bar .right {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #8d8d8d;
-            font-size: 20px;
-            line-height: 1;
-        }
-
-        .url-bar .left { left: 12px; }
-        .url-bar .right { right: 12px; }
-
         .page-home .mobile-header {
             position: relative;
             top: auto;
@@ -157,16 +113,18 @@
         }
 
         .page-home .mobile-menu {
-            top: 144px;
-            left: 0;
-            transform: translateY(-10px);
-            max-width: none;
+            top: auto;
+            bottom: 132px;
+            left: 50%;
+            transform: translateX(-50%) translateY(12px);
+            max-width: 390px;
             width: 100%;
             z-index: 50;
+            border-top: 1px solid #ebebeb;
         }
 
         .page-home .mobile-menu.open {
-            transform: translateY(0);
+            transform: translateX(-50%) translateY(0);
         }
 
         .page-home .main {
@@ -321,18 +279,6 @@
 </head>
 <body class="page-home">
     <div class="mobile-app">
-        <div class="browser-top" aria-hidden="true">
-            <div class="status-row">
-                <span>5:42</span>
-                <span>◉ 65%</span>
-            </div>
-            <div class="url-bar">
-                <span class="left">☆</span>
-                <span>wegoinn.com</span>
-                <span class="right">↻</span>
-            </div>
-        </div>
-
         <header class="mobile-header">
             <a class="brand" href="mobile-home.html" aria-label="Wegoinn home">
                 <img src="images/logoRed.png" alt="Wegoinn">
@@ -358,7 +304,7 @@
 
         <main class="main home-main">
             <section class="hero">
-                <img src="image copy 4.png" alt="Red city cover" draggable="false">
+                <img src="wegoinn_hero_mobile.png" alt="Wegoinn mobile hero" draggable="false">
                 <div class="hero-copy">
                     <h1 data-ko="위고인 호스텔" data-en="Wegoinn Hostel">위고인 호스텔</h1>
                     <p data-ko="Your Casual Seoul, We Go&#63; INN&#33;" data-en="Your Casual Seoul, We Go&#63; INN&#33;">Your Casual Seoul, We Go&#63; INN&#33;</p>
