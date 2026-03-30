@@ -83,11 +83,19 @@
             font-weight: 700;
             letter-spacing: 0.06em;
             z-index: 3;
-            transition: transform 0.24s ease;
+            transition: opacity 0.24s ease, transform 0.24s ease;
         }
 
         body:not(.home-nav-hidden) .home-book {
             transform: translateX(-50%) translateY(-84px);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        body.home-nav-hidden .home-book {
+            transform: translateX(-50%) translateY(-84px);
+            opacity: 0;
+            pointer-events: none;
         }
 
         .mobile-bottom-nav {
