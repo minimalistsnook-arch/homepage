@@ -125,20 +125,48 @@
         <a href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener"><span class="icon">🗂</span><span data-ko="예약하기" data-en="Book Now">예약하기</span></a>
     </nav>
 </div>
-<script src="mobile-red-city.js?v=20260402-4"></script>
 <script>
 (function () {
-    function initFaqFallback() {
+    var lang = localStorage.getItem('mobile_lang') || 'ko';
+
+    function setLanguage(nextLang) {
+        document.querySelectorAll('[data-ko][data-en]').forEach(function (el) {
+            el.textContent = nextLang === 'ko' ? el.dataset.ko : el.dataset.en;
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+            btn.classList.toggle('active', btn.dataset.lang === nextLang);
+        });
+
+        localStorage.setItem('mobile_lang', nextLang);
+        document.documentElement.lang = nextLang;
+    }
+
+    function initMenu() {
+        var btn = document.querySelector('.menu-btn');
+        var menu = document.querySelector('.mobile-menu');
+        if (!btn || !menu) return;
+
+        btn.addEventListener('click', function () {
+            menu.classList.toggle('open');
+        });
+
+        menu.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                menu.classList.remove('open');
+            });
+        });
+    }
+
+    function initFaq() {
         var items = document.querySelectorAll('.faq-item');
         if (!items.length) return;
 
         items.forEach(function (item) {
             var btn = item.querySelector('.faq-q');
-            if (!btn || btn.dataset.faqBound === '1') return;
+            if (!btn) return;
 
-            btn.dataset.faqBound = '1';
-            btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
-
+            btn.setAttribute('aria-expanded', 'false');
             btn.addEventListener('click', function () {
                 var isOpen = item.classList.contains('open') || item.classList.contains('active');
                 item.classList.toggle('open', !isOpen);
@@ -148,11 +176,17 @@
         });
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initFaqFallback);
-    } else {
-        initFaqFallback();
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                setLanguage(btn.dataset.lang);
+            });
+        });
+
+        setLanguage(lang);
+        initMenu();
+        initFaq();
+    });
 })();
 </script>
 </body>
