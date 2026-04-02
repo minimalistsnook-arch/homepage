@@ -491,7 +491,8 @@ body {
     border-top: 1px solid #edf0f5;
 }
 
-.faq-item.open .faq-a {
+.faq-item.open .faq-a,
+.faq-item.active .faq-a {
     display: block;
 }
 

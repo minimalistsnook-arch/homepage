@@ -44,6 +44,7 @@
             qBtn.addEventListener('click', () => {
                 const isOpen = item.classList.contains('open');
                 item.classList.toggle('open', !isOpen);
+                item.classList.toggle('active', !isOpen);
                 qBtn.setAttribute('aria-expanded', String(!isOpen));
             });
         });
