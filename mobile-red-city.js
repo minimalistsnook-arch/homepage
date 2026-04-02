@@ -32,6 +32,23 @@
         });
     }
 
+    function initFaqAccordion() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        if (!faqItems.length) return;
+
+        faqItems.forEach((item) => {
+            const qBtn = item.querySelector('.faq-q');
+            if (!qBtn) return;
+
+            qBtn.setAttribute('aria-expanded', 'false');
+            qBtn.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                item.classList.toggle('open', !isOpen);
+                qBtn.setAttribute('aria-expanded', String(!isOpen));
+            });
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         setAppVh();
         window.addEventListener('resize', setAppVh, { passive: true });
@@ -43,5 +60,6 @@
 
         setLanguage(lang);
         initMenu();
+        initFaqAccordion();
     });
 })();
