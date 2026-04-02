@@ -125,6 +125,35 @@
         <a href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener"><span class="icon">🗂</span><span data-ko="예약하기" data-en="Book Now">예약하기</span></a>
     </nav>
 </div>
-<script src="mobile-red-city.js?v=20260402-2"></script>
+<script src="mobile-red-city.js?v=20260402-3"></script>
+<script>
+(function () {
+    function initFaqFallback() {
+        var items = document.querySelectorAll('.faq-item');
+        if (!items.length) return;
+
+        items.forEach(function (item) {
+            var btn = item.querySelector('.faq-q');
+            if (!btn || btn.dataset.faqBound === '1') return;
+
+            btn.dataset.faqBound = '1';
+            btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+
+            btn.addEventListener('click', function () {
+                var isOpen = item.classList.contains('open') || item.classList.contains('active');
+                item.classList.toggle('open', !isOpen);
+                item.classList.toggle('active', !isOpen);
+                btn.setAttribute('aria-expanded', String(!isOpen));
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFaqFallback);
+    } else {
+        initFaqFallback();
+    }
+})();
+</script>
 </body>
 </html>
