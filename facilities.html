@@ -18,270 +18,393 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* New Color Palette Overrides for Facilities Page */
-        /* Palette: #e40404 (red), #BB8377 (warm tan), #FFF5F0 (light cream), #4A271F (deep brown) */
-        
-        /* Main background - soft cream */
         body {
-            background-color: #FFF5F0;
-        }
-        
-        /* Hero section - company red background */
-        .facilities-hero-section {
-            background-color: #e40404;
-            padding: 80px 0;
-        }
-        
-        /* Main title - white for contrast against tan background */
-        .facilities-hero-title {
-            color: #FFF5F0 !important;
-        }
-        
-        /* Headlines - white for contrast against tan background */
-        .facilities-hero-headline {
-            color: #FFF5F0 !important;
-        }
-        
-        /* Subheadline - light cream for subtle contrast */
-        .facilities-hero-subheadline {
-            color: #FFF5F0 !important;
-        }
-        
-        /* Service numbers - company red for accent */
-        .service-number {
-            color: #e40404 !important;
-        }
-        
-        /* Service titles - deep brown */
-        .service-title {
-            color: #4A271F !important;
-        }
-        
-        /* Service descriptions - white for contrast against red background */
-        .service-desc {
-            color: #FFF5F0 !important;
-        }
-        
-        /* Facility section backgrounds - alternating cream and tan */
-        .facility-section {
-            background-color: #FFF5F0;
-            padding: 80px 0;
-        }
-        
-        .facility-section:nth-child(even) {
-            background-color: #BB8377;
-        }
-        
-        /* Section titles - deep brown */
-        .facility-section h2 {
-            color: #4A271F !important;
-        }
-        
-        /* Section descriptions - warm tan */
-        .section-description {
-            color: #BB8377 !important;
-        }
-        
-        /* Image scroll containers - clean styling */
-        .image-scroll-container {
-            background-color: #FFF5F0;
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 30px;
-            position: relative; /* Added for positioning arrows */
-            overflow: visible; /* Ensure arrows are not clipped */
-            min-height: 80px; /* Ensure enough height for arrows */
-        }
-        
-        /* Scroll images - enhanced borders */
-        .scroll-image {
-            border: 3px solid #BB8377;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            display: inline-block; /* Ensure images are inline */
-            margin-right: 10px; /* Space between images */
-        }
-        
-        .scroll-image:hover {
-            border-color: #e40404;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(228, 4, 4, 0.2);
+            background: #f7f1e8;
         }
 
-        /* Scroll arrow styles */
-        .scroll-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #BB8377;
-            color: #FFF5F0;
-            border: 2px solid #FFF5F0;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000; /* Ensure arrows are above images */
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-            font-size: 1.5rem;
-            transition: background 0.2s, color 0.2s, border 0.2s;
-            opacity: 1 !important;
-            pointer-events: auto !important;
-        }
-        .scroll-arrow:hover {
-            background: #e40404;
-            color: #FFF5F0;
-            border: 2px solid #e40404;
-        }
-
-        .scroll-arrow.left {
-            left: 10px;
-        }
-
-        .scroll-arrow.right {
-            right: 10px;
-        }
-        .image-scroll-container:hover .scroll-arrow,
-        .image-scroll-container:focus-within .scroll-arrow {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        
-        /* Footer - deep brown background */
         .footer {
-            background-color: #4A271F !important;
-            color: #FFF5F0 !important;
+            background-color: #3a241d !important;
+            color: #f8f3ed !important;
         }
-        
-        /* Mobile language toggle - warm tan background */
+
         .mobile-language-toggle {
-            background-color: #BB8377;
+            background-color: #b78565;
             border-radius: 25px;
             padding: 8px;
         }
-        
+
         .mobile-language-btn {
-            background-color: #FFF5F0;
-            color: #4A271F;
+            background-color: #fffaf4;
+            color: #3e2a21;
         }
-        
+
         .mobile-language-btn.active {
-            background-color: #e40404;
-            color: #FFF5F0;
+            background-color: #b33b22;
+            color: #fffaf4;
         }
-        
-        /* Facility Header with Instagram Link */
-        .facility-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
+
+        .gusu-page {
+            padding: 54px 42px 86px;
+            background:
+                radial-gradient(circle at top left, rgba(221, 180, 118, 0.18), transparent 24%),
+                linear-gradient(180deg, #fbf7f1 0%, #f4ede3 100%);
         }
-        
-        .facility-header h2 {
+
+        .gusu-shell {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .gusu-hero {
+            display: grid;
+            grid-template-columns: minmax(290px, 0.95fr) minmax(560px, 1.35fr);
+            gap: 24px;
+            align-items: stretch;
+            margin-bottom: 26px;
+        }
+
+        .gusu-hero-copy,
+        .gusu-hero-media,
+        .gusu-info-card,
+        .gusu-story,
+        .gusu-gallery,
+        .gusu-signature-card {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 24px 48px rgba(70, 42, 25, 0.1);
+        }
+
+        .gusu-hero-copy {
+            background: linear-gradient(160deg, #43251d 0%, #6a3b2b 52%, #a95c35 100%);
+            color: #fff7f0;
+            padding: 42px 36px;
+            position: relative;
+        }
+
+        .gusu-hero-copy::after {
+            content: "";
+            position: absolute;
+            inset: auto -42px -42px auto;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(255, 232, 208, 0.08);
+        }
+
+        .gusu-kicker {
+            display: inline-flex;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255, 247, 240, 0.12);
+            border: 1px solid rgba(255, 247, 240, 0.2);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .gusu-hero-copy h1 {
+            margin: 18px 0 12px;
+            font-size: clamp(2.6rem, 4vw, 4.3rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            color: #fff7f0;
+        }
+
+        .gusu-hero-copy p {
             margin: 0;
+            color: rgba(255, 247, 240, 0.86);
+            font-size: 1.04rem;
+            line-height: 1.75;
+            max-width: 32rem;
         }
-        
-        .instagram-link {
+
+        .gusu-hero-tags {
             display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.8rem;
-            background: #4A271F;
-            color: #FFF5F0;
-            text-decoration: none;
-            border: 1px solid #4A271F;
-            border-radius: 15px;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            font-size: 0.8rem;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
         }
-        
-        .instagram-link:hover {
-            background: #FFF5F0;
-            color: #4A271F;
-            transform: translateY(-1px);
+
+        .gusu-hero-tags span {
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: rgba(255, 247, 240, 0.12);
+            border: 1px solid rgba(255, 247, 240, 0.18);
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: #fff7f0;
+        }
+
+        .gusu-hero-media {
+            position: relative;
+            min-height: 520px;
+        }
+
+        .gusu-hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gusu-media-caption {
+            position: absolute;
+            left: 26px;
+            top: 26px;
+            padding: 12px 18px;
+            border-radius: 18px;
+            background: rgba(24, 16, 13, 0.72);
+            color: #fff7f0;
+            backdrop-filter: blur(14px);
+        }
+
+        .gusu-media-caption strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .gusu-media-caption span {
+            display: block;
+            margin-top: 3px;
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(255, 247, 240, 0.74);
+        }
+
+        .gusu-summary {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .gusu-info-card {
+            background: rgba(255, 250, 244, 0.92);
+            border: 1px solid rgba(115, 77, 53, 0.1);
+            padding: 24px;
+        }
+
+        .gusu-info-card h2 {
+            margin: 0 0 14px;
+            font-size: 1.08rem;
+            color: #43251d !important;
+        }
+
+        .gusu-info-card p,
+        .gusu-info-card a {
+            margin: 0;
+            color: #604131;
+            line-height: 1.7;
             text-decoration: none;
         }
-        
-        .instagram-link i {
+
+        .gusu-info-card a:hover {
+            color: #b33b22;
+        }
+
+        .gusu-discount {
+            display: inline-flex;
+            margin-top: 12px;
+            padding: 10px 14px;
+            border-radius: 16px;
+            background: #b33b22;
+            color: #fff7f0 !important;
+            font-weight: 600;
+        }
+
+        .gusu-story {
+            display: grid;
+            grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+            background: #fffaf4;
+            margin-bottom: 22px;
+        }
+
+        .gusu-story-copy {
+            padding: 40px 38px;
+        }
+
+        .gusu-story-copy h2 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 2.8vw, 2.7rem);
+            line-height: 1.08;
+            color: #43251d;
+        }
+
+        .gusu-story-copy p {
+            margin: 0 0 16px;
+            color: #6d4f3d;
+            line-height: 1.85;
             font-size: 1rem;
         }
-        
-        .instagram-link span {
-            font-size: 0.8rem;
+
+        .gusu-story-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 24px;
         }
-        
-        /* Sloth Illustration Positioning */
-        .facilities-hero-section {
-            position: relative;
+
+        .gusu-story-points div {
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: #f4ebdf;
+            color: #533426;
+            font-weight: 600;
+        }
+
+        .gusu-story-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gusu-gallery {
+            background: linear-gradient(180deg, #efe4d5 0%, #f8f2e9 100%);
+            padding: 22px;
+            margin-bottom: 22px;
+        }
+
+        .gusu-gallery-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .gusu-gallery-head h2 {
+            margin: 0;
+            color: #43251d;
+            font-size: 1.7rem;
+        }
+
+        .gusu-gallery-head p {
+            margin: 0;
+            color: #735342;
+            max-width: 32rem;
+            line-height: 1.7;
+        }
+
+        .gusu-gallery-grid {
+            display: grid;
+            grid-template-columns: 1.18fr 0.82fr;
+            gap: 16px;
+        }
+
+        .gusu-gallery-feature,
+        .gusu-gallery-stack img {
+            border-radius: 22px;
             overflow: hidden;
         }
-        
-        .facilities-hero-sloth {
-            position: absolute;
-            bottom: 40px;
-            right: 350px;
-            z-index: 10;
+
+        .gusu-gallery-feature img,
+        .gusu-gallery-stack img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        
-        .sloth-illustration {
-            width: 220px;
-            height: auto;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+
+        .gusu-gallery-stack {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
         }
-        
-        /* Responsive design for facility header */
-        @media (max-width: 768px) {
-            .facility-header {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 0.75rem;
+
+        .gusu-signatures {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .gusu-signature-card {
+            background: #fffaf4;
+            padding: 24px;
+            border: 1px solid rgba(115, 77, 53, 0.08);
+        }
+
+        .gusu-signature-card span {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            align-items: center;
+            justify-content: center;
+            background: #f3e7d7;
+            color: #8c5134;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .gusu-signature-card h3 {
+            margin: 0 0 10px;
+            color: #43251d;
+            font-size: 1.08rem;
+        }
+
+        .gusu-signature-card p {
+            margin: 0;
+            color: #6d4f3d;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1180px) {
+            .gusu-page {
+                padding-inline: 26px;
             }
-            
-            .facility-header h2 {
-                margin-bottom: 0;
+
+            .gusu-hero,
+            .gusu-story,
+            .gusu-gallery-grid {
+                grid-template-columns: 1fr;
             }
-            
-            .instagram-link {
-                padding: 0.35rem 0.7rem;
-            }
-            
-            .instagram-link i {
-                font-size: 0.9rem;
-            }
-            
-            .instagram-link span {
-                font-size: 0.75rem;
-            }
-            
-            .sloth-illustration {
-                width: 160px;
-            }
-            
-            .facilities-hero-sloth {
-                bottom: 30px;
-                right: 250px;
+
+            .gusu-hero-media {
+                min-height: 420px;
             }
         }
-        
-        @media (max-width: 480px) {
-            .facility-header {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 0.75rem;
+
+        @media (max-width: 900px) {
+            .gusu-summary,
+            .gusu-signatures {
+                grid-template-columns: 1fr;
             }
-            
-            .instagram-link {
-                padding: 0.35rem 0.7rem;
-                width: auto;
-                justify-content: center;
+
+            .gusu-story-points,
+            .gusu-gallery-stack {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .gusu-page {
+                padding: 34px 18px 60px;
+            }
+
+            .gusu-hero-copy,
+            .gusu-story-copy,
+            .gusu-gallery,
+            .gusu-info-card,
+            .gusu-signature-card {
+                padding: 22px;
+            }
+
+            .gusu-hero-media {
+                min-height: 300px;
+            }
+
+            .gusu-story-points,
+            .gusu-gallery-stack {
+                grid-template-columns: 1fr;
+            }
+
+            .gusu-gallery-head {
+                align-items: start;
+                flex-direction: column;
             }
         }
     </style>
@@ -294,15 +417,13 @@
     </button>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebarNavigation">
         <div class="sidebar-logo">
             <a href="index.html">
                 <img src="images/logoRed.png" alt="mainLogo" class="sidebar-logo-img">
             </a>
         </div>
-        
-        <!-- Language Toggle -->
+
         <div class="language-toggle">
             <button id="enBtn" class="language-btn" data-lang="en">
                 <span class="language-text">EN</span>
@@ -311,7 +432,7 @@
                 <span class="language-text">KO</span>
             </button>
         </div>
-        
+
         <ul class="sidebar-menu">
             <li><a href="about.html" class="sidebar-link" data-en="About us" data-ko="소개">About us</a></li>
             <li><a href="roomtype.html" class="sidebar-link" data-en="Room Type" data-ko="객실 유형">Room Type</a></li>
@@ -321,15 +442,13 @@
             <li><a href="contact.html" class="sidebar-link" data-en="Contact us" data-ko="연락처">Contact us</a></li>
             <li><a href="https://booking-engine.onda.me/wegoinn" class="sidebar-link" target="_blank" rel="noopener noreferrer" data-en="Booking" data-ko="예약">Booking</a></li>
         </ul>
-        
+
         <div class="sidebar-bottom-img">
-            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative" />
+            <img src="images/slothHi.png" alt="Sidebar Bottom Decorative">
         </div>
     </aside>
 
-    <!-- Main Content Wrapper -->
     <div class="main-content">
-        <!-- Mobile Language Toggle -->
         <div class="mobile-language-toggle">
             <button id="mobileEnBtn" class="mobile-language-btn" data-lang="en">
                 <span class="mobile-language-text">EN</span>
@@ -338,221 +457,144 @@
                 <span class="mobile-language-text">KO</span>
             </button>
         </div>
-        
-        <!-- Facilities Section - Text Only -->
-        <section class="facilities-hero-section">
-            <div class="facilities-hero-container">
-                <div class="facilities-hero-left">
-                    <h2 class="facilities-hero-title" data-en="Facilities" data-ko="시설">Facilities</h2>
-                    <div class="facilities-hero-headline">
-                        <span data-en="3 Special Services!" data-ko="3가지 특별한 서비스!">3 Special Services!</span><br>
-                        <span data-en="Only available in Wegoinn." data-ko="위고인에서만 이용 가능합니다.">Only available in Wegoinn.</span>
-                    </div>
-                    <div class="facilities-hero-subheadline" data-en="We promise you a comfortable stay experience." data-ko="편안한 투숙 경험을 약속드립니다.">
-                        We promise you a comfortable stay experience.
-                    </div>
-                </div>
-                <div class="facilities-hero-right">
-                    <div class="service-list-horizontal">
-                        <div class="service-item-horizontal">
-                            <div class="service-number">01</div>
-                            <div class="service-title" data-en="Cafe" data-ko="카페">Cafe</div>
-                            <div class="service-desc" data-en="With flavorful coffee and sweet desserts, we make visitors' rest even more comfortable." data-ko="향긋한 커피와 달콤한 디저트로 방문객의 휴식을 더욱 편안하게 만들어드립니다.">With flavorful coffee and sweet desserts, we make visitors' rest even more comfortable.</div>
-                        </div>
-                        <div class="service-item-horizontal">
-                            <div class="service-number">02</div>
-                            <div class="service-title" data-en="Izakaya" data-ko="이자카야">Izakaya</div>
-                            <div class="service-desc" data-en="Kuriya is a Japanese-style izakaya where you can taste Japanese cuisine in Korea." data-ko="구리야는 한국에서 일본 요리를 맛볼 수 있는 일본식 이자카야입니다.">Kuriya is a Japanese-style izakaya where you can taste Japanese cuisine in Korea.</div>
+
+        <section class="gusu-page">
+            <div class="gusu-shell">
+                <section class="gusu-hero">
+                    <div class="gusu-hero-copy">
+                        <div class="gusu-kicker" data-en="Facilities" data-ko="시설">Facilities</div>
+                        <h1><span data-en="GUSU" data-ko="구수">GUSU</span><br><span data-en="SEOUL" data-ko="서울">SEOUL</span></h1>
+                        <p data-en="A warm K-cuisine and social lounge experience inside Wegoinn, balancing terrace light, calm interiors, and a contemporary Seoul mood." data-ko="위고인 안에서 만나는 따뜻한 한식 다이닝 & 소셜 라운지입니다. 테라스의 빛, 차분한 실내, 현대적인 서울 감성을 한 공간에 담았습니다.">
+                            A warm K-cuisine and social lounge experience inside Wegoinn, balancing terrace light, calm interiors, and a contemporary Seoul mood.
+                        </p>
+                        <div class="gusu-hero-tags">
+                            <span data-en="1F Terrace" data-ko="1층 테라스">1F Terrace</span>
+                            <span data-en="Modern Korean Mood" data-ko="모던 코리안 무드">Modern Korean Mood</span>
+                            <span data-en="Guest 10% Benefit" data-ko="투숙객 10% 혜택">Guest 10% Benefit</span>
                         </div>
                     </div>
-                    <div class="service-list-horizontal-bottom">
-                        <div class="service-item-horizontal">
-                            <div class="service-number">03</div>
-                            <div class="service-title" data-en="Rooftop Bar" data-ko="루프탑 바">Rooftop Bar</div>
-                            <div class="service-desc" data-en="Rooftop Bar: a harmony of daily music, night views, and a cocktail. End your day at the rooftop bar." data-ko="루프탑 바: 일상의 음악, 야경, 그리고 칵테일의 조화. 루프탑 바에서 하루를 마무리하세요.">Rooftop Bar: a harmony of daily music, night views, and a cocktail. End your day at the rooftop bar.</div>
+                    <div class="gusu-hero-media">
+                        <img src="image%20copy%205.png" alt="GUSU SEOUL facilities overview">
+                        <div class="gusu-media-caption">
+                            <strong data-en="K-Cuisine & Social Lounge" data-ko="한식 다이닝 & 소셜 라운지">K-Cuisine & Social Lounge</strong>
+                            <span data-en="GUSU SEOUL" data-ko="GUSU SEOUL">GUSU SEOUL</span>
                         </div>
                     </div>
-                </div>
-                <!-- Sloth Illustration positioned in bottom right corner -->
-                <div class="facilities-hero-sloth">
-                    <img src="images/slothRecline.png" alt="Relaxed Sloth" class="sloth-illustration">
-                </div>
+                </section>
+
+                <section class="gusu-summary">
+                    <article class="gusu-info-card">
+                        <h2 data-en="Operation Hours" data-ko="운영 시간">Operation Hours</h2>
+                        <p data-en="Mon-Fri 11:30 - 22:00" data-ko="월-금 11:30 - 22:00">Mon-Fri 11:30 - 22:00</p>
+                        <p data-en="Break time 15:00 - 17:00" data-ko="브레이크타임 15:00 - 17:00">Break time 15:00 - 17:00</p>
+                        <p data-en="Sat-Sun 12:00 - 23:00" data-ko="토-일 12:00 - 23:00">Sat-Sun 12:00 - 23:00</p>
+                    </article>
+                    <article class="gusu-info-card">
+                        <h2 data-en="Guest Offer" data-ko="투숙객 혜택">Guest Offer</h2>
+                        <p data-en="Present your room key at GUSU SEOUL and enjoy a special in-house guest price." data-ko="GUSU SEOUL에서 객실 키를 제시하시면 위고인 투숙객 전용 혜택을 받으실 수 있습니다.">
+                            Present your room key at GUSU SEOUL and enjoy a special in-house guest price.
+                        </p>
+                        <span class="gusu-discount" data-en="10% discount for Wegoinn guests" data-ko="위고인 투숙객 10% 할인">10% discount for Wegoinn guests</span>
+                    </article>
+                    <article class="gusu-info-card">
+                        <h2 data-en="Location" data-ko="위치">Location</h2>
+                        <p data-en="Wegoinn Hostel 1F & Terrace" data-ko="위고인 호스텔 1층 & 테라스">Wegoinn Hostel 1F & Terrace</p>
+                        <a href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" data-en="Open on Naver Map" data-ko="네이버 지도에서 보기">
+                            Open on Naver Map
+                        </a>
+                    </article>
+                </section>
+
+                <section class="gusu-story">
+                    <div class="gusu-story-copy">
+                        <h2 data-en="A polished dining space that still feels relaxed." data-ko="정제되어 있지만 편안한 분위기의 다이닝 공간.">
+                            A polished dining space that still feels relaxed.
+                        </h2>
+                        <p data-en="The first-floor terrace catches the street light during the day, while the dining hall stays bright and composed with soft neutral finishes. It feels more like a contemporary lounge than a typical hotel facility, so it sits naturally within the Wegoinn brand." data-ko="1층 테라스는 낮의 빛을 담아내고, 실내 다이닝 홀은 부드러운 뉴트럴 톤으로 정돈되어 있습니다. 일반적인 호텔 부대시설보다는 감도 높은 라운지에 가까워, 현재 홈페이지 무드와도 자연스럽게 연결됩니다.">
+                            The first-floor terrace catches the street light during the day, while the dining hall stays bright and composed with soft neutral finishes. It feels more like a contemporary lounge than a typical hotel facility, so it sits naturally within the Wegoinn brand.
+                        </p>
+                        <p data-en="From casual coffee time to a slower evening meal, GUSU SEOUL adds a more sophisticated guest touchpoint without breaking the calm visual language of the site." data-ko="가벼운 커피 타임부터 느긋한 저녁 식사까지, GUSU SEOUL은 사이트의 차분한 인상을 해치지 않으면서도 한 단계 세련된 투숙 경험을 더해줍니다.">
+                            From casual coffee time to a slower evening meal, GUSU SEOUL adds a more sophisticated guest touchpoint without breaking the calm visual language of the site.
+                        </p>
+                        <div class="gusu-story-points">
+                            <div data-en="Open terrace seating" data-ko="개방감 있는 테라스 좌석">Open terrace seating</div>
+                            <div data-en="Bright double-height hall" data-ko="밝은 복층형 다이닝 홀">Bright double-height hall</div>
+                            <div data-en="Warm lounge corner" data-ko="따뜻한 라운지 코너">Warm lounge corner</div>
+                            <div data-en="Contemporary Korean palette" data-ko="현대적인 한국적 컬러감">Contemporary Korean palette</div>
+                        </div>
+                    </div>
+                    <div class="gusu-story-photo">
+                        <img src="image%20copy%203.png" alt="Interior view of GUSU SEOUL dining hall">
+                    </div>
+                </section>
+
+                <section class="gusu-gallery">
+                    <div class="gusu-gallery-head">
+                        <h2 data-en="Inside GUSU SEOUL" data-ko="GUSU SEOUL 공간 보기">Inside GUSU SEOUL</h2>
+                        <p data-en="A clean terrace edge, airy dining floor, and intimate lounge seating create a facility page that feels closer to a boutique venue showcase." data-ko="테라스의 개방감, 여유 있는 다이닝 홀, 밀도 있는 라운지 좌석을 함께 보여주며 부대시설 페이지를 하나의 감각적인 공간 소개처럼 구성했습니다.">
+                            A clean terrace edge, airy dining floor, and intimate lounge seating create a facility page that feels closer to a boutique venue showcase.
+                        </p>
+                    </div>
+                    <div class="gusu-gallery-grid">
+                        <div class="gusu-gallery-feature">
+                            <img src="image%20copy%202.png" alt="GUSU SEOUL terrace exterior">
+                        </div>
+                        <div class="gusu-gallery-stack">
+                            <img src="image%20copy%204.png" alt="GUSU SEOUL wide interior">
+                            <img src="image%20copy.png" alt="GUSU SEOUL lounge seating">
+                            <img src="image.png" alt="GUSU SEOUL dining seats">
+                            <img src="image%20copy%203.png" alt="GUSU SEOUL bright main hall">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="gusu-signatures">
+                    <article class="gusu-signature-card">
+                        <span>01</span>
+                        <h3 data-en="Street-Facing Terrace" data-ko="거리와 맞닿은 테라스">Street-Facing Terrace</h3>
+                        <p data-en="Outdoor tables and lounge seating make the facility feel active and visible from arrival." data-ko="야외 테이블과 라운지 좌석이 있어, 도착 순간부터 살아있는 분위기를 전달합니다.">
+                            Outdoor tables and lounge seating make the facility feel active and visible from arrival.
+                        </p>
+                    </article>
+                    <article class="gusu-signature-card">
+                        <span>02</span>
+                        <h3 data-en="Calm Dining Hall" data-ko="차분한 다이닝 홀">Calm Dining Hall</h3>
+                        <p data-en="Tall glazing and restrained tones give the main hall a bright but composed character." data-ko="큰 창과 절제된 톤이 메인 홀에 밝지만 안정적인 인상을 만듭니다.">
+                            Tall glazing and restrained tones give the main hall a bright but composed character.
+                        </p>
+                    </article>
+                    <article class="gusu-signature-card">
+                        <span>03</span>
+                        <h3 data-en="Lounge-Like Finish" data-ko="라운지 같은 마감">Lounge-Like Finish</h3>
+                        <p data-en="Warm leather seating and wood textures connect the venue with Wegoinn's more refined hospitality tone." data-ko="따뜻한 가죽 좌석과 우드 텍스처가 위고인의 정제된 호스피탈리티 무드와 잘 이어집니다.">
+                            Warm leather seating and wood textures connect the venue with Wegoinn's more refined hospitality tone.
+                        </p>
+                    </article>
+                </section>
             </div>
         </section>
 
-        <!-- Libertree Cafe Section -->
-        <section class="facility-section libertree-section">
-            <div class="container">
-                <div class="facility-header">
-                    <h2 data-en="Libertree Cafe" data-ko="리버트리 카페">Libertree Cafe</h2>
-                    <a href="https://www.instagram.com/libertree_wegoinn_/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Follow Libertree Cafe on Instagram">
-                        <i class="fab fa-instagram"></i>
-                        <span data-en="Follow us" data-ko="팔로우하기">Follow us</span>
-                    </a>
-                </div>
-                <p class="section-description" data-en="A cozy cafe serving delicious coffee, fresh pastries, and light meals in a relaxed atmosphere." data-ko="편안한 분위기에서 맛있는 커피, 신선한 페이스트리, 가벼운 식사를 제공하는 아늑한 카페입니다.">A cozy cafe serving delicious coffee, fresh pastries, and light meals in a relaxed atmosphere.</p>
-                
-                <div class="image-scroll-container">
-                    <button class="scroll-arrow left" onclick="scrollImages('libertree-scroll', -1)">&#8592;</button>
-                    <div class="image-scroll-wrapper" id="libertree-scroll">
-                        <div class="scroll-image">
-                            <img src="images/libertreeOne.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeThree.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeFour.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeFive.png" alt="Libertree Cafe">
-                        </div> 
-                        <div class="scroll-image">
-                            <img src="images/libertreeSix.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeSeven.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeEight.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeNine.png" alt="Libertree Cafe">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/libertreeTen.png" alt="Libertree Cafe">
-                        </div>
-                    </div>
-                    <button class="scroll-arrow right" onclick="scrollImages('libertree-scroll', 1)">&#8594;</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Izakaya Section -->
-        <section class="facility-section izakaya-section">
-            <div class="container">
-                <div class="facility-header">
-                    <h2 data-en="Izakaya Lakidon" data-ko="이자카야 라키돈">Izakaya Lakidon</h2>
-                    <a href="https://www.instagram.com/libertree_wegoinn_/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Follow Izakaya Lakidon on Instagram">
-                        <i class="fab fa-instagram"></i>
-                        <span data-en="Follow us" data-ko="팔로우하기">Follow us</span>
-                    </a>
-                </div>
-                <p class="section-description" data-en="Authentic Japanese dining experience with traditional izakaya dishes and a warm, welcoming atmosphere." data-ko="전통적인 이자카야 요리와 따뜻하고 환영하는 분위기로 진정한 일본식 다이닝 경험을 제공합니다.">Authentic Japanese dining experience with traditional izakaya dishes and a warm, welcoming atmosphere.</p>
-                <div class="image-scroll-container">
-                    <button class="scroll-arrow left" onclick="scrollImages('izakaya-scroll', -1)">&#8592;</button>
-                    <div class="image-scroll-wrapper" id="izakaya-scroll">
-                        <div class="scroll-image">
-                            <img src="images/izaOne.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaTwo.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaThree.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaFour.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaFive.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaSix.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaSeven.png" alt="Izakaya Interior">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/izaEight.png" alt="Izakaya Interior">
-                        </div>
-                    </div>
-                    <button class="scroll-arrow right" onclick="scrollImages('izakaya-scroll', 1)">&#8594;</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rooftop Bar Section -->
-        <section class="facility-section rooftop-section">
-            <div class="container">
-                <div class="facility-header">
-                    <h2 data-en="Rooftop Bar" data-ko="루프탑 바">Rooftop Bar</h2>
-                    <a href="https://www.instagram.com/libertree_wegoinn_/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Follow Rooftop Bar on Instagram">
-                        <i class="fab fa-instagram"></i>
-                        <span data-en="Follow us" data-ko="팔로우하기">Follow us</span>
-                    </a>
-                </div>
-                <p class="section-description" data-en="Enjoy stunning city views while sipping on craft cocktails and socializing with fellow travelers." data-ko="크래프트 칵테일을 마시며 멋진 도시 전경을 감상하고 동료 여행자들과 교류하세요.">Enjoy stunning city views while sipping on craft cocktails and socializing with fellow travelers.</p>
-                
-                <div class="image-scroll-container">
-                    <button class="scroll-arrow left" onclick="scrollImages('rooftop-scroll', -1)">&#8592;</button>
-                    <div class="image-scroll-wrapper" id="rooftop-scroll">
-                        <div class="scroll-image">
-                            <img src="images/nineEleven.jpg" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineTwelve.jpg" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineThirteen.jpg" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineFour.png" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineFive.png" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineSix.png" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineSeven.png" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineEight.png" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineNine.png" alt="Rooftop Bar">
-                        </div>
-                        <div class="scroll-image">
-                            <img src="images/nineTen.png" alt="Rooftop Bar">
-                        </div>
-                    </div>
-                    <button class="scroll-arrow right" onclick="scrollImages('rooftop-scroll', 1)">&#8594;</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
         <footer class="footer">
             <div class="container">
-                            <div class="footer-business-info">
-                <div class="footer-business-col">
-                    <div data-en="Company Name: Weegoland (WEEGOLAND)" data-ko="회사명 : 위고랜드 (WEEGOLAND)">Company Name: Weegoland (WEEGOLAND)</div>
-                    <div data-en="Representative: Jaehyun Yoon" data-ko="대표자 : 윤재현">Representative: Jaehyun Yoon</div>
-                    <div data-en="Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)" data-ko="주소 : 서울 서대문구 신촌로 141 (위고인 호스텔)">Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)</div>
-                    <div data-en="Email: wegoinnteam@gmail.com" data-ko="이메일 : wegoinnteam@gmail.com">Email: wegoinnteam@gmail.com</div>
+                <div class="footer-business-info">
+                    <div class="footer-business-col">
+                        <div data-en="Company Name: Weegoland (WEEGOLAND)" data-ko="회사명 : 위고랜드 (WEEGOLAND)">Company Name: Weegoland (WEEGOLAND)</div>
+                        <div data-en="Representative: Jaehyun Yoon" data-ko="대표자 : 윤재현">Representative: Jaehyun Yoon</div>
+                        <div data-en="Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)" data-ko="주소 : 서울 서대문구 신촌로 141 (위고인 호스텔)">Address: 141, Sinchon-Ro, Seodaemun-Gu, Seoul (Wegoinn Hostel)</div>
+                        <div data-en="Email: wegoinnteam@gmail.com" data-ko="이메일 : wegoinnteam@gmail.com">Email: wegoinnteam@gmail.com</div>
+                    </div>
+                    <div class="footer-business-col">
+                        <div data-en="Phone: 02-393-9922" data-ko="전화 : 02-393-9922">Phone: 02-393-9922</div>
+                        <div data-en="Fax: 02-393-2229" data-ko="팩스 : 02-393-2229">Fax: 02-393-2229</div>
+                        <div data-en="Business Registration No.: 110-08-76462" data-ko="사업자등록번호 : 110-08-76462">Business Registration No.: 110-08-76462</div>
+                        <div data-en="E-commerce Registration: Not applicable" data-ko="통신판매업신고 : 해당없음">E-commerce Registration: Not applicable</div>
+                    </div>
                 </div>
-                <div class="footer-business-col">
-                    <div data-en="Phone: 02-393-9922" data-ko="전화 : 02-393-9922">Phone: 02-393-9922</div>
-                    <div data-en="Fax: 02-393-2229" data-ko="팩스 : 02-393-2229">Fax: 02-393-2229</div>
-                    <div data-en="Business Registration No.: 110-08-76462" data-ko="사업자등록번호 : 110-08-76462">Business Registration No.: 110-08-76462</div>
-                    <div data-en="E-commerce Registration: Not applicable" data-ko="통신판매업신고 : 해당없음">E-commerce Registration: Not applicable</div>
-                </div>
-            </div>
                 <p>&copy; 2024 WeGoInn. All rights reserved.</p>
             </div>
         </footer>
     </div>
 
     <script src="script.js"></script>
-    <script>
-        function scrollImages(wrapperId, direction) {
-            const wrapper = document.getElementById(wrapperId);
-            if (!wrapper) return;
-            const scrollAmount = wrapper.querySelector('.scroll-image')?.offsetWidth || 200;
-            wrapper.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-        }
-    </script>
 </body>
-</html> 
+</html>
