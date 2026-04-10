@@ -10,129 +10,215 @@
     <link rel="stylesheet" href="mobile-red-city.css?v=20260402-4">
     <style>
         body {
-            background: linear-gradient(180deg, #fff8f6 0%, #fff1ee 100%);
+            background: linear-gradient(180deg, #f8f1e8 0%, #efe4d6 100%);
             font-family: "Pretendard", "Poppins", sans-serif;
         }
 
         .main.facilities-main {
-            padding-top: 16px;
+            padding-top: 14px;
             padding-bottom: 20px;
         }
 
-        .gusu-mobile-hero {
-            overflow: hidden;
+        .gusu-mobile-hero,
+        .gusu-mobile-info,
+        .gusu-mobile-gallery {
+            border: 1px solid rgba(86, 55, 46, 0.1);
             border-radius: 28px;
-            border: 1px solid #f0ccd3;
-            background: #fff;
-            box-shadow: 0 18px 34px rgba(126, 15, 34, 0.08);
-            margin-bottom: 12px;
-        }
-
-        .gusu-mobile-banner {
-            position: relative;
-            height: 242px;
+            background: rgba(255, 250, 245, 0.92);
+            box-shadow: 0 18px 36px rgba(74, 49, 41, 0.09);
+            margin-bottom: 14px;
             overflow: hidden;
         }
 
-        .gusu-mobile-banner-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            height: 100%;
-            gap: 8px;
-            padding: 8px;
-            background: #fff;
-        }
-
-        .gusu-mobile-banner-grid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 20px;
-        }
-
-        .gusu-mobile-banner-copy {
-            position: absolute;
-            inset: 0;
+        .gusu-mobile-hero-visual {
+            position: relative;
+            min-height: 420px;
+            padding: 18px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 18px;
-            background: linear-gradient(180deg, rgba(71, 6, 15, 0.14), rgba(71, 6, 15, 0.62));
-            color: #fff7f5;
+            background:
+                linear-gradient(180deg, rgba(29, 20, 17, 0.08), rgba(29, 20, 17, 0.74)),
+                url("KakaoTalk_20260410_094944503_17.jpg") center/cover no-repeat;
+            color: #fff8f3;
         }
 
         .gusu-mobile-kicker {
             display: inline-flex;
+            align-items: center;
+            gap: 8px;
             width: fit-content;
-            padding: 6px 10px;
+            padding: 7px 11px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.14);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 248, 242, 0.14);
+            border: 1px solid rgba(255, 248, 242, 0.18);
             font-size: 0.68rem;
             font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .gusu-mobile-kicker::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #d3a56e;
+        }
+
+        .gusu-mobile-hero-visual h1 {
+            margin: 14px 0 12px;
+            max-width: 10ch;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2.7rem;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+            color: #fff8f3;
+        }
+
+        .gusu-mobile-hero-visual p {
+            margin: 0;
+            max-width: 17rem;
+            color: rgba(255, 248, 243, 0.86);
+            font-size: 0.82rem;
+            line-height: 1.75;
+        }
+
+        .gusu-mobile-meta {
+            display: grid;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .gusu-mobile-meta div {
+            padding: 12px 13px;
+            border-radius: 16px;
+            background: rgba(255, 248, 242, 0.13);
+            border: 1px solid rgba(255, 248, 242, 0.12);
+            backdrop-filter: blur(10px);
+        }
+
+        .gusu-mobile-meta strong {
+            display: block;
+            margin-bottom: 4px;
+            color: rgba(255, 244, 236, 0.72);
+            font-size: 0.67rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
         }
 
-        .gusu-mobile-banner-copy h1 {
-            margin: 10px 0 0;
-            max-width: 12ch;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 2.15rem;
-            line-height: 0.92;
-            letter-spacing: -0.04em;
-            color: #fff8f6;
+        .gusu-mobile-meta span {
+            color: #fff8f3;
+            font-size: 0.78rem;
+            line-height: 1.5;
         }
 
-        .gusu-mobile-copy {
-            padding: 18px 16px 16px;
-        }
-
-        .gusu-mobile-copy p {
-            margin: 0;
-            color: #65454c;
-            font-size: 0.83rem;
-            line-height: 1.75;
-        }
-
-        .gusu-mobile-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 14px;
-        }
-
-        .gusu-mobile-tags b {
-            display: inline-flex;
-            padding: 8px 11px;
-            border-radius: 999px;
-            background: #fff3f0;
-            border: 1px solid #f4d2d7;
-            color: #9c1b31;
-            font-size: 0.7rem;
-            font-weight: 700;
-        }
-
-        .gusu-mobile-section,
-        .gusu-mobile-promo,
-        .gusu-mobile-menu,
-        .gusu-mobile-gallery {
-            border: 1px solid #f0d2d8;
-            border-radius: 22px;
-            background: #fff;
-            box-shadow: 0 14px 28px rgba(126, 15, 34, 0.06);
-            margin-bottom: 12px;
+        .gusu-mobile-panel {
             padding: 16px;
         }
 
-        .gusu-mobile-section h2,
-        .gusu-mobile-promo h2,
-        .gusu-mobile-menu h2,
+        .gusu-mobile-panel img {
+            width: 100%;
+            height: 214px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .gusu-mobile-panel-copy {
+            margin-top: 12px;
+        }
+
+        .gusu-mobile-panel-copy strong,
+        .gusu-mobile-section-title,
         .gusu-mobile-gallery h2 {
-            margin: 0 0 10px;
-            color: #8a1024;
-            font-size: 1rem;
+            display: block;
+            margin: 0 0 8px;
+            color: #392520;
+        }
+
+        .gusu-mobile-panel-copy span,
+        .gusu-mobile-section-copy,
+        .gusu-mobile-gallery p,
+        .gusu-mobile-note span,
+        .gusu-mobile-map {
+            color: #6b4d45;
+            font-size: 0.8rem;
+            line-height: 1.72;
+            text-decoration: none;
+        }
+
+        .gusu-mobile-section {
+            margin-bottom: 14px;
+            padding: 18px 16px;
+            border: 1px solid rgba(86, 55, 46, 0.1);
+            border-radius: 26px;
+            background: rgba(255, 250, 245, 0.92);
+            box-shadow: 0 16px 34px rgba(74, 49, 41, 0.07);
+        }
+
+        .gusu-mobile-section-title,
+        .gusu-mobile-gallery h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.9rem;
+            line-height: 0.94;
+            letter-spacing: -0.04em;
+        }
+
+        .gusu-mobile-card-grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .gusu-mobile-card {
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid rgba(86, 55, 46, 0.08);
+            background: #fbf6f0;
+        }
+
+        .gusu-mobile-card img {
+            width: 100%;
+            height: 158px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gusu-mobile-card-copy {
+            padding: 14px;
+        }
+
+        .gusu-mobile-card-copy strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #3f2822;
+            font-size: 0.9rem;
+        }
+
+        .gusu-mobile-card-copy span {
+            color: #715149;
+            font-size: 0.77rem;
+            line-height: 1.68;
+        }
+
+        .gusu-mobile-note-grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .gusu-mobile-note {
+            padding: 14px;
+            border-radius: 18px;
+            background: #f4eadf;
+        }
+
+        .gusu-mobile-note strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #3f2822;
+            font-size: 0.82rem;
         }
 
         .gusu-mobile-hours {
@@ -142,100 +228,36 @@
 
         .gusu-mobile-hour-row {
             padding: 11px 12px;
-            border-radius: 16px;
-            background: #fff4f1;
-        }
-
-        .gusu-mobile-hour-row strong {
-            display: block;
-            margin-bottom: 4px;
-            color: #d91f3a;
-            font-size: 0.78rem;
-        }
-
-        .gusu-mobile-hour-row span,
-        .gusu-mobile-section p,
-        .gusu-mobile-section a,
-        .gusu-mobile-gallery p {
-            color: #65454c;
-            font-size: 0.79rem;
-            line-height: 1.65;
-            text-decoration: none;
-        }
-
-        .gusu-mobile-promo {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #e31937, #bf1330);
-            color: #fff8f6;
-        }
-
-        .gusu-mobile-promo::after {
-            content: "10%";
-            position: absolute;
-            right: 14px;
-            bottom: -2px;
-            font-size: 3.4rem;
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.12);
-            line-height: 1;
-        }
-
-        .gusu-mobile-promo h2,
-        .gusu-mobile-promo p,
-        .gusu-mobile-promo strong {
-            color: #fff8f6;
-        }
-
-        .gusu-mobile-promo p {
-            margin: 0 0 12px;
-            font-size: 0.82rem;
-            line-height: 1.7;
-        }
-
-        .gusu-mobile-promo strong {
-            display: inline-flex;
-            padding: 8px 11px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.14);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            font-size: 0.76rem;
-        }
-
-        .gusu-mobile-menu-grid {
-            display: grid;
-            gap: 10px;
-        }
-
-        .gusu-mobile-menu-item {
-            display: grid;
-            grid-template-columns: 88px 1fr;
-            gap: 10px;
-            align-items: center;
-            padding: 8px;
-            border-radius: 18px;
-            background: #fff5f2;
-        }
-
-        .gusu-mobile-menu-item img {
-            width: 88px;
-            height: 88px;
-            object-fit: cover;
             border-radius: 14px;
-            display: block;
+            background: #fbf3ea;
         }
 
-        .gusu-mobile-menu-item strong {
+        .gusu-mobile-hour-row b {
             display: block;
-            color: #7c1225;
-            font-size: 0.84rem;
             margin-bottom: 4px;
+            color: #7b4c3d;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
-        .gusu-mobile-menu-item span {
-            color: #66464d;
-            font-size: 0.75rem;
+        .gusu-mobile-hour-row span {
+            color: #6b4d45;
+            font-size: 0.76rem;
             line-height: 1.6;
+        }
+
+        .gusu-mobile-map {
+            display: inline-flex;
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: #3b2520;
+            color: #fff8f3;
+        }
+
+        .gusu-mobile-gallery {
+            padding: 18px 16px;
         }
 
         .gusu-mobile-gallery-grid {
@@ -247,26 +269,15 @@
 
         .gusu-mobile-gallery-grid img {
             width: 100%;
-            height: 118px;
+            height: 124px;
             object-fit: cover;
-            display: block;
             border-radius: 18px;
+            display: block;
         }
 
         .gusu-mobile-gallery-grid img.feature {
             grid-column: 1 / -1;
-            height: 204px;
-        }
-
-        .gusu-mobile-character {
-            margin-top: 12px;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .gusu-mobile-character img {
-            width: 74px;
-            filter: drop-shadow(0 10px 18px rgba(126, 15, 34, 0.14));
+            height: 210px;
         }
     </style>
 </head>
@@ -289,91 +300,96 @@
 
     <main class="main facilities-main">
         <section class="gusu-mobile-hero">
-            <div class="gusu-mobile-banner">
-                <div class="gusu-mobile-banner-grid">
-                    <img src="image%20copy%202.png" alt="GUSU SEOUL terrace view">
-                    <img src="images/izaOne.png" alt="GUSU SEOUL signature dish">
-                </div>
-                <div class="gusu-mobile-banner-copy">
+            <div class="gusu-mobile-hero-visual">
+                <div>
                     <div class="gusu-mobile-kicker" data-ko="시설" data-en="Facilities">시설</div>
-                    <h1 data-ko="K-Cuisine & Social Lounge: GUSU SEOUL" data-en="K-Cuisine & Social Lounge: GUSU SEOUL">K-Cuisine & Social Lounge: GUSU SEOUL</h1>
+                    <h1 data-ko="Wegoinn x GUSU SEOUL Lounge Cafe" data-en="Wegoinn x GUSU SEOUL Lounge Cafe">Wegoinn x GUSU SEOUL Lounge Cafe</h1>
+                    <p data-ko="위고인 1층에 자리한 구수서울 콜라보 라운지 카페를 모바일에서도 공간 중심으로 보이도록 다시 정리했습니다." data-en="The first-floor Wegoinn x GUSU SEOUL lounge cafe is now presented around atmosphere first, then essentials.">위고인 1층에 자리한 구수서울 콜라보 라운지 카페를 모바일에서도 공간 중심으로 보이도록 다시 정리했습니다.</p>
+                    <div class="gusu-mobile-meta">
+                        <div>
+                            <strong data-ko="콜라보" data-en="Collaboration">Collaboration</strong>
+                            <span data-ko="위고인 x 구수서울" data-en="Wegoinn x GUSU SEOUL">위고인 x 구수서울</span>
+                        </div>
+                        <div>
+                            <strong data-ko="포지션" data-en="Positioning">Positioning</strong>
+                            <span data-ko="1층 라운지 카페" data-en="1F Lounge Cafe">1층 라운지 카페</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gusu-mobile-copy">
-                <p data-ko="위고인의 화이트&레드 아이덴티티 안에서 구수서울의 모던 한옥 감성을 보여주도록 다시 구성했습니다. 테라스, 다이닝 홀, 대표 메뉴와 투숙객 혜택이 한 화면 흐름 안에서 자연스럽게 이어집니다." data-en="This version keeps Wegoinn's white-and-red identity while introducing GUSU SEOUL with a more modern-hanok tone through terrace, dining, menu, and promotion in one flow.">위고인의 화이트&레드 아이덴티티 안에서 구수서울의 모던 한옥 감성을 보여주도록 다시 구성했습니다. 테라스, 다이닝 홀, 대표 메뉴와 투숙객 혜택이 한 화면 흐름 안에서 자연스럽게 이어집니다.</p>
-                <div class="gusu-mobile-tags">
-                    <b data-ko="테라스 다이닝" data-en="Terrace Dining">테라스 다이닝</b>
-                    <b data-ko="대표 메뉴 3종" data-en="3 Signature Dishes">대표 메뉴 3종</b>
-                    <b data-ko="투숙객 10% 할인" data-en="Guest 10% Discount">투숙객 10% 할인</b>
+            <div class="gusu-mobile-panel">
+                <img src="KakaoTalk_20260410_094944503_15.jpg" alt="GUSU SEOUL lounge detail">
+                <div class="gusu-mobile-panel-copy">
+                    <strong data-ko="도착 순간부터 공간의 톤을 보여줍니다." data-en="The tone is visible from the first frame.">도착 순간부터 공간의 톤을 보여줍니다.</strong>
+                    <span data-ko="아트월, 아이보리 톤, 정돈된 좌석 구성을 앞세워 시설 페이지가 더 고급스럽게 읽히도록 바꿨습니다." data-en="Art wall, ivory tones, and composed seating make the facilities page feel more refined.">아트월, 아이보리 톤, 정돈된 좌석 구성을 앞세워 시설 페이지가 더 고급스럽게 읽히도록 바꿨습니다.</span>
                 </div>
             </div>
         </section>
 
         <section class="gusu-mobile-section">
-            <h2 data-ko="운영 시간" data-en="Operation Hours">운영 시간</h2>
-            <div class="gusu-mobile-hours">
-                <div class="gusu-mobile-hour-row">
-                    <strong data-ko="평일" data-en="Weekdays">평일</strong>
-                    <span data-ko="11:30 - 22:00 / 브레이크타임 15:00 - 17:00" data-en="11:30 - 22:00 / Break 15:00 - 17:00">11:30 - 22:00 / 브레이크타임 15:00 - 17:00</span>
-                </div>
-                <div class="gusu-mobile-hour-row">
-                    <strong data-ko="주말" data-en="Weekend">주말</strong>
-                    <span data-ko="12:00 - 23:00" data-en="12:00 - 23:00">12:00 - 23:00</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="gusu-mobile-menu">
-            <h2 data-ko="대표 메뉴" data-en="Signature Menu">대표 메뉴</h2>
-            <div class="gusu-mobile-menu-grid">
-                <article class="gusu-mobile-menu-item">
-                    <img src="images/izaOne.png" alt="Signature menu one">
-                    <div>
-                        <strong data-ko="시그니처 한식 플레이트" data-en="Signature Hot Dish">시그니처 한식 플레이트</strong>
-                        <span data-ko="따뜻하고 깊은 풍미로 공간의 무드를 가장 잘 보여주는 대표 메뉴입니다." data-en="A warm, rich signature dish that fits the venue's refined lounge mood.">따뜻하고 깊은 풍미로 공간의 무드를 가장 잘 보여주는 대표 메뉴입니다.</span>
+            <h2 class="gusu-mobile-section-title" data-ko="라운지 포인트" data-en="Lounge Highlights">라운지 포인트</h2>
+            <p class="gusu-mobile-section-copy" data-ko="공간 전경, 카운터 디테일, 프라이빗 테이블 장면을 섞어 1층 라운지 카페의 완성도를 보여주도록 구성했습니다." data-en="Wide lounge views, counter details, and quieter table scenes were combined to present the full first-floor mood.">공간 전경, 카운터 디테일, 프라이빗 테이블 장면을 섞어 1층 라운지 카페의 완성도를 보여주도록 구성했습니다.</p>
+            <div class="gusu-mobile-card-grid">
+                <article class="gusu-mobile-card">
+                    <img src="KakaoTalk_20260410_094944503_06.jpg" alt="Main lounge seating">
+                    <div class="gusu-mobile-card-copy">
+                        <strong data-ko="메인 라운지 좌석" data-en="Main Lounge Seating">메인 라운지 좌석</strong>
+                        <span data-ko="넓은 동선과 부드러운 컬러로 개방감과 차분함을 함께 보여줍니다." data-en="Open circulation and softer tones keep the lounge calm and spacious.">넓은 동선과 부드러운 컬러로 개방감과 차분함을 함께 보여줍니다.</span>
                     </div>
                 </article>
-                <article class="gusu-mobile-menu-item">
-                    <img src="images/izaTwo.png" alt="Signature menu two">
-                    <div>
-                        <strong data-ko="가볍게 즐기는 페어링 메뉴" data-en="Casual Pairing Plate">가볍게 즐기는 페어링 메뉴</strong>
-                        <span data-ko="친구와 함께 나누기 좋은 구성이며, 라운지 스타일의 식사에 잘 어울립니다." data-en="A lighter pairing plate suited to casual social dining.">친구와 함께 나누기 좋은 구성이며, 라운지 스타일의 식사에 잘 어울립니다.</span>
+                <article class="gusu-mobile-card">
+                    <img src="KakaoTalk_20260410_094944503_20.jpg" alt="Bakery counter detail">
+                    <div class="gusu-mobile-card-copy">
+                        <strong data-ko="카운터 디테일" data-en="Curated Counter">카운터 디테일</strong>
+                        <span data-ko="베이커리와 디스플레이 컷으로 카페의 밀도를 높였습니다." data-en="Bakery and display details add polish and cafe character.">베이커리와 디스플레이 컷으로 카페의 밀도를 높였습니다.</span>
                     </div>
                 </article>
-                <article class="gusu-mobile-menu-item">
-                    <img src="images/izaThree.png" alt="Signature menu three">
-                    <div>
-                        <strong data-ko="저녁 시간을 위한 컴포트 메뉴" data-en="Evening Comfort Menu">저녁 시간을 위한 컴포트 메뉴</strong>
-                        <span data-ko="하루를 마무리하는 시간에 어울리는 안정감 있는 메뉴 톤으로 배치했습니다." data-en="An evening comfort option that rounds out the menu lineup.">하루를 마무리하는 시간에 어울리는 안정감 있는 메뉴 톤으로 배치했습니다.</span>
+                <article class="gusu-mobile-card">
+                    <img src="KakaoTalk_20260410_094944503_25.jpg" alt="Private corner table">
+                    <div class="gusu-mobile-card-copy">
+                        <strong data-ko="프라이빗 코너" data-en="Quiet Corner">프라이빗 코너</strong>
+                        <span data-ko="공용 라운지와 대비되는 조용한 장면으로 고급감을 보강합니다." data-en="A quieter table scene adds intimacy to the public lounge mood.">공용 라운지와 대비되는 조용한 장면으로 고급감을 보강합니다.</span>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="gusu-mobile-promo">
-            <h2 data-ko="프로모션" data-en="Promotion">프로모션</h2>
-            <p data-ko="구수서울에서 객실 키를 제시하면 위고인 투숙객 전용 혜택을 받을 수 있습니다." data-en="Present your room key at GUSU SEOUL to receive the dedicated Wegoinn guest offer.">구수서울에서 객실 키를 제시하면 위고인 투숙객 전용 혜택을 받을 수 있습니다.</p>
-            <strong data-ko="투숙객 10% 할인" data-en="Guest 10% Discount">투숙객 10% 할인</strong>
-        </section>
-
-        <section class="gusu-mobile-section">
-            <h2 data-ko="위치" data-en="Location">위치</h2>
-            <p data-ko="위고인 호스텔 1층 & 테라스" data-en="Wegoinn Hostel 1F & Terrace">위고인 호스텔 1층 & 테라스</p>
-            <a href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" data-ko="네이버 지도에서 보기" data-en="Open on Naver Map">네이버 지도에서 보기</a>
+        <section class="gusu-mobile-info">
+            <div class="gusu-mobile-panel">
+                <h2 class="gusu-mobile-section-title" data-ko="이용 정보" data-en="Practical Info">이용 정보</h2>
+                <p class="gusu-mobile-section-copy" data-ko="공간 소개 다음에 필요한 정보가 이어지도록 정리해, 감도와 사용성을 동시에 유지했습니다." data-en="Practical details follow the space story so the page stays premium but useful.">공간 소개 다음에 필요한 정보가 이어지도록 정리해, 감도와 사용성을 동시에 유지했습니다.</p>
+                <div class="gusu-mobile-note-grid">
+                    <div class="gusu-mobile-note">
+                        <strong data-ko="운영 시간" data-en="Operation Hours">운영 시간</strong>
+                        <div class="gusu-mobile-hours">
+                            <div class="gusu-mobile-hour-row">
+                                <b data-ko="평일" data-en="Weekdays">평일</b>
+                                <span data-ko="11:30 - 22:00 / 브레이크타임 15:00 - 17:00" data-en="11:30 - 22:00 / Break 15:00 - 17:00">11:30 - 22:00 / 브레이크타임 15:00 - 17:00</span>
+                            </div>
+                            <div class="gusu-mobile-hour-row">
+                                <b data-ko="주말" data-en="Weekend">주말</b>
+                                <span data-ko="12:00 - 23:00" data-en="12:00 - 23:00">12:00 - 23:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gusu-mobile-note">
+                        <strong data-ko="투숙객 혜택" data-en="Guest Benefit">투숙객 혜택</strong>
+                        <span data-ko="객실 키를 제시하면 위고인 투숙객 전용 할인 혜택을 받을 수 있습니다." data-en="Present your room key for the dedicated Wegoinn guest discount.">객실 키를 제시하면 위고인 투숙객 전용 할인 혜택을 받을 수 있습니다.</span>
+                        <a class="gusu-mobile-map" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" data-ko="위고인 1층 / 지도 보기" data-en="1F Wegoinn / Open Map">위고인 1층 / 지도 보기</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="gusu-mobile-gallery">
             <h2 data-ko="공간 하이라이트" data-en="Spatial Highlights">공간 하이라이트</h2>
-            <p data-ko="테라스의 개방감, 밝은 메인 홀, 라운지 좌석을 순서 있게 보여주며 구수서울의 무드를 정리했습니다." data-en="Terrace openness, a bright dining hall, and a warmer lounge corner complete the GUSU SEOUL mood.">테라스의 개방감, 밝은 메인 홀, 라운지 좌석을 순서 있게 보여주며 구수서울의 무드를 정리했습니다.</p>
+            <p data-ko="메인 공간감이 큰 컷과 건축적 장면, 음식 디테일을 섞어 모바일에서도 완성도 있게 보이도록 선별했습니다." data-en="A balanced mix of arrival view, architecture, and detail shots keeps the mobile page polished.">메인 공간감이 큰 컷과 건축적 장면, 음식 디테일을 섞어 모바일에서도 완성도 있게 보이도록 선별했습니다.</p>
             <div class="gusu-mobile-gallery-grid">
-                <img class="feature" src="image%20copy%203.png" alt="GUSU SEOUL main hall">
-                <img src="image%20copy.png" alt="GUSU SEOUL lounge corner">
-                <img src="image%20copy%204.png" alt="GUSU SEOUL wide interior">
-                <img src="image%20copy%202.png" alt="GUSU SEOUL terrace">
-                <img src="image.png" alt="GUSU SEOUL dining seating">
-            </div>
-            <div class="gusu-mobile-character">
-                <img src="images/slothHi.png" alt="Wegoinn sloth character">
+                <img class="feature" src="KakaoTalk_20260410_094944503_13.jpg" alt="Wide lounge cafe view">
+                <img src="KakaoTalk_20260410_094944503_11.jpg" alt="Ceiling and long table view">
+                <img src="KakaoTalk_20260410_094944503_21.jpg" alt="Bakery display view">
+                <img src="KakaoTalk_20260410_094944503_23.jpg" alt="Terrace seating">
+                <img src="KakaoTalk_20260410_094944503_27.jpg" alt="Dessert and drink detail">
             </div>
         </section>
     </main>
