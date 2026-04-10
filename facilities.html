@@ -58,7 +58,7 @@
         }
 
         .facility-page {
-            padding: 14px 14px 88px;
+            padding: 0 0 88px;
             background:
                 linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 24%),
                 linear-gradient(180deg, #efe7dc 0%, #e5dacd 100%);
@@ -66,29 +66,284 @@
 
         .facility-shell {
             width: 100%;
-            max-width: 1660px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
+        }
+
+        .facility-hero,
+        .facility-hero-secondary,
+        .facility-hero-tertiary,
+        .facility-hero-quaternary {
+            position: relative;
+            min-height: 100vh;
+            padding: 16px;
+            display: grid;
+            align-items: stretch;
+            overflow: hidden;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .facility-hero {
-            position: relative;
-            min-height: 86vh;
-            padding: 44px;
-            display: grid;
-            align-items: end;
-            overflow: hidden;
-            border-radius: 42px;
             background:
-                linear-gradient(180deg, rgba(16, 12, 11, 0.04) 0%, rgba(16, 12, 11, 0.72) 100%),
-                url("KakaoTalk_20260410_094944503_13.jpg") center/cover no-repeat;
-            box-shadow: 0 28px 70px rgba(47, 32, 28, 0.16);
+                linear-gradient(180deg, rgba(16, 12, 11, 0.02) 0%, rgba(16, 12, 11, 0.74) 100%),
+                url("KakaoTalk_20260410_094944503_13.jpg") center center/cover no-repeat;
+        }
+
+        .facility-hero-secondary,
+        .facility-hero-tertiary {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .facility-hero-secondary {
+            background: url("KakaoTalk_20260410_094944503_26.jpg") center center/cover no-repeat;
+        }
+
+        .facility-secondary-link {
+            position: absolute;
+            right: 28px;
+            bottom: 28px;
+            display: inline-flex;
+            width: min(220px, 18vw);
+            z-index: 2;
+            animation: facilityClickFloat 1.8s ease-in-out infinite;
+        }
+
+        .facility-secondary-link::before,
+        .facility-secondary-link::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            border-radius: 999px;
+            opacity: 0;
+        }
+
+        .facility-secondary-link::before {
+            left: 61%;
+            top: 18%;
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle, rgba(255,255,255,0.98) 0%, rgba(255,232,140,0.95) 35%, rgba(255,232,140,0) 72%);
+            box-shadow: 0 0 18px rgba(255, 233, 153, 0.9);
+            animation: facilityClickSparkle 1.4s ease-out infinite;
+        }
+
+        .facility-secondary-link::after {
+            left: calc(61% - 13px);
+            top: calc(18% - 13px);
+            width: 44px;
+            height: 44px;
+            border: 2px solid rgba(255, 239, 178, 0.75);
+            animation: facilityClickPulse 1.4s ease-out infinite;
+        }
+
+        .facility-secondary-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .facility-secondary-link-more .facility-secondary-fill,
+        .facility-secondary-link-more .facility-secondary-text {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .facility-secondary-link-more .facility-secondary-fill {
+            left: 17%;
+            top: 22%;
+            width: 50%;
+            height: 32%;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .facility-secondary-link-more .facility-secondary-text {
+            left: 18.5%;
+            top: 24%;
+            width: 47%;
+            color: #111;
+            font-family: "Arial Narrow", "Arial", sans-serif;
+            font-size: clamp(16px, 1.65vw, 30px);
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            line-height: 1;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @keyframes facilityClickFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        @keyframes facilityClickSparkle {
+            0% { transform: scale(0.35); opacity: 0; }
+            28% { opacity: 1; }
+            60% { transform: scale(1.05); opacity: 0.95; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        @keyframes facilityClickPulse {
+            0% { transform: scale(0.4); opacity: 0; }
+            18% { opacity: 0.9; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        .facility-photo-overlay {
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 10020;
+            background: rgba(12, 10, 10, 0.94);
+            padding: 28px;
+            overflow-y: auto;
+        }
+
+        .facility-photo-overlay.open {
+            display: block;
+        }
+
+        .facility-photo-overlay-inner {
+            max-width: 1480px;
+            margin: 0 auto;
+        }
+
+        .facility-photo-overlay-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 22px;
+            color: #fff8f1;
+        }
+
+        .facility-photo-overlay-title {
+            margin: 0;
+            font-family: "Montserrat", "Inter", sans-serif;
+            font-size: clamp(26px, 2.8vw, 40px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .facility-photo-overlay-close {
+            width: 46px;
+            height: 46px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(255, 248, 241, 0.96);
+            color: #201815;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .facility-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .facility-photo-card {
+            border-radius: 22px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .facility-photo-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+
+        .facility-gallery-card,
+        .facility-menu-card {
+            cursor: zoom-in;
+            border: 0;
+            padding: 0;
+        }
+
+        .facility-menu-card img {
+            aspect-ratio: auto;
+            object-fit: contain;
+            background: #fff;
+        }
+
+        .facility-hero-quaternary .facility-secondary-link {
+            width: min(180px, 14vw);
+        }
+
+        .facility-menu-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(10, 8, 8, 0.95);
+            z-index: 10030;
+        }
+
+        .facility-menu-lightbox.open {
+            display: flex;
+        }
+
+        .facility-menu-lightbox img {
+            display: block;
+            max-width: min(92vw, 1400px);
+            max-height: 90vh;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .facility-menu-lightbox-close {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            width: 46px;
+            height: 46px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(255, 248, 241, 0.96);
+            color: #201815;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .facility-hero-tertiary {
+            background: url("KakaoTalk_20260410_094944503_17.jpg") center center/cover no-repeat;
+        }
+
+        .facility-hero-quaternary {
+            background: url("images/facility-hero-4-rotated.png") center center/cover no-repeat;
         }
 
         .facility-hero-copy {
             position: relative;
             z-index: 1;
-            max-width: 980px;
+            width: 100%;
+            max-width: none;
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr;
             color: #fff8f1;
+        }
+
+        .facility-hero-top {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .facility-hero-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
         }
 
         .facility-kicker,
@@ -121,16 +376,18 @@
         }
 
         .facility-hero h1 {
-            margin: 18px 0 16px;
-            max-width: 11ch;
-            font-size: clamp(44px, 6vw, 82px);
+            margin: 0;
+            max-width: none;
+            font-size: clamp(28px, 3vw, 42px);
             line-height: 0.92;
             font-weight: 800;
+            text-align: right;
+            padding-top: 2px;
         }
 
         .facility-subtitle {
-            margin: 0 0 20px;
-            max-width: 780px;
+            margin: 0 0 14px;
+            max-width: 980px;
             font-size: 22px;
             font-weight: 600;
             line-height: 1.45;
@@ -149,7 +406,7 @@
         }
 
         .facility-hero .facility-body {
-            max-width: 760px;
+            max-width: 980px;
             color: rgba(255, 248, 241, 0.84);
         }
 
@@ -157,8 +414,8 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 12px;
-            margin-top: 26px;
-            max-width: 920px;
+            margin-top: 18px;
+            max-width: 100%;
         }
 
         .facility-meta-item {
@@ -206,6 +463,23 @@
 
         .facility-section {
             padding: 28px;
+        }
+
+        .facility-section-primary {
+            min-height: calc(100vh - 8px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .facility-section-primary .facility-mosaic {
+            flex: 1;
+            align-items: stretch;
+        }
+
+        .facility-section-primary .facility-image-panel.large,
+        .facility-section-primary .facility-image-panel.large img {
+            min-height: 100%;
+            height: 100%;
         }
 
         .facility-section h2,
@@ -472,13 +746,58 @@
 
         @media (max-width: 760px) {
             .facility-page {
-                padding: 20px 12px 66px;
+                padding: 0 0 66px;
+            }
+
+            .facility-hero,
+            .facility-hero-secondary,
+            .facility-hero-tertiary,
+            .facility-hero-quaternary {
+                min-height: 100vh;
+                border-radius: 0;
             }
 
             .facility-hero {
-                min-height: 680px;
-                padding: 24px;
-                border-radius: 28px;
+                padding: 18px;
+                background:
+                    linear-gradient(180deg, rgba(16, 12, 11, 0.04) 0%, rgba(16, 12, 11, 0.74) 100%),
+                    url("KakaoTalk_20260410_094944503_13.jpg") center center/cover no-repeat;
+            }
+
+            .facility-hero-secondary,
+            .facility-hero-tertiary {
+                padding: 0;
+            }
+
+            .facility-hero-secondary {
+                background: transparent;
+            }
+
+            .facility-secondary-link {
+                right: 18px;
+                bottom: 18px;
+                width: min(180px, 42vw);
+            }
+
+            .facility-hero-quaternary .facility-secondary-link {
+                width: min(154px, 36vw);
+            }
+
+            .facility-photo-overlay {
+                padding: 18px 12px 28px;
+            }
+
+            .facility-photo-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .facility-hero-tertiary {
+                background: url("KakaoTalk_20260410_094944503_17.jpg") center center/cover no-repeat;
+            }
+
+            .facility-hero-quaternary {
+                background: url("images/facility-hero-4-rotated.png") center center/cover no-repeat;
             }
 
             .facility-hero h1 {
@@ -554,8 +873,10 @@
             <div class="facility-shell">
                 <section class="facility-hero">
                     <div class="facility-hero-copy">
-                        <div class="facility-kicker" data-en="Facilities" data-ko="시설">Facilities</div>
-                        <h1 data-en="WEGOINN x GUSU SEOUL" data-ko="WEGOINN x GUSU SEOUL">WEGOINN x GUSU SEOUL</h1>
+                        <div class="facility-hero-top">
+                            <h1 data-en="WEGOINN x GUSU SEOUL" data-ko="WEGOINN x GUSU SEOUL">WEGOINN x GUSU SEOUL</h1>
+                        </div>
+                        <div class="facility-hero-bottom">
                         <p class="facility-subtitle" data-en="A first-floor lounge cafe shaped by architecture, long-table rhythm, and a warm urban hospitality mood." data-ko="건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다.">건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다.</p>
                         <p class="facility-body" data-en="Instead of treating the facility as a secondary amenity, this page introduces the collaboration as a full spatial experience. The composition is led by your photos only, with the space, counter, terrace, and dining scenes filling the screen more directly." data-ko="이번 시설 페이지는 부대시설 안내가 아니라, 위고인과 구수서울의 협업 공간을 하나의 경험처럼 보이도록 다시 구성했습니다. 본문 사진은 업로드해주신 사진만 사용했고, 공간 전경과 카운터, 테라스, 다이닝 장면이 화면을 직접적으로 채우도록 배치했습니다.">이번 시설 페이지는 부대시설 안내가 아니라, 위고인과 구수서울의 협업 공간을 하나의 경험처럼 보이도록 다시 구성했습니다. 본문 사진은 업로드해주신 사진만 사용했고, 공간 전경과 카운터, 테라스, 다이닝 장면이 화면을 직접적으로 채우도록 배치했습니다.</p>
                         <div class="facility-meta">
@@ -572,101 +893,70 @@
                                 <span data-en="Urban, architectural, warm" data-ko="도시적이고 건축적이며 따뜻한 분위기">Urban, architectural, warm</span>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <section class="facility-grid">
-                    <article class="facility-section">
-                        <div class="facility-overline" data-en="Spatial Story" data-ko="공간 스토리">Spatial Story</div>
-                        <h2 class="facility-story-title" data-en="A Korean lounge cafe shaped by tradition and trend." data-ko="한국 고유의 정서를 담은 라운지 카페 구수 서울입니다.">한국 고유의 정서를 담은 라운지 카페 구수 서울입니다.</h2>
-                        <p class="facility-body" data-en="Tradition meets trend here. GUSU SEOUL reinterprets familiar Korean ingredients, flavors, and sensibilities into a contemporary lounge cafe experience rooted in Seoul." data-ko="전통과 트렌드가 만나는 곳, 서울의 구수한 멋을 재해석하는 라운지 카페가 바로 구수서울입니다. 익숙한 한국의 재료와 맛, 그리고 정서를 현대적인 감성으로 다시 풀어내어 가장 서울다운 경험을 제안합니다.">전통과 트렌드가 만나는 곳, 서울의 구수한 멋을 재해석하는 라운지 카페가 바로 구수서울입니다. 익숙한 한국의 재료와 맛, 그리고 정서를 현대적인 감성으로 다시 풀어내어 가장 서울다운 경험을 제안합니다.</p>
-                        <div class="facility-mosaic">
-                            <div class="facility-image-panel large">
-                                <img src="KakaoTalk_20260410_094944503_17.jpg" alt="Main wide interior view of GUSU SEOUL lounge cafe">
-                            </div>
-                            <div class="facility-image-panel stack">
-                                <div class="facility-image-card">
-                                    <img src="KakaoTalk_20260410_094944503_15.jpg" alt="Art wall lounge seating at Wegoinn x GUSU SEOUL">
-                                    <div class="facility-caption-box">
-                                        <div class="facility-card-label" data-en="Arrival View" data-ko="도착 장면">Arrival View</div>
-                                        <h3 data-en="Art wall and lounge seating" data-ko="아트월과 라운지 좌석">Art wall and lounge seating</h3>
-                                        <p class="facility-caption" data-en="A cleaner first impression with softer tones and stronger composition." data-ko="차분한 톤과 정돈된 구도로 공간의 첫인상을 선명하게 보여줍니다.">A cleaner first impression with softer tones and stronger composition.</p>
-                                    </div>
-                                </div>
-                                <div class="facility-image-card">
-                                    <img src="KakaoTalk_20260410_094944503_06.jpg" alt="Bright lounge seating scene at GUSU SEOUL">
-                                    <div class="facility-caption-box">
-                                        <div class="facility-card-label" data-en="Open Layout" data-ko="오픈 레이아웃">Open Layout</div>
-                                        <h3 data-en="Long-view seating rhythm" data-ko="길게 이어지는 좌석 리듬">Long-view seating rhythm</h3>
-                                        <p class="facility-caption" data-en="The wider crop keeps the page feeling open rather than boxed in." data-ko="넓은 크롭을 사용해 화면이 답답하지 않고 시원하게 열리도록 했습니다.">The wider crop keeps the page feeling open rather than boxed in.</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </article>
-
-                    <article class="facility-info-panel facility-section">
-                        <div class="facility-overline" data-en="Practical Info" data-ko="이용 정보">Practical Info</div>
-                        <h3 data-en="Time and care stay in every detail." data-ko="시간과 정성이 머무는 공간.">Time and care stay in every detail.</h3>
-                        <p class="facility-note" data-en="Every menu at GUSU SEOUL holds the aesthetics of waiting: the chew of freshly drawn rice cake, the aroma of deeply brewed tea, and the softness of carefully crafted makgeolli. The space is designed as a pause inside the city." data-ko="구수서울의 메뉴와 공간에는 기다림의 미학이 담겨 있습니다. 갓 뽑아낸 듯한 가래떡의 쫄깃함, 깊게 우려낸 차의 향기, 정성으로 빚어낸 막걸리의 부드러움까지. 바쁜 도심 속에서 잠시 멈춰 맛과 분위기를 온전히 즐길 수 있도록 구성했습니다.">Every menu at GUSU SEOUL holds the aesthetics of waiting: the chew of freshly drawn rice cake, the aroma of deeply brewed tea, and the softness of carefully crafted makgeolli. The space is designed as a pause inside the city.</p>
-                        <div class="facility-hours">
-                            <div class="facility-hours-row">
-                                <strong data-en="Open Every Day" data-ko="연중무휴">Open Every Day</strong>
-                                <span data-en="09:00 - 23:00" data-ko="09:00 오픈 / 23:00 마감">09:00 - 23:00</span>
-                            </div>
-                        </div>
-                        <ul class="facility-info-list">
-                            <li data-en="Present your room key at GUSU SEOUL for the dedicated Wegoinn guest benefit." data-ko="GUSU SEOUL에서 객실 키를 제시하면 위고인 투숙객 전용 혜택을 받을 수 있습니다.">Present your room key at GUSU SEOUL for the dedicated Wegoinn guest benefit.</li>
-                            <li data-en="Location: Wegoinn Hostel 1F & Terrace" data-ko="위치: 위고인 호스텔 1층 & 테라스">Location: Wegoinn Hostel 1F & Terrace</li>
-                        </ul>
-                        <a class="facility-map-link" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" data-en="Open on Naver Map" data-ko="네이버 지도 보기">Open on Naver Map</a>
-                    </article>
-                </section>
-
-                <section class="facility-wide-panel">
-                    <div class="facility-wide-photo">
-                        <img src="KakaoTalk_20260410_094944503_03.jpg" alt="Dining and seating scene inside GUSU SEOUL">
-                    </div>
-                    <div class="facility-wide-copy">
-                        <div class="facility-overline" data-en="Lounge Detail" data-ko="라운지 디테일">Lounge Detail</div>
-                        <h2 data-en="The most Seoul experience, GUSU." data-ko="가장 서울다운 경험, 구수.">The most Seoul experience, GUSU.</h2>
-                        <p class="facility-body" data-en="GUSU SEOUL builds its identity from Seoul locality: Korean architectural motifs, typography that feels rustic yet refined, and a vintage-toned palette. It is designed to feel most Korean and most contemporary at once." data-ko="구수서울은 서울의 로컬리티를 디자인의 핵심 동력으로 삼습니다. 한국적인 건축 요소를 떠올리게 하는 공간감, 촌스러운 듯하면서도 세련된 타이포의 결, 빈티지한 컬러 팔레트가 어우러져 가장 한국적이면서도 가장 현대적인 분위기를 만듭니다.">GUSU SEOUL builds its identity from Seoul locality: Korean architectural motifs, typography that feels rustic yet refined, and a vintage-toned palette. It is designed to feel most Korean and most contemporary at once.</p>
-                        <ul class="facility-info-list">
-                            <li data-en="Familiar ingredients and Korean menu language are reborn through GUSU SEOUL with a more hip and trend-aware sensibility." data-ko="익숙한 재료와 한국적인 메뉴 언어가 구수서울만의 터치를 거쳐 더 힙하고 트렌디한 감성으로 다시 태어납니다.">Familiar ingredients and Korean menu language are reborn through GUSU SEOUL with a more hip and trend-aware sensibility.</li>
-                            <li data-en="We hope your day can pause here for a moment, with dessert and tea becoming a small, warm rest." data-ko="한 그릇의 디저트와 한 잔의 차에 깃든 시간이, 당신의 하루를 잠시 멈추게 하는 따뜻한 휴식이 되기를 바랍니다.">We hope your day can pause here for a moment, with dessert and tea becoming a small, warm rest.</li>
-                        </ul>
                     </div>
                 </section>
 
-                <section class="facility-gallery">
-                    <div class="facility-overline" data-en="Photo Gallery" data-ko="포토 갤러리">Photo Gallery</div>
-                    <div class="facility-thumb-grid">
-                        <button class="facility-thumb-button" type="button" data-full="images/facility-view-1.jpg" data-alt="Main wide interior view of GUSU SEOUL lounge cafe">
-                            <span class="facility-thumb-card"><img src="images/facility-thumb-1.jpg" alt="Main wide interior view of GUSU SEOUL lounge cafe"></span>
-                        </button>
-                        <button class="facility-thumb-button" type="button" data-full="images/facility-view-2.jpg" data-alt="Art wall lounge seating at Wegoinn x GUSU SEOUL">
-                            <span class="facility-thumb-card"><img src="images/facility-thumb-2.jpg" alt="Art wall lounge seating at Wegoinn x GUSU SEOUL"></span>
-                        </button>
-                        <button class="facility-thumb-button" type="button" data-full="images/facility-view-3.jpg" data-alt="Dining and seating scene inside GUSU SEOUL">
-                            <span class="facility-thumb-card"><img src="images/facility-thumb-3.jpg" alt="Dining and seating scene inside GUSU SEOUL"></span>
-                        </button>
-                        <button class="facility-thumb-button" type="button" data-full="images/facility-view-4.jpg" data-alt="Bakery counter display at GUSU SEOUL">
-                            <span class="facility-thumb-card"><img src="images/facility-thumb-4.jpg" alt="Bakery counter display at GUSU SEOUL"></span>
-                        </button>
-                        <button class="facility-thumb-button" type="button" data-full="images/facility-view-5.jpg" data-alt="Terrace seating detail at GUSU SEOUL">
-                            <span class="facility-thumb-card"><img src="images/facility-thumb-5.jpg" alt="Terrace seating detail at GUSU SEOUL"></span>
-                        </button>
-                    </div>
-                </section>
-
-                <div class="facility-lightbox" id="facilityLightbox" aria-hidden="true">
-                    <div class="facility-lightbox-inner">
-                        <button class="facility-lightbox-close" type="button" id="facilityLightboxClose" aria-label="Close photo">×</button>
-                        <img id="facilityLightboxImage" src="" alt="">
-                    </div>
-                </div>
+                <section class="facility-hero-secondary" aria-label="Facilities second container"><a class="facility-secondary-link" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Open GUSU SEOUL on Naver Map"><img src="images/click-1-cutout.png" alt="Open GUSU SEOUL on Naver Map"></a></section>
+                <section class="facility-hero-tertiary" aria-label="Facilities third container"><a class="facility-secondary-link" href="#" id="facilityPhotoMoreTrigger" aria-label="Photo more"><img src="images/click-2-cutout.png" alt="Photo more"></a></section>
+                <section class="facility-hero-quaternary" id="facility-fourth" aria-label="Facilities fourth container"><a class="facility-secondary-link" href="#" id="facilityFourthTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a></section>
             </div>
         </section>
+
+        <div class="facility-photo-overlay" id="facilityPhotoOverlay" aria-hidden="true">
+            <div class="facility-photo-overlay-inner">
+                <div class="facility-photo-overlay-head">
+                    <h2 class="facility-photo-overlay-title">Photo More</h2>
+                    <button class="facility-photo-overlay-close" type="button" id="facilityPhotoOverlayClose" aria-label="Close photo gallery">×</button>
+                </div>
+                <div class="facility-photo-grid">
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/01.jpg" data-photo-alt="Facilities gallery photo 1"><img src="images/facility-gallery/thumbs/01.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 1"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/02.jpg" data-photo-alt="Facilities gallery photo 2"><img src="images/facility-gallery/thumbs/02.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 2"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/03.jpg" data-photo-alt="Facilities gallery photo 3"><img src="images/facility-gallery/thumbs/03.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 3"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/04.jpg" data-photo-alt="Facilities gallery photo 4"><img src="images/facility-gallery/thumbs/04.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 4"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/05.jpg" data-photo-alt="Facilities gallery photo 5"><img src="images/facility-gallery/thumbs/05.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 5"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/06.jpg" data-photo-alt="Facilities gallery photo 6"><img src="images/facility-gallery/thumbs/06.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 6"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/07.jpg" data-photo-alt="Facilities gallery photo 7"><img src="images/facility-gallery/thumbs/07.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 7"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/08.jpg" data-photo-alt="Facilities gallery photo 8"><img src="images/facility-gallery/thumbs/08.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 8"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/09.jpg" data-photo-alt="Facilities gallery photo 9"><img src="images/facility-gallery/thumbs/09.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 9"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/11.jpg" data-photo-alt="Facilities gallery photo 11"><img src="images/facility-gallery/thumbs/11.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 11"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/12.jpg" data-photo-alt="Facilities gallery photo 12"><img src="images/facility-gallery/thumbs/12.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 12"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/13.jpg" data-photo-alt="Facilities gallery photo 13"><img src="images/facility-gallery/thumbs/13.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 13"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/14.jpg" data-photo-alt="Facilities gallery photo 14"><img src="images/facility-gallery/thumbs/14.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 14"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/15.jpg" data-photo-alt="Facilities gallery photo 15"><img src="images/facility-gallery/thumbs/15.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 15"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/16.jpg" data-photo-alt="Facilities gallery photo 16"><img src="images/facility-gallery/thumbs/16.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 16"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/18.jpg" data-photo-alt="Facilities gallery photo 18"><img src="images/facility-gallery/thumbs/18.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 18"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/19.jpg" data-photo-alt="Facilities gallery photo 19"><img src="images/facility-gallery/thumbs/19.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 19"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/20.jpg" data-photo-alt="Facilities gallery photo 20"><img src="images/facility-gallery/thumbs/20.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 20"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/21.jpg" data-photo-alt="Facilities gallery photo 21"><img src="images/facility-gallery/thumbs/21.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 21"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/22.jpg" data-photo-alt="Facilities gallery photo 22"><img src="images/facility-gallery/thumbs/22.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 22"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/23.jpg" data-photo-alt="Facilities gallery photo 23"><img src="images/facility-gallery/thumbs/23.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 23"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/24.jpg" data-photo-alt="Facilities gallery photo 24"><img src="images/facility-gallery/thumbs/24.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 24"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/25.jpg" data-photo-alt="Facilities gallery photo 25"><img src="images/facility-gallery/thumbs/25.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 25"></button>
+                    <button class="facility-photo-card facility-gallery-card" type="button" data-photo-full="images/facility-gallery/full/27.jpg" data-photo-alt="Facilities gallery photo 27"><img src="images/facility-gallery/thumbs/27.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 27"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="facility-menu-overlay facility-photo-overlay" id="facilityMenuOverlay" aria-hidden="true">
+            <div class="facility-photo-overlay-inner">
+                <div class="facility-photo-overlay-head">
+                    <h2 class="facility-photo-overlay-title">Menu</h2>
+                    <button class="facility-photo-overlay-close" type="button" id="facilityMenuOverlayClose" aria-label="Close menu gallery">×</button>
+                </div>
+                <div class="facility-photo-grid">
+                    <button class="facility-photo-card facility-menu-card" type="button" data-menu-full="images/facility-gallery/menu1-full.webp" data-menu-alt="Menu 1"><img src="images/facility-gallery/menu1.webp" loading="lazy" decoding="async" alt="Menu 1"></button>
+                    <button class="facility-photo-card facility-menu-card" type="button" data-menu-full="images/facility-gallery/menu2-full.webp" data-menu-alt="Menu 2"><img src="images/facility-gallery/menu2.webp" loading="lazy" decoding="async" alt="Menu 2"></button>
+                    <button class="facility-photo-card facility-menu-card" type="button" data-menu-full="images/facility-gallery/menu3-full.webp" data-menu-alt="Menu 3"><img src="images/facility-gallery/menu3.webp" loading="lazy" decoding="async" alt="Menu 3"></button>
+                    <button class="facility-photo-card facility-menu-card" type="button" data-menu-full="images/facility-gallery/menu4-full.webp" data-menu-alt="Menu 4"><img src="images/facility-gallery/menu4.webp" loading="lazy" decoding="async" alt="Menu 4"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="facility-menu-lightbox" id="facilityMenuLightbox" aria-hidden="true">
+            <button class="facility-menu-lightbox-close" type="button" id="facilityMenuLightboxClose" aria-label="Close enlarged menu">×</button>
+            <img id="facilityMenuLightboxImage" src="" alt="">
+        </div>
 
         <footer class="footer">
             <div class="container">
@@ -692,32 +982,173 @@
     <script src="script.js"></script>
     <script>
         (function () {
-            var lightbox = document.getElementById("facilityLightbox");
-            var image = document.getElementById("facilityLightboxImage");
-            var close = document.getElementById("facilityLightboxClose");
-            if (!lightbox || !image || !close) return;
+            var sections = Array.prototype.slice.call(document.querySelectorAll(".facility-hero, .facility-hero-secondary, .facility-hero-tertiary, .facility-hero-quaternary"));
+            var photoTrigger = document.getElementById("facilityPhotoMoreTrigger");
+            var photoOverlay = document.getElementById("facilityPhotoOverlay");
+            var photoOverlayClose = document.getElementById("facilityPhotoOverlayClose");
+            var menuOverlay = document.getElementById("facilityMenuOverlay");
+            var menuOverlayClose = document.getElementById("facilityMenuOverlayClose");
+            var menuLightbox = document.getElementById("facilityMenuLightbox");
+            var menuLightboxImage = document.getElementById("facilityMenuLightboxImage");
+            var menuLightboxClose = document.getElementById("facilityMenuLightboxClose");
+            var fourthTrigger = document.getElementById("facilityFourthTrigger");
+            if (sections.length < 2) return;
 
-            document.querySelectorAll(".facility-thumb-button").forEach(function (button) {
+            var isAnimating = false;
+            var threshold = 28;
+
+            function scrollToSection(section) {
+                isAnimating = true;
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.setTimeout(function () {
+                    isAnimating = false;
+                }, 700);
+            }
+
+            function getClosestSectionIndex() {
+                var scrollTop = window.scrollY;
+                var closestIndex = 0;
+                var closestDistance = Infinity;
+
+                sections.forEach(function (section, index) {
+                    var distance = Math.abs(section.offsetTop - scrollTop);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+
+                return closestIndex;
+            }
+
+            function openPhotoOverlay() {
+                if (!photoOverlay) return;
+                photoOverlay.classList.add("open");
+                photoOverlay.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closePhotoOverlay() {
+                if (!photoOverlay) return;
+                photoOverlay.classList.remove("open");
+                photoOverlay.setAttribute("aria-hidden", "true");
+                document.body.style.overflow = "";
+            }
+
+            function openMenuOverlay() {
+                if (!menuOverlay) return;
+                menuOverlay.classList.add("open");
+                menuOverlay.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMenuOverlay() {
+                if (!menuOverlay) return;
+                menuOverlay.classList.remove("open");
+                menuOverlay.setAttribute("aria-hidden", "true");
+                document.body.style.overflow = "";
+            }
+
+            function openMenuLightbox(src, alt) {
+                if (!menuLightbox || !menuLightboxImage) return;
+                menuLightboxImage.src = src || "";
+                menuLightboxImage.alt = alt || "";
+                menuLightbox.classList.add("open");
+                menuLightbox.setAttribute("aria-hidden", "false");
+            }
+
+            function closeMenuLightbox() {
+                if (!menuLightbox || !menuLightboxImage) return;
+                menuLightbox.classList.remove("open");
+                menuLightbox.setAttribute("aria-hidden", "true");
+                menuLightboxImage.src = "";
+            }
+
+            if (photoTrigger) {
+                photoTrigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    openPhotoOverlay();
+                });
+            }
+
+            if (fourthTrigger) {
+                fourthTrigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    openMenuOverlay();
+                });
+            }
+
+            if (menuOverlayClose) {
+                menuOverlayClose.addEventListener("click", closeMenuOverlay);
+            }
+
+            if (menuOverlay) {
+                menuOverlay.addEventListener("click", function (event) {
+                    if (event.target === menuOverlay) closeMenuOverlay();
+                });
+            }
+
+            document.querySelectorAll(".facility-gallery-card[data-photo-full]").forEach(function (button) {
                 button.addEventListener("click", function () {
-                    image.src = button.getAttribute("data-full") || "";
-                    image.alt = button.getAttribute("data-alt") || "";
-                    lightbox.classList.add("open");
-                    lightbox.setAttribute("aria-hidden", "false");
+                    openMenuLightbox(button.getAttribute("data-photo-full"), button.getAttribute("data-photo-alt"));
                 });
             });
 
-            function closeLightbox() {
-                lightbox.classList.remove("open");
-                lightbox.setAttribute("aria-hidden", "true");
-                image.src = "";
+            document.querySelectorAll(".facility-menu-card[data-menu-full]").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    openMenuLightbox(button.getAttribute("data-menu-full"), button.getAttribute("data-menu-alt"));
+                });
+            });
+
+            if (menuLightboxClose) {
+                menuLightboxClose.addEventListener("click", closeMenuLightbox);
             }
 
-            close.addEventListener("click", closeLightbox);
-            lightbox.addEventListener("click", function (event) {
-                if (event.target === lightbox) closeLightbox();
-            });
+            if (menuLightbox) {
+                menuLightbox.addEventListener("click", function (event) {
+                    if (event.target === menuLightbox) closeMenuLightbox();
+                });
+            }
+
+            if (photoOverlayClose) {
+                photoOverlayClose.addEventListener("click", closePhotoOverlay);
+            }
+
+            if (photoOverlay) {
+                photoOverlay.addEventListener("click", function (event) {
+                    if (event.target === photoOverlay) closePhotoOverlay();
+                });
+            }
+
+            window.addEventListener("wheel", function (event) {
+                if (photoOverlay && photoOverlay.classList.contains("open")) return;
+                if (menuOverlay && menuOverlay.classList.contains("open")) return;
+                if (menuLightbox && menuLightbox.classList.contains("open")) return;
+                if (isAnimating || Math.abs(event.deltaY) < threshold) return;
+
+                var currentIndex = getClosestSectionIndex();
+                var targetIndex = currentIndex;
+
+                if (event.deltaY > 0 && currentIndex < sections.length - 1) {
+                    targetIndex = currentIndex + 1;
+                }
+
+                if (event.deltaY < 0 && currentIndex > 0) {
+                    targetIndex = currentIndex - 1;
+                }
+
+                if (targetIndex !== currentIndex) {
+                    event.preventDefault();
+                    scrollToSection(sections[targetIndex]);
+                }
+            }, { passive: false });
+
             document.addEventListener("keydown", function (event) {
-                if (event.key === "Escape") closeLightbox();
+                if (event.key === "Escape") {
+                    closePhotoOverlay();
+                    closeMenuOverlay();
+                    closeMenuLightbox();
+                }
             });
         })();
     </script>
