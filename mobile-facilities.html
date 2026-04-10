@@ -31,19 +31,19 @@
         }
 
         .main.facilities-main {
-            padding: 0 0 78px;
+            padding: 0;
         }
 
         .facility-mobile-screen {
             position: relative;
-            min-height: 100svh;
+            min-height: calc(100svh - 168px);
             overflow: hidden;
         }
 
         .facility-mobile-screen--hero {
             display: flex;
             align-items: flex-end;
-            padding: 22px 18px 22px;
+            padding: 18px 14px;
             background:
                 linear-gradient(180deg, rgba(16, 12, 11, 0.04) 0%, rgba(16, 12, 11, 0.74) 100%),
                 url("KakaoTalk_20260410_094944503_13.jpg") center center/cover no-repeat;
@@ -67,7 +67,7 @@
             z-index: 1;
             width: 100%;
             display: grid;
-            min-height: calc(100svh - 44px);
+            min-height: calc(100svh - 204px);
             grid-template-rows: auto 1fr;
         }
 
@@ -144,8 +144,8 @@
 
         .facility-mobile-link {
             position: absolute;
-            right: 18px;
-            bottom: 96px;
+            right: 14px;
+            bottom: 18px;
             display: inline-flex;
             width: min(180px, 42vw);
             z-index: 3;
