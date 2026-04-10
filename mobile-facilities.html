@@ -8,112 +8,115 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mobile-red-city.css?v=20260402-4">
-    <style>
+        <style>
         :root {
             --m-bg: #eee5da;
-            --m-surface: rgba(248, 243, 236, 0.94);
-            --m-line: rgba(37, 28, 24, 0.08);
             --m-text: #211816;
-            --m-muted: #655149;
+            --m-cream: #fff8f1;
+        }
+
+        html, body {
+            scroll-behavior: smooth;
         }
 
         body {
-            background: linear-gradient(180deg, #eee5da 0%, #e4d7ca 100%);
+            margin: 0;
+            background: #e9ded1;
             font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
             color: var(--m-text);
         }
 
+        .mobile-app {
+            background: #e9ded1;
+        }
+
         .main.facilities-main {
-            padding-top: 10px;
-            padding-bottom: 20px;
+            padding: 0 0 78px;
+            scroll-snap-type: y mandatory;
         }
 
-        .facility-mobile-hero,
-        .facility-mobile-section,
-        .facility-mobile-gallery {
-            border: 1px solid var(--m-line);
-            border-radius: 28px;
-            background: var(--m-surface);
-            box-shadow: 0 16px 34px rgba(47, 32, 28, 0.08);
+        .facility-mobile-screen {
+            position: relative;
+            min-height: 100svh;
+            scroll-snap-align: start;
             overflow: hidden;
-            margin-bottom: 14px;
         }
 
-        .facility-mobile-hero-visual {
-            min-height: 520px;
-            padding: 18px;
+        .facility-mobile-screen--hero {
+            display: flex;
+            align-items: flex-end;
+            padding: 22px 18px 22px;
+            background:
+                linear-gradient(180deg, rgba(16, 12, 11, 0.04) 0%, rgba(16, 12, 11, 0.74) 100%),
+                url("KakaoTalk_20260410_094944503_13.jpg") center center/cover no-repeat;
+            color: var(--m-cream);
+        }
+
+        .facility-mobile-screen--second {
+            background: url("KakaoTalk_20260410_094944503_26.jpg") center center/cover no-repeat;
+        }
+
+        .facility-mobile-screen--third {
+            background: url("KakaoTalk_20260410_094944503_17.jpg") center center/cover no-repeat;
+        }
+
+        .facility-mobile-screen--fourth {
+            background: url("images/facility-hero-4-rotated.png") center center/cover no-repeat;
+        }
+
+        .facility-mobile-copy {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: grid;
+            min-height: calc(100svh - 44px);
+            grid-template-rows: auto 1fr;
+        }
+
+        .facility-mobile-copy-top {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .facility-mobile-copy-bottom {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            background:
-                linear-gradient(180deg, rgba(16, 12, 11, 0.08), rgba(16, 12, 11, 0.72)),
-                url("KakaoTalk_20260410_094944503_13.jpg") center/cover no-repeat;
-            color: #fff8f1;
+            align-items: flex-start;
         }
 
-        .facility-mobile-kicker,
-        .facility-mobile-overline {
-            display: inline-flex;
-            width: fit-content;
+        .facility-mobile-copy h1 {
+            margin: 0;
             font-family: "Montserrat", "Inter", sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .facility-mobile-kicker {
-            padding: 8px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 248, 241, 0.18);
-            background: rgba(255, 248, 241, 0.12);
-            margin-bottom: 14px;
-        }
-
-        .facility-mobile-hero h1,
-        .facility-mobile-section h2,
-        .facility-mobile-card strong {
-            font-family: "Montserrat", "Inter", sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        .facility-mobile-hero h1 {
-            margin: 0 0 12px;
-            max-width: 8ch;
-            font-size: 40px;
-            line-height: 0.94;
+            font-size: clamp(28px, 8.6vw, 42px);
+            line-height: 0.92;
             font-weight: 800;
-            color: #fff8f1;
+            letter-spacing: -0.03em;
+            text-align: right;
+            color: var(--m-cream);
         }
 
         .facility-mobile-subtitle {
-            margin: 0 0 10px;
-            font-size: 18px;
+            margin: 0 0 12px;
+            font-size: 17px;
+            line-height: 1.55;
             font-weight: 600;
-            line-height: 1.5;
-            color: rgba(255, 248, 241, 0.94);
+            color: rgba(255, 248, 241, 0.95);
         }
 
-        .facility-mobile-body,
-        .facility-mobile-card span,
-        .facility-mobile-note,
-        .facility-mobile-hours span,
-        .facility-mobile-map,
-        .facility-mobile-gallery p {
-            font-size: 15px;
-            line-height: 1.75;
-            color: var(--m-muted);
-            text-decoration: none;
-        }
-
-        .facility-mobile-hero .facility-mobile-body {
-            color: rgba(255, 248, 241, 0.86);
+        .facility-mobile-body {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.72;
+            color: rgba(255, 248, 241, 0.84);
         }
 
         .facility-mobile-meta {
             display: grid;
             gap: 8px;
             margin-top: 16px;
+            width: 100%;
         }
 
         .facility-mobile-meta div {
@@ -121,156 +124,204 @@
             border-radius: 16px;
             background: rgba(255, 248, 241, 0.12);
             border: 1px solid rgba(255, 248, 241, 0.12);
+            backdrop-filter: blur(10px);
         }
 
         .facility-mobile-meta strong {
             display: block;
             margin-bottom: 4px;
             font-family: "Montserrat", "Inter", sans-serif;
-            font-size: 12px;
+            font-size: 11px;
+            font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: rgba(255, 248, 241, 0.74);
+            color: rgba(255, 248, 241, 0.72);
         }
 
         .facility-mobile-meta span {
-            color: #fff8f1;
+            color: var(--m-cream);
             font-size: 14px;
-            line-height: 1.55;
+            line-height: 1.5;
         }
 
-        .facility-mobile-panel {
-            padding: 16px;
+        .facility-mobile-link {
+            position: absolute;
+            right: 18px;
+            bottom: 96px;
+            display: inline-flex;
+            width: min(180px, 42vw);
+            z-index: 3;
+            animation: facilityClickFloat 1.8s ease-in-out infinite;
         }
 
-        .facility-mobile-section {
-            padding: 18px 16px;
+        .facility-mobile-link::before,
+        .facility-mobile-link::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            border-radius: 999px;
+            opacity: 0;
         }
 
-        .facility-mobile-overline {
-            margin-bottom: 12px;
-            color: #8c6c5e;
+        .facility-mobile-link::before {
+            left: 61%;
+            top: 18%;
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle, rgba(255,255,255,0.98) 0%, rgba(255,232,140,0.95) 35%, rgba(255,232,140,0) 72%);
+            box-shadow: 0 0 18px rgba(255, 233, 153, 0.9);
+            animation: facilityClickSparkle 1.4s ease-out infinite;
         }
 
-        .facility-mobile-section h2 {
-            margin: 0 0 10px;
-            font-size: 34px;
-            line-height: 0.96;
-            font-weight: 800;
-            color: var(--m-text);
+        .facility-mobile-link::after {
+            left: calc(61% - 13px);
+            top: calc(18% - 13px);
+            width: 44px;
+            height: 44px;
+            border: 2px solid rgba(255, 239, 178, 0.75);
+            animation: facilityClickPulse 1.4s ease-out infinite;
         }
 
-        .facility-mobile-mosaic,
-        .facility-mobile-card-grid,
-        .facility-mobile-gallery-grid {
-            display: grid;
-            gap: 10px;
-            margin-top: 14px;
-        }
-
-        .facility-mobile-mosaic img,
-        .facility-mobile-card img,
-        .facility-mobile-gallery-grid img {
-            width: 100%;
-            object-fit: cover;
+        .facility-mobile-link img {
             display: block;
-            border-radius: 20px;
+            width: 100%;
+            height: auto;
         }
 
-        .facility-mobile-mosaic img.hero {
-            height: 268px;
+        .facility-mobile-screen--fourth .facility-mobile-link {
+            width: min(154px, 36vw);
         }
 
-        .facility-mobile-mosaic img.small {
-            height: 160px;
+        .facility-mobile-overlay {
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 10020;
+            background: rgba(12, 10, 10, 0.94);
+            padding: 18px 12px 28px;
+            overflow-y: auto;
+        }
+
+        .facility-mobile-overlay.open {
+            display: block;
+        }
+
+        .facility-mobile-overlay-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .facility-mobile-overlay-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+            color: var(--m-cream);
+        }
+
+        .facility-mobile-overlay-title {
+            margin: 0;
+            font-family: "Montserrat", "Inter", sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .facility-mobile-overlay-close {
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(255, 248, 241, 0.96);
+            color: #201815;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .facility-mobile-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
         }
 
         .facility-mobile-card {
+            border: 0;
+            padding: 0;
+            border-radius: 18px;
             overflow: hidden;
-            border-radius: 22px;
-            border: 1px solid var(--m-line);
-            background: #fbf6ef;
+            background: rgba(255, 255, 255, 0.06);
+            cursor: zoom-in;
         }
 
         .facility-mobile-card img {
-            height: 186px;
-            border-radius: 0;
-        }
-
-        .facility-mobile-card-copy {
-            padding: 14px;
-        }
-
-        .facility-mobile-card strong {
             display: block;
-            margin-bottom: 6px;
-            font-size: 20px;
-            font-weight: 700;
-            color: #281c19;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
         }
 
-        .facility-mobile-note-box {
-            padding: 14px;
-            border-radius: 18px;
-            background: #f2e8dc;
-            margin-top: 12px;
+        .facility-mobile-menu-card img {
+            aspect-ratio: auto;
+            object-fit: contain;
+            background: #fff;
         }
 
-        .facility-mobile-note-box strong {
+        .facility-mobile-lightbox {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(10, 8, 8, 0.95);
+            z-index: 10030;
+        }
+
+        .facility-mobile-lightbox.open {
+            display: flex;
+        }
+
+        .facility-mobile-lightbox img {
             display: block;
-            margin-bottom: 8px;
-            font-family: "Montserrat", "Inter", sans-serif;
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #7b5d52;
+            max-width: 92vw;
+            max-height: 88vh;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
         }
 
-        .facility-mobile-hours {
-            display: grid;
-            gap: 8px;
-        }
-
-        .facility-mobile-hours div {
-            padding: 10px 12px;
-            border-radius: 14px;
-            background: #fbf4eb;
-        }
-
-        .facility-mobile-hours b {
-            display: block;
-            margin-bottom: 4px;
-            font-family: "Montserrat", "Inter", sans-serif;
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #7d5f54;
-        }
-
-        .facility-mobile-map {
-            display: inline-flex;
-            margin-top: 10px;
-            padding: 10px 14px;
+        .facility-mobile-lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: 0;
             border-radius: 999px;
-            background: #241a18;
-            color: #fff8f1;
+            background: rgba(255, 248, 241, 0.96);
+            color: #201815;
+            font-size: 28px;
+            cursor: pointer;
         }
 
-        .facility-mobile-gallery {
-            padding: 18px 16px;
+        @keyframes facilityClickFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
         }
 
-        .facility-mobile-gallery-grid {
-            grid-template-columns: 1fr 1fr;
+        @keyframes facilityClickSparkle {
+            0% { transform: scale(0.35); opacity: 0; }
+            28% { opacity: 1; }
+            60% { transform: scale(1.05); opacity: 0.95; }
+            100% { transform: scale(1.5); opacity: 0; }
         }
 
-        .facility-mobile-gallery-grid img.feature {
-            grid-column: 1 / -1;
-            height: 220px;
-        }
-
-        .facility-mobile-gallery-grid img.square {
-            height: 132px;
+        @keyframes facilityClickPulse {
+            0% { transform: scale(0.4); opacity: 0; }
+            18% { opacity: 0.9; }
+            100% { transform: scale(1.3); opacity: 0; }
         }
     </style>
 </head>
@@ -291,91 +342,100 @@
         <a href="mobile-contact.html" data-ko="연락처" data-en="Contact">연락처</a>
     </nav>
 
-    <main class="main facilities-main">
-        <section class="facility-mobile-hero">
-            <div class="facility-mobile-hero-visual">
-                <div class="facility-mobile-kicker" data-ko="시설" data-en="Facilities">시설</div>
-                <h1 data-ko="WEGOINN x GUSU SEOUL" data-en="WEGOINN x GUSU SEOUL">WEGOINN x GUSU SEOUL</h1>
-                <p class="facility-mobile-subtitle" data-ko="위고인 1층 라운지 카페의 공간감을 먼저 보여주는 모바일 구성입니다." data-en="A mobile layout that lets the first-floor lounge cafe fill the screen first.">위고인 1층 라운지 카페의 공간감을 먼저 보여주는 모바일 구성입니다.</p>
-                <p class="facility-mobile-body" data-ko="본문 안의 사진은 업로드해주신 컷만 사용했습니다. 공간 전경, 카운터, 테이블, 디테일이 자연스럽게 이어지도록 정리했습니다." data-en="Only your uploaded photos are used in the facilities body, arranged from wide space view to counter and dining detail.">본문 안의 사진은 업로드해주신 컷만 사용했습니다. 공간 전경, 카운터, 테이블, 디테일이 자연스럽게 이어지도록 정리했습니다.</p>
-                <div class="facility-mobile-meta">
-                    <div>
-                        <strong data-ko="포지션" data-en="Positioning">Positioning</strong>
-                        <span data-ko="1층 라운지 카페" data-en="1F Lounge Cafe">1층 라운지 카페</span>
-                    </div>
-                    <div>
-                        <strong data-ko="콜라보" data-en="Collaboration">Collaboration</strong>
-                        <span data-ko="위고인 x 구수서울" data-en="Wegoinn x GUSU SEOUL">위고인 x 구수서울</span>
+        <main class="main facilities-main">
+        <section class="facility-mobile-screen facility-mobile-screen--hero">
+            <div class="facility-mobile-copy">
+                <div class="facility-mobile-copy-top">
+                    <h1 data-ko="WEGOINN x GUSU SEOUL" data-en="WEGOINN x GUSU SEOUL">WEGOINN x GUSU SEOUL</h1>
+                </div>
+                <div class="facility-mobile-copy-bottom">
+                    <p class="facility-mobile-subtitle" data-ko="건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다." data-en="A first-floor lounge cafe shaped by architecture, long-table rhythm, and a warm urban hospitality mood.">건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다.</p>
+                    <p class="facility-mobile-body" data-ko="이번 시설 페이지는 부대시설 안내가 아니라, 위고인과 구수서울의 협업 공간을 하나의 경험처럼 보이도록 다시 구성했습니다. 본문 사진은 업로드해주신 사진만 사용했고, 공간 전경과 카운터, 테라스, 다이닝 장면이 화면을 직접적으로 채우도록 배치했습니다." data-en="This facilities page reframes the collaboration as a full spatial experience, using only your uploaded photos to let the lounge, counter, terrace, and dining scenes fill the screen more directly.">이번 시설 페이지는 부대시설 안내가 아니라, 위고인과 구수서울의 협업 공간을 하나의 경험처럼 보이도록 다시 구성했습니다. 본문 사진은 업로드해주신 사진만 사용했고, 공간 전경과 카운터, 테라스, 다이닝 장면이 화면을 직접적으로 채우도록 배치했습니다.</p>
+                    <div class="facility-mobile-meta">
+                        <div>
+                            <strong data-ko="포지션" data-en="Positioning">Positioning</strong>
+                            <span data-ko="1층 라운지 카페" data-en="1F Lounge Cafe">1층 라운지 카페</span>
+                        </div>
+                        <div>
+                            <strong data-ko="콜라보레이션" data-en="Collaboration">Collaboration</strong>
+                            <span data-ko="위고인 x 구수서울" data-en="Wegoinn x GUSU SEOUL">위고인 x 구수서울</span>
+                        </div>
+                        <div>
+                            <strong data-ko="무드" data-en="Mood">Mood</strong>
+                            <span data-ko="도시적이고 건축적이며 따뜻한 분위기" data-en="Urban, architectural, warm">도시적이고 건축적이며 따뜻한 분위기</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="facility-mobile-section">
-            <div class="facility-mobile-overline" data-ko="공간 스토리" data-en="Spatial Story">Spatial Story</div>
-            <h2 data-ko="한국 고유의 정서를 담은 라운지 카페 구수 서울입니다." data-en="A Korean lounge cafe shaped by tradition and trend.">한국 고유의 정서를 담은 라운지 카페 구수 서울입니다.</h2>
-            <p class="facility-mobile-body" data-ko="전통과 트렌드가 만나는 곳, 서울의 구수한 멋을 재해석하는 라운지 카페가 바로 구수서울입니다. 익숙한 재료와 메뉴가 구수서울만의 터치를 거쳐 가장 서울다운 경험으로 다시 태어납니다." data-en="GUSU SEOUL is where tradition meets trend, reinterpreting familiar Korean ingredients and menu language into a distinctly Seoul lounge cafe experience.">전통과 트렌드가 만나는 곳, 서울의 구수한 멋을 재해석하는 라운지 카페가 바로 구수서울입니다. 익숙한 재료와 메뉴가 구수서울만의 터치를 거쳐 가장 서울다운 경험으로 다시 태어납니다.</p>
-            <div class="facility-mobile-mosaic">
-                <img class="hero" src="KakaoTalk_20260410_094944503_17.jpg" alt="Main wide interior view">
-                <img class="small" src="KakaoTalk_20260410_094944503_15.jpg" alt="Art wall lounge seating">
-                <img class="small" src="KakaoTalk_20260410_094944503_06.jpg" alt="Long-view lounge seating">
-            </div>
+        <section class="facility-mobile-screen facility-mobile-screen--second" aria-label="Facilities second container">
+            <a class="facility-mobile-link" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Open GUSU SEOUL on Naver Map"><img src="images/click-1-cutout.png" alt="Open GUSU SEOUL on Naver Map"></a>
         </section>
 
-        <section class="facility-mobile-section">
-            <div class="facility-mobile-overline" data-ko="이용 정보" data-en="Practical Info">Practical Info</div>
-            <h2 data-ko="시간과 정성이 머무는 공간." data-en="Time and care stay in every detail.">시간과 정성이 머무는 공간.</h2>
-            <p class="facility-mobile-body" data-ko="구수서울의 메뉴와 공간에는 기다림의 미학이 담겨 있습니다. 가래떡의 쫄깃함, 깊게 우려낸 차의 향기, 부드러운 막걸리의 결까지 바쁜 하루 속 잠시 멈춰 쉬어갈 수 있는 여유를 제안합니다." data-en="Fresh rice cake texture, deeply brewed tea, and soft makgeolli reflect the aesthetics of waiting, giving the city day a brief pause.">구수서울의 메뉴와 공간에는 기다림의 미학이 담겨 있습니다. 가래떡의 쫄깃함, 깊게 우려낸 차의 향기, 부드러운 막걸리의 결까지 바쁜 하루 속 잠시 멈춰 쉬어갈 수 있는 여유를 제안합니다.</p>
-            <div class="facility-mobile-note-box">
-                <strong data-ko="운영 시간" data-en="Operation Hours">Operation Hours</strong>
-                <div class="facility-mobile-hours">
-                    <div>
-                        <b data-ko="연중무휴" data-en="Open Every Day">연중무휴</b>
-                        <span data-ko="09:00 오픈 / 23:00 마감" data-en="09:00 - 23:00">09:00 오픈 / 23:00 마감</span>
-                    </div>
-                </div>
-            </div>
-            <div class="facility-mobile-note-box">
-                <strong data-ko="위치 및 혜택" data-en="Location & Benefit">Location & Benefit</strong>
-                <p class="facility-mobile-note" data-ko="위고인 호스텔 1층 & 테라스 / 객실 키를 제시하면 위고인 투숙객 전용 혜택을 받을 수 있습니다." data-en="Wegoinn Hostel 1F & Terrace / Present your room key for the dedicated guest benefit.">위고인 호스텔 1층 & 테라스 / 객실 키를 제시하면 위고인 투숙객 전용 혜택을 받을 수 있습니다.</p>
-                <a class="facility-mobile-map" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" data-ko="네이버 지도 보기" data-en="Open on Naver Map">네이버 지도 보기</a>
-            </div>
+        <section class="facility-mobile-screen facility-mobile-screen--third" aria-label="Facilities third container">
+            <a class="facility-mobile-link" href="#" id="mobileFacilityPhotoTrigger" aria-label="Photo more"><img src="images/click-2-cutout.png" alt="Photo more"></a>
         </section>
 
-        <section class="facility-mobile-section">
-            <div class="facility-mobile-overline" data-ko="라운지 디테일" data-en="Lounge Detail">Lounge Detail</div>
-            <h2 data-ko="가장 서울다운 경험, 구수." data-en="The most Seoul experience, GUSU.">가장 서울다운 경험, 구수.</h2>
-            <div class="facility-mobile-card-grid">
-                <article class="facility-mobile-card">
-                    <img src="KakaoTalk_20260410_094944503_03.jpg" alt="Dining and seating scene">
-                    <div class="facility-mobile-card-copy">
-                        <strong data-ko="다이닝 장면" data-en="Dining Scene">다이닝 장면</strong>
-                        <span data-ko="한국적인 건축 요소를 떠올리게 하는 공간감과 서울의 로컬리티가 어우러져 가장 한국적이면서도 가장 현대적인 분위기를 만듭니다." data-en="Korean architectural cues and Seoul locality combine here into something both most Korean and most contemporary.">한국적인 건축 요소를 떠올리게 하는 공간감과 서울의 로컬리티가 어우러져 가장 한국적이면서도 가장 현대적인 분위기를 만듭니다.</span>
-                    </div>
-                </article>
-                <article class="facility-mobile-card">
-                    <img src="KakaoTalk_20260410_094944503_20.jpg" alt="Bakery counter display">
-                    <div class="facility-mobile-card-copy">
-                        <strong data-ko="카운터 디테일" data-en="Counter Detail">카운터 디테일</strong>
-                        <span data-ko="익숙한 재료와 메뉴가 구수서울만의 터치를 거쳐 더 힙하고 트렌디한 경험으로 다시 태어나는 장면입니다." data-en="Familiar ingredients are reborn here with GUSU SEOULs own hip and trend-aware touch.">익숙한 재료와 메뉴가 구수서울만의 터치를 거쳐 더 힙하고 트렌디한 경험으로 다시 태어나는 장면입니다.</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="facility-mobile-gallery">
-            <div class="facility-mobile-overline" data-ko="공간 하이라이트" data-en="Spatial Highlights">Spatial Highlights</div>
-            <h2 data-ko="업로드 사진만으로 정리한 하이라이트." data-en="Highlights built only from your uploaded photos.">업로드 사진만으로 정리한 하이라이트.</h2>
-            <p data-ko="한 그릇의 디저트와 한 잔의 차에 깃든 시간이 당신의 하루를 잠시 멈추게 하는 따뜻한 휴식이 되기를 바랍니다. 구수서울은 언제나 일상을 특별하게 만들어줄 구수한 이야기를 준비하고 있습니다." data-en="We hope dessert and tea can become a brief, warm pause in your day; GUSU SEOUL is always preparing another quietly memorable Seoul story.">한 그릇의 디저트와 한 잔의 차에 깃든 시간이 당신의 하루를 잠시 멈추게 하는 따뜻한 휴식이 되기를 바랍니다. 구수서울은 언제나 일상을 특별하게 만들어줄 구수한 이야기를 준비하고 있습니다.</p>
-            <div class="facility-mobile-gallery-grid">
-                <img class="feature" src="KakaoTalk_20260410_094944503_11.jpg" alt="Architectural long table view">
-                <img class="square" src="KakaoTalk_20260410_094944503_21.jpg" alt="Bread display detail">
-                <img class="square" src="KakaoTalk_20260410_094944503_23.jpg" alt="Terrace seating detail">
-                <img class="square" src="KakaoTalk_20260410_094944503_25.jpg" alt="Private table detail">
-                <img class="square" src="KakaoTalk_20260410_094944503_27.jpg" alt="Dessert and drink detail">
-            </div>
+        <section class="facility-mobile-screen facility-mobile-screen--fourth" id="mobileFacilityFourth" aria-label="Facilities fourth container">
+            <a class="facility-mobile-link" href="#" id="mobileFacilityMenuTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a>
         </section>
     </main>
+
+    <div class="facility-mobile-overlay" id="mobileFacilityPhotoOverlay" aria-hidden="true">
+        <div class="facility-mobile-overlay-inner">
+            <div class="facility-mobile-overlay-head">
+                <h2 class="facility-mobile-overlay-title">Photo More</h2>
+                <button class="facility-mobile-overlay-close" type="button" id="mobileFacilityPhotoOverlayClose" aria-label="Close photo gallery">×</button>
+            </div>
+            <div class="facility-mobile-grid">
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/01.jpg" data-alt="Facilities gallery photo 01"><img src="images/facility-gallery/thumbs/01.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 01"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/02.jpg" data-alt="Facilities gallery photo 02"><img src="images/facility-gallery/thumbs/02.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 02"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/03.jpg" data-alt="Facilities gallery photo 03"><img src="images/facility-gallery/thumbs/03.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 03"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/04.jpg" data-alt="Facilities gallery photo 04"><img src="images/facility-gallery/thumbs/04.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 04"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/05.jpg" data-alt="Facilities gallery photo 05"><img src="images/facility-gallery/thumbs/05.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 05"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/06.jpg" data-alt="Facilities gallery photo 06"><img src="images/facility-gallery/thumbs/06.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 06"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/07.jpg" data-alt="Facilities gallery photo 07"><img src="images/facility-gallery/thumbs/07.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 07"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/08.jpg" data-alt="Facilities gallery photo 08"><img src="images/facility-gallery/thumbs/08.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 08"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/09.jpg" data-alt="Facilities gallery photo 09"><img src="images/facility-gallery/thumbs/09.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 09"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/11.jpg" data-alt="Facilities gallery photo 11"><img src="images/facility-gallery/thumbs/11.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 11"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/12.jpg" data-alt="Facilities gallery photo 12"><img src="images/facility-gallery/thumbs/12.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 12"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/13.jpg" data-alt="Facilities gallery photo 13"><img src="images/facility-gallery/thumbs/13.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 13"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/14.jpg" data-alt="Facilities gallery photo 14"><img src="images/facility-gallery/thumbs/14.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 14"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/15.jpg" data-alt="Facilities gallery photo 15"><img src="images/facility-gallery/thumbs/15.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 15"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/16.jpg" data-alt="Facilities gallery photo 16"><img src="images/facility-gallery/thumbs/16.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 16"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/18.jpg" data-alt="Facilities gallery photo 18"><img src="images/facility-gallery/thumbs/18.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 18"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/19.jpg" data-alt="Facilities gallery photo 19"><img src="images/facility-gallery/thumbs/19.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 19"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/20.jpg" data-alt="Facilities gallery photo 20"><img src="images/facility-gallery/thumbs/20.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 20"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/21.jpg" data-alt="Facilities gallery photo 21"><img src="images/facility-gallery/thumbs/21.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 21"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/22.jpg" data-alt="Facilities gallery photo 22"><img src="images/facility-gallery/thumbs/22.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 22"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/23.jpg" data-alt="Facilities gallery photo 23"><img src="images/facility-gallery/thumbs/23.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 23"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/24.jpg" data-alt="Facilities gallery photo 24"><img src="images/facility-gallery/thumbs/24.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 24"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/25.jpg" data-alt="Facilities gallery photo 25"><img src="images/facility-gallery/thumbs/25.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 25"></button>
+                <button class="facility-mobile-card" type="button" data-full="images/facility-gallery/full/27.jpg" data-alt="Facilities gallery photo 27"><img src="images/facility-gallery/thumbs/27.jpg" loading="lazy" decoding="async" alt="Facilities gallery photo 27"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="facility-mobile-overlay" id="mobileFacilityMenuOverlay" aria-hidden="true">
+        <div class="facility-mobile-overlay-inner">
+            <div class="facility-mobile-overlay-head">
+                <h2 class="facility-mobile-overlay-title">Menu</h2>
+                <button class="facility-mobile-overlay-close" type="button" id="mobileFacilityMenuOverlayClose" aria-label="Close menu gallery">×</button>
+            </div>
+            <div class="facility-mobile-grid">
+                <button class="facility-mobile-card facility-mobile-menu-card" type="button" data-full="images/facility-gallery/menu1-full.webp" data-alt="Menu 1"><img src="images/facility-gallery/menu1.webp" loading="lazy" decoding="async" alt="Menu 1"></button>
+                <button class="facility-mobile-card facility-mobile-menu-card" type="button" data-full="images/facility-gallery/menu2-full.webp" data-alt="Menu 2"><img src="images/facility-gallery/menu2.webp" loading="lazy" decoding="async" alt="Menu 2"></button>
+                <button class="facility-mobile-card facility-mobile-menu-card" type="button" data-full="images/facility-gallery/menu3-full.webp" data-alt="Menu 3"><img src="images/facility-gallery/menu3.webp" loading="lazy" decoding="async" alt="Menu 3"></button>
+                <button class="facility-mobile-card facility-mobile-menu-card" type="button" data-full="images/facility-gallery/menu4-full.webp" data-alt="Menu 4"><img src="images/facility-gallery/menu4.webp" loading="lazy" decoding="async" alt="Menu 4"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="facility-mobile-lightbox" id="mobileFacilityLightbox" aria-hidden="true">
+        <button class="facility-mobile-lightbox-close" type="button" id="mobileFacilityLightboxClose" aria-label="Close enlarged image">×</button>
+        <img id="mobileFacilityLightboxImage" src="" alt="">
+    </div>
 
     <nav class="mobile-bottom-nav">
         <a href="mobile-home.html"><span class="icon">⌂</span><span data-ko="홈" data-en="Home">홈</span></a>
@@ -385,6 +445,107 @@
         <a href="https://booking-engine.onda.me/wegoinn" target="_blank" rel="noopener"><span class="icon">🗂</span><span data-ko="예약하기" data-en="Book Now">예약하기</span></a>
     </nav>
 </div>
+
 <script src="mobile-red-city.js?v=20260402-4"></script>
+<script>
+(function () {
+    var photoTrigger = document.getElementById("mobileFacilityPhotoTrigger");
+    var photoOverlay = document.getElementById("mobileFacilityPhotoOverlay");
+    var photoOverlayClose = document.getElementById("mobileFacilityPhotoOverlayClose");
+    var menuTrigger = document.getElementById("mobileFacilityMenuTrigger");
+    var menuOverlay = document.getElementById("mobileFacilityMenuOverlay");
+    var menuOverlayClose = document.getElementById("mobileFacilityMenuOverlayClose");
+    var lightbox = document.getElementById("mobileFacilityLightbox");
+    var lightboxImage = document.getElementById("mobileFacilityLightboxImage");
+    var lightboxClose = document.getElementById("mobileFacilityLightboxClose");
+
+    function openOverlay(el) {
+        if (!el) return;
+        el.classList.add("open");
+        el.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeOverlay(el) {
+        if (!el) return;
+        el.classList.remove("open");
+        el.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    function openLightbox(src, alt) {
+        if (!lightbox || !lightboxImage) return;
+        lightboxImage.src = src || "";
+        lightboxImage.alt = alt || "";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLightbox() {
+        if (!lightbox || !lightboxImage) return;
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+    }
+
+    if (photoTrigger) {
+        photoTrigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            openOverlay(photoOverlay);
+        });
+    }
+
+    if (photoOverlayClose) {
+        photoOverlayClose.addEventListener("click", function () { closeOverlay(photoOverlay); });
+    }
+
+    if (photoOverlay) {
+        photoOverlay.addEventListener("click", function (event) {
+            if (event.target === photoOverlay) closeOverlay(photoOverlay);
+        });
+    }
+
+    if (menuTrigger) {
+        menuTrigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            openOverlay(menuOverlay);
+        });
+    }
+
+    if (menuOverlayClose) {
+        menuOverlayClose.addEventListener("click", function () { closeOverlay(menuOverlay); });
+    }
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener("click", function (event) {
+            if (event.target === menuOverlay) closeOverlay(menuOverlay);
+        });
+    }
+
+    document.querySelectorAll(".facility-mobile-card[data-full]").forEach(function (button) {
+        button.addEventListener("click", function () {
+            openLightbox(button.getAttribute("data-full"), button.getAttribute("data-alt"));
+        });
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener("click", closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener("click", function (event) {
+            if (event.target === lightbox) closeLightbox();
+        });
+    }
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeOverlay(photoOverlay);
+            closeOverlay(menuOverlay);
+            closeLightbox();
+        }
+    });
+})();
+</script>
 </body>
 </html>
