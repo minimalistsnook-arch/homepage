@@ -37,7 +37,7 @@
 
         .facility-mobile-screen {
             position: relative;
-            min-height: calc(100svh - 168px);
+            min-height: calc(var(--app-vh, 100vh) - 168px);
             overflow: hidden;
         }
 
@@ -98,7 +98,7 @@
             z-index: 1;
             width: 100%;
             display: grid;
-            min-height: calc(100svh - 204px);
+            min-height: calc(var(--app-vh, 100vh) - 204px);
             grid-template-rows: auto 1fr;
         }
 
