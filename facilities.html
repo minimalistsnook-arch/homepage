@@ -73,7 +73,8 @@
         .facility-hero,
         .facility-hero-secondary,
         .facility-hero-tertiary,
-        .facility-hero-quaternary {
+        .facility-hero-quaternary,
+        .facility-hero-quinary {
             position: relative;
             min-height: 100vh;
             padding: 16px;
@@ -98,7 +99,8 @@
 
         .facility-hero-secondary,
         .facility-hero-tertiary,
-        .facility-hero-quaternary {
+        .facility-hero-quaternary,
+        .facility-hero-quinary {
             isolation: isolate;
         }
 
@@ -108,7 +110,8 @@
 
         .facility-hero-secondary::before,
         .facility-hero-tertiary::before,
-        .facility-hero-quaternary::before {
+        .facility-hero-quaternary::before,
+        .facility-hero-quinary::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -294,6 +297,10 @@
             width: min(180px, 14vw);
         }
 
+        .facility-hero-quinary .facility-secondary-link {
+            width: min(180px, 14vw);
+        }
+
         .facility-menu-lightbox {
             position: fixed;
             inset: 0;
@@ -338,6 +345,10 @@
 
         .facility-hero-quaternary {
             background: url("images/facility-hero-4-rotated.png") center center/cover no-repeat;
+        }
+
+        .facility-hero-quinary {
+            background: url("container5.png") center center/cover no-repeat;
         }
 
         .facility-hero-copy {
@@ -793,7 +804,8 @@
             .facility-hero,
             .facility-hero-secondary,
             .facility-hero-tertiary,
-            .facility-hero-quaternary {
+            .facility-hero-quaternary,
+            .facility-hero-quinary {
                 min-height: 100vh;
                 border-radius: 0;
             }
@@ -824,6 +836,10 @@
                 width: min(154px, 36vw);
             }
 
+            .facility-hero-quinary .facility-secondary-link {
+                width: min(154px, 36vw);
+            }
+
             .facility-photo-overlay {
                 padding: 18px 12px 28px;
             }
@@ -839,6 +855,10 @@
 
             .facility-hero-quaternary {
                 background: url("images/facility-hero-4-rotated.png") center center/cover no-repeat;
+            }
+
+            .facility-hero-quinary {
+                background: url("container5.png") center center/cover no-repeat;
             }
 
             .facility-hero h1 {
@@ -960,6 +980,7 @@
                 <section class="facility-hero-secondary" aria-label="Facilities second container"><a class="facility-secondary-link" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Open GUSU SEOUL on Naver Map"><img src="images/click-1-cutout.png" alt="Open GUSU SEOUL on Naver Map"></a></section>
                 <section class="facility-hero-tertiary" aria-label="Facilities third container"><a class="facility-secondary-link" href="#" id="facilityPhotoMoreTrigger" aria-label="Photo more"><img src="images/click-2-cutout.png" alt="Photo more"></a></section>
                 <section class="facility-hero-quaternary" id="facility-fourth" aria-label="Facilities fourth container"><a class="facility-secondary-link" href="#" id="facilityFourthTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a></section>
+                <section class="facility-hero-quinary" id="facility-fifth" aria-label="Facilities fifth container"><a class="facility-secondary-link" href="#" id="facilityFifthTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a></section>
             </div>
         </section>
 
@@ -1042,7 +1063,7 @@
     <script src="script.js"></script>
     <script>
         (function () {
-            var sections = Array.prototype.slice.call(document.querySelectorAll(".facility-hero, .facility-hero-secondary, .facility-hero-tertiary, .facility-hero-quaternary"));
+            var sections = Array.prototype.slice.call(document.querySelectorAll(".facility-hero, .facility-hero-secondary, .facility-hero-tertiary, .facility-hero-quaternary, .facility-hero-quinary"));
             var photoTrigger = document.getElementById("facilityPhotoMoreTrigger");
             var photoOverlay = document.getElementById("facilityPhotoOverlay");
             var photoOverlayClose = document.getElementById("facilityPhotoOverlayClose");
@@ -1052,6 +1073,7 @@
             var menuLightboxImage = document.getElementById("facilityMenuLightboxImage");
             var menuLightboxClose = document.getElementById("facilityMenuLightboxClose");
             var fourthTrigger = document.getElementById("facilityFourthTrigger");
+            var fifthTrigger = document.getElementById("facilityFifthTrigger");
             if (sections.length < 2) return;
 
             var isAnimating = false;
@@ -1133,6 +1155,13 @@
 
             if (fourthTrigger) {
                 fourthTrigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    openMenuOverlay();
+                });
+            }
+
+            if (fifthTrigger) {
+                fifthTrigger.addEventListener("click", function (event) {
                     event.preventDefault();
                     openMenuOverlay();
                 });

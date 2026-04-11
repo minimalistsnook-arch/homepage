@@ -62,15 +62,21 @@
             background: url("KakaoTalk_20260410_094944503_21.jpg") center center/cover no-repeat;
         }
 
+        .facility-mobile-screen--fifth {
+            background: url("container5.png") center center/cover no-repeat;
+        }
+
         .facility-mobile-screen--second,
         .facility-mobile-screen--third,
-        .facility-mobile-screen--fourth {
+        .facility-mobile-screen--fourth,
+        .facility-mobile-screen--fifth {
             isolation: isolate;
         }
 
         .facility-mobile-screen--second::before,
         .facility-mobile-screen--third::before,
-        .facility-mobile-screen--fourth::before {
+        .facility-mobile-screen--fourth::before,
+        .facility-mobile-screen--fifth::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -230,6 +236,10 @@
         }
 
         .facility-mobile-screen--fourth .facility-mobile-link {
+            width: min(154px, 36vw);
+        }
+
+        .facility-mobile-screen--fifth .facility-mobile-link {
             width: min(154px, 36vw);
         }
 
@@ -427,6 +437,10 @@
         <section class="facility-mobile-screen facility-mobile-screen--fourth" id="mobileFacilityFourth" aria-label="Facilities fourth container">
             <a class="facility-mobile-link" href="#" id="mobileFacilityMenuTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a>
         </section>
+
+        <section class="facility-mobile-screen facility-mobile-screen--fifth" id="mobileFacilityFifth" aria-label="Facilities fifth container">
+            <a class="facility-mobile-link" href="#" id="mobileFacilityMenuTriggerFifth" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a>
+        </section>
     </main>
 
     <div class="facility-mobile-overlay" id="mobileFacilityPhotoOverlay" aria-hidden="true">
@@ -500,6 +514,7 @@
     var photoOverlay = document.getElementById("mobileFacilityPhotoOverlay");
     var photoOverlayClose = document.getElementById("mobileFacilityPhotoOverlayClose");
     var menuTrigger = document.getElementById("mobileFacilityMenuTrigger");
+    var menuTriggerFifth = document.getElementById("mobileFacilityMenuTriggerFifth");
     var menuOverlay = document.getElementById("mobileFacilityMenuOverlay");
     var menuOverlayClose = document.getElementById("mobileFacilityMenuOverlayClose");
     var lightbox = document.getElementById("mobileFacilityLightbox");
@@ -554,6 +569,13 @@
 
     if (menuTrigger) {
         menuTrigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            openOverlay(menuOverlay);
+        });
+    }
+
+    if (menuTriggerFifth) {
+        menuTriggerFifth.addEventListener("click", function (event) {
             event.preventDefault();
             openOverlay(menuOverlay);
         });
