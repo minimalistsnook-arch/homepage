@@ -191,18 +191,44 @@
             line-height: 1.5;
         }
 
-        .facility-mobile-link {
+        .facility-mobile-actions {
             position: absolute;
+            left: 14px;
             right: 14px;
             bottom: 18px;
-            display: inline-flex;
-            width: min(180px, 42vw);
+            display: flex;
+            gap: 8px;
             z-index: 3;
+        }
+
+        .facility-mobile-action {
+            position: relative;
+            flex: 1 1 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 10px 8px;
+            border: 1px solid rgba(255, 248, 241, 0.72);
+            border-radius: 999px;
+            background: rgba(32, 24, 21, 0.62);
+            color: #fff8f1;
+            font-family: "Montserrat", "Inter", sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            line-height: 1.1;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             animation: facilityClickFloat 1.8s ease-in-out infinite;
         }
 
-        .facility-mobile-link::before,
-        .facility-mobile-link::after {
+        .facility-mobile-action::before,
+        .facility-mobile-action::after {
             content: "";
             position: absolute;
             pointer-events: none;
@@ -210,37 +236,29 @@
             opacity: 0;
         }
 
-        .facility-mobile-link::before {
+        .facility-mobile-action::before {
             left: 61%;
             top: 18%;
-            width: 18px;
-            height: 18px;
+            width: 14px;
+            height: 14px;
             background: radial-gradient(circle, rgba(255,255,255,0.98) 0%, rgba(255,232,140,0.95) 35%, rgba(255,232,140,0) 72%);
-            box-shadow: 0 0 18px rgba(255, 233, 153, 0.9);
+            box-shadow: 0 0 14px rgba(255, 233, 153, 0.9);
             animation: facilityClickSparkle 1.4s ease-out infinite;
         }
 
-        .facility-mobile-link::after {
-            left: calc(61% - 13px);
-            top: calc(18% - 13px);
-            width: 44px;
-            height: 44px;
+        .facility-mobile-action::after {
+            left: calc(61% - 10px);
+            top: calc(18% - 10px);
+            width: 34px;
+            height: 34px;
             border: 2px solid rgba(255, 239, 178, 0.75);
             animation: facilityClickPulse 1.4s ease-out infinite;
         }
 
-        .facility-mobile-link img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .facility-mobile-screen--fourth .facility-mobile-link {
-            width: min(154px, 36vw);
-        }
-
-        .facility-mobile-screen--fifth .facility-mobile-link {
-            width: min(154px, 36vw);
+        .facility-mobile-action:hover,
+        .facility-mobile-action:focus-visible {
+            background: rgba(32, 24, 21, 0.82);
+            outline: none;
         }
 
         .facility-mobile-overlay {
@@ -427,19 +445,35 @@
         </section>
 
         <section class="facility-mobile-screen facility-mobile-screen--second" aria-label="Facilities second container">
-            <a class="facility-mobile-link" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Open GUSU SEOUL on Naver Map"><img src="images/click-1-cutout.png" alt="Open GUSU SEOUL on Naver Map"></a>
+            <div class="facility-mobile-actions" aria-label="Facility quick actions">
+                <a class="facility-mobile-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                <button class="facility-mobile-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                <button class="facility-mobile-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+            </div>
         </section>
 
         <section class="facility-mobile-screen facility-mobile-screen--third" aria-label="Facilities third container">
-            <a class="facility-mobile-link" href="#" id="mobileFacilityPhotoTrigger" aria-label="Photo more"><img src="images/click-2-cutout.png" alt="Photo more"></a>
+            <div class="facility-mobile-actions" aria-label="Facility quick actions">
+                <a class="facility-mobile-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                <button class="facility-mobile-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                <button class="facility-mobile-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+            </div>
         </section>
 
         <section class="facility-mobile-screen facility-mobile-screen--fourth" id="mobileFacilityFourth" aria-label="Facilities fourth container">
-            <a class="facility-mobile-link" href="#" id="mobileFacilityMenuTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a>
+            <div class="facility-mobile-actions" aria-label="Facility quick actions">
+                <a class="facility-mobile-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                <button class="facility-mobile-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                <button class="facility-mobile-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+            </div>
         </section>
 
         <section class="facility-mobile-screen facility-mobile-screen--fifth" id="mobileFacilityFifth" aria-label="Facilities fifth container">
-            <a class="facility-mobile-link" href="#" id="mobileFacilityMenuTriggerFifth" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a>
+            <div class="facility-mobile-actions" aria-label="Facility quick actions">
+                <a class="facility-mobile-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                <button class="facility-mobile-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                <button class="facility-mobile-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+            </div>
         </section>
     </main>
 
@@ -510,11 +544,10 @@
 <script src="mobile-red-city.js?v=20260402-4"></script>
 <script>
 (function () {
-    var photoTrigger = document.getElementById("mobileFacilityPhotoTrigger");
+    var photoTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-facility-action="photo"]'));
     var photoOverlay = document.getElementById("mobileFacilityPhotoOverlay");
     var photoOverlayClose = document.getElementById("mobileFacilityPhotoOverlayClose");
-    var menuTrigger = document.getElementById("mobileFacilityMenuTrigger");
-    var menuTriggerFifth = document.getElementById("mobileFacilityMenuTriggerFifth");
+    var menuTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-facility-action="menu"]'));
     var menuOverlay = document.getElementById("mobileFacilityMenuOverlay");
     var menuOverlayClose = document.getElementById("mobileFacilityMenuOverlayClose");
     var lightbox = document.getElementById("mobileFacilityLightbox");
@@ -550,12 +583,12 @@
         lightboxImage.src = "";
     }
 
-    if (photoTrigger) {
-        photoTrigger.addEventListener("click", function (event) {
+    photoTriggers.forEach(function (trigger) {
+        trigger.addEventListener("click", function (event) {
             event.preventDefault();
             openOverlay(photoOverlay);
         });
-    }
+    });
 
     if (photoOverlayClose) {
         photoOverlayClose.addEventListener("click", function () { closeOverlay(photoOverlay); });
@@ -567,19 +600,12 @@
         });
     }
 
-    if (menuTrigger) {
-        menuTrigger.addEventListener("click", function (event) {
+    menuTriggers.forEach(function (trigger) {
+        trigger.addEventListener("click", function (event) {
             event.preventDefault();
             openOverlay(menuOverlay);
         });
-    }
-
-    if (menuTriggerFifth) {
-        menuTriggerFifth.addEventListener("click", function (event) {
-            event.preventDefault();
-            openOverlay(menuOverlay);
-        });
-    }
+    });
 
     if (menuOverlayClose) {
         menuOverlayClose.addEventListener("click", function () { closeOverlay(menuOverlay); });

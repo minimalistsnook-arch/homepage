@@ -121,18 +121,43 @@
             z-index: 0;
         }
 
-        .facility-secondary-link {
+        .facility-actions {
             position: absolute;
             right: 28px;
             bottom: 28px;
-            display: inline-flex;
-            width: min(220px, 18vw);
+            display: flex;
+            align-items: center;
+            gap: 12px;
             z-index: 2;
+        }
+
+        .facility-action {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 168px;
+            min-height: 58px;
+            padding: 14px 22px;
+            border: 1px solid rgba(255, 248, 241, 0.75);
+            border-radius: 999px;
+            background: rgba(32, 24, 21, 0.58);
+            color: #fff8f1;
+            font-family: "Montserrat", "Inter", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             animation: facilityClickFloat 1.8s ease-in-out infinite;
         }
 
-        .facility-secondary-link::before,
-        .facility-secondary-link::after {
+        .facility-action::before,
+        .facility-action::after {
             content: "";
             position: absolute;
             pointer-events: none;
@@ -140,7 +165,7 @@
             opacity: 0;
         }
 
-        .facility-secondary-link::before {
+        .facility-action::before {
             left: 61%;
             top: 18%;
             width: 18px;
@@ -150,7 +175,7 @@
             animation: facilityClickSparkle 1.4s ease-out infinite;
         }
 
-        .facility-secondary-link::after {
+        .facility-action::after {
             left: calc(61% - 13px);
             top: calc(18% - 13px);
             width: 44px;
@@ -159,40 +184,11 @@
             animation: facilityClickPulse 1.4s ease-out infinite;
         }
 
-        .facility-secondary-link img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .facility-secondary-link-more .facility-secondary-fill,
-        .facility-secondary-link-more .facility-secondary-text {
-            position: absolute;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .facility-secondary-link-more .facility-secondary-fill {
-            left: 17%;
-            top: 22%;
-            width: 50%;
-            height: 32%;
-            background: #fff;
-            border-radius: 8px;
-        }
-
-        .facility-secondary-link-more .facility-secondary-text {
-            left: 18.5%;
-            top: 24%;
-            width: 47%;
-            color: #111;
-            font-family: "Arial Narrow", "Arial", sans-serif;
-            font-size: clamp(16px, 1.65vw, 30px);
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            line-height: 1;
-            text-align: center;
-            text-transform: uppercase;
+        .facility-action:hover,
+        .facility-action:focus-visible {
+            background: rgba(32, 24, 21, 0.8);
+            transform: translateY(-2px);
+            outline: none;
         }
 
         @keyframes facilityClickFloat {
@@ -293,12 +289,12 @@
             background: #fff;
         }
 
-        .facility-hero-quaternary .facility-secondary-link {
-            width: min(180px, 14vw);
-        }
-
-        .facility-hero-quinary .facility-secondary-link {
-            width: min(180px, 14vw);
+        .facility-hero-secondary .facility-actions,
+        .facility-hero-tertiary .facility-actions,
+        .facility-hero-quaternary .facility-actions,
+        .facility-hero-quinary .facility-actions {
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .facility-menu-lightbox {
@@ -826,18 +822,21 @@
                 background: transparent;
             }
 
-            .facility-secondary-link {
+            .facility-actions {
                 right: 18px;
+                left: 18px;
                 bottom: 18px;
-                width: min(180px, 42vw);
+                gap: 8px;
+                justify-content: flex-end;
             }
 
-            .facility-hero-quaternary .facility-secondary-link {
-                width: min(154px, 36vw);
-            }
-
-            .facility-hero-quinary .facility-secondary-link {
-                width: min(154px, 36vw);
+            .facility-action {
+                min-width: 0;
+                flex: 1 1 calc(33.333% - 6px);
+                min-height: 52px;
+                padding: 12px 10px;
+                font-size: 10px;
+                letter-spacing: 0.06em;
             }
 
             .facility-photo-overlay {
@@ -977,10 +976,34 @@
                     </div>
                 </section>
 
-                <section class="facility-hero-secondary" aria-label="Facilities second container"><a class="facility-secondary-link" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Open GUSU SEOUL on Naver Map"><img src="images/click-1-cutout.png" alt="Open GUSU SEOUL on Naver Map"></a></section>
-                <section class="facility-hero-tertiary" aria-label="Facilities third container"><a class="facility-secondary-link" href="#" id="facilityPhotoMoreTrigger" aria-label="Photo more"><img src="images/click-2-cutout.png" alt="Photo more"></a></section>
-                <section class="facility-hero-quaternary" id="facility-fourth" aria-label="Facilities fourth container"><a class="facility-secondary-link" href="#" id="facilityFourthTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a></section>
-                <section class="facility-hero-quinary" id="facility-fifth" aria-label="Facilities fifth container"><a class="facility-secondary-link" href="#" id="facilityFifthTrigger" aria-label="More photos"><img src="images/image-copy-5-cutout.png" alt="More photos"></a></section>
+                <section class="facility-hero-secondary" aria-label="Facilities second container">
+                <div class="facility-actions" aria-label="Facility quick actions">
+                    <a class="facility-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                    <button class="facility-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                    <button class="facility-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+                </div>
+                </section>
+                <section class="facility-hero-tertiary" aria-label="Facilities third container">
+                <div class="facility-actions" aria-label="Facility quick actions">
+                    <a class="facility-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                    <button class="facility-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                    <button class="facility-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+                </div>
+                </section>
+                <section class="facility-hero-quaternary" id="facility-fourth" aria-label="Facilities fourth container">
+                <div class="facility-actions" aria-label="Facility quick actions">
+                    <a class="facility-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                    <button class="facility-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                    <button class="facility-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+                </div>
+                </section>
+                <section class="facility-hero-quinary" id="facility-fifth" aria-label="Facilities fifth container">
+                <div class="facility-actions" aria-label="Facility quick actions">
+                    <a class="facility-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                    <button class="facility-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                    <button class="facility-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+                </div>
+                </section>
             </div>
         </section>
 
@@ -1064,7 +1087,7 @@
     <script>
         (function () {
             var sections = Array.prototype.slice.call(document.querySelectorAll(".facility-hero, .facility-hero-secondary, .facility-hero-tertiary, .facility-hero-quaternary, .facility-hero-quinary"));
-            var photoTrigger = document.getElementById("facilityPhotoMoreTrigger");
+            var photoTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-facility-action="photo"]'));
             var photoOverlay = document.getElementById("facilityPhotoOverlay");
             var photoOverlayClose = document.getElementById("facilityPhotoOverlayClose");
             var menuOverlay = document.getElementById("facilityMenuOverlay");
@@ -1072,8 +1095,7 @@
             var menuLightbox = document.getElementById("facilityMenuLightbox");
             var menuLightboxImage = document.getElementById("facilityMenuLightboxImage");
             var menuLightboxClose = document.getElementById("facilityMenuLightboxClose");
-            var fourthTrigger = document.getElementById("facilityFourthTrigger");
-            var fifthTrigger = document.getElementById("facilityFifthTrigger");
+            var menuTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-facility-action="menu"]'));
             if (sections.length < 2) return;
 
             var isAnimating = false;
@@ -1146,26 +1168,19 @@
                 menuLightboxImage.src = "";
             }
 
-            if (photoTrigger) {
-                photoTrigger.addEventListener("click", function (event) {
+            photoTriggers.forEach(function (trigger) {
+                trigger.addEventListener("click", function (event) {
                     event.preventDefault();
                     openPhotoOverlay();
                 });
-            }
+            });
 
-            if (fourthTrigger) {
-                fourthTrigger.addEventListener("click", function (event) {
+            menuTriggers.forEach(function (trigger) {
+                trigger.addEventListener("click", function (event) {
                     event.preventDefault();
                     openMenuOverlay();
                 });
-            }
-
-            if (fifthTrigger) {
-                fifthTrigger.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openMenuOverlay();
-                });
-            }
+            });
 
             if (menuOverlayClose) {
                 menuOverlayClose.addEventListener("click", closeMenuOverlay);
