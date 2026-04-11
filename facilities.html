@@ -96,8 +96,26 @@
             padding: 0;
         }
 
+        .facility-hero-secondary,
+        .facility-hero-tertiary,
+        .facility-hero-quaternary {
+            isolation: isolate;
+        }
+
         .facility-hero-secondary {
             background: url("KakaoTalk_20260410_094944503_26.jpg") center center/cover no-repeat;
+        }
+
+        .facility-hero-secondary::before,
+        .facility-hero-tertiary::before,
+        .facility-hero-quaternary::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            filter: brightness(1.14) saturate(1.04);
+            transform: scale(1.02);
+            z-index: 0;
         }
 
         .facility-secondary-link {
@@ -344,6 +362,7 @@
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
+            max-width: 920px;
         }
 
         .facility-kicker,
@@ -387,11 +406,12 @@
 
         .facility-subtitle {
             margin: 0 0 14px;
-            max-width: 980px;
-            font-size: 22px;
-            font-weight: 600;
-            line-height: 1.45;
-            color: rgba(255, 248, 241, 0.92);
+            max-width: 780px;
+            font-size: clamp(30px, 3.1vw, 48px);
+            font-weight: 800;
+            line-height: 1.24;
+            letter-spacing: -0.03em;
+            color: #fff8f1;
         }
 
         .facility-body,
@@ -406,8 +426,28 @@
         }
 
         .facility-hero .facility-body {
-            max-width: 980px;
-            color: rgba(255, 248, 241, 0.84);
+            max-width: 760px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.92;
+            color: rgba(255, 248, 241, 0.9);
+        }
+
+        .facility-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 28px;
+            margin: 18px 0 22px;
+            font-family: "Montserrat", "Inter", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: rgba(255, 248, 241, 0.88);
+        }
+
+        .facility-keywords span {
+            white-space: nowrap;
         }
 
         .facility-meta {
@@ -805,11 +845,24 @@
             }
 
             .facility-subtitle {
-                font-size: 18px;
+                font-size: 32px;
+                line-height: 1.28;
             }
 
             .facility-meta {
                 grid-template-columns: 1fr;
+            }
+
+            .facility-hero .facility-body {
+                font-size: 16px;
+                line-height: 1.82;
+            }
+
+            .facility-keywords {
+                gap: 8px 18px;
+                margin: 16px 0 20px;
+                font-size: 12px;
+                letter-spacing: 0.18em;
             }
 
             .facility-section,
@@ -877,8 +930,14 @@
                             <h1 data-en="WEGOINN x GUSU SEOUL" data-ko="WEGOINN x GUSU SEOUL">WEGOINN x GUSU SEOUL</h1>
                         </div>
                         <div class="facility-hero-bottom">
-                        <p class="facility-subtitle" data-en="A first-floor lounge cafe shaped by architecture, long-table rhythm, and a warm urban hospitality mood." data-ko="건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다.">건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다.</p>
-                        <p class="facility-body" data-en="GUSU SEOUL is a calm urban hideaway defined by mellow coffee, Korean-directed sensibility, warm modern interiors, and a photogenic atmosphere in the heart of Mapo." data-ko="구수서울은 이름처럼 구수한 풍미의 커피와 한국적인 디렉팅이 돋보이는 공간으로, 도심 속에서 차분한 휴식을 제안합니다. 감각적이고 모던한 인테리어 속에 따뜻한 감성이 녹아 있어, 정성 가득한 음료와 함께 사진 찍기 좋은 힙한 분위기를 자랑합니다. 바쁜 일상에서 잠시 벗어나 구수 서울의 독특한 감성과 깊은 커피 향을 만끼해보세요">구수서울은 이름처럼 구수한 풍미의 커피와 한국적인 디렉팅이 돋보이는 공간으로, 도심 속에서 차분한 휴식을 제안합니다. 감각적이고 모던한 인테리어 속에 따뜻한 감성이 녹아 있어, 정성 가득한 음료와 함께 사진 찍기 좋은 힙한 분위기를 자랑합니다. 바쁜 일상에서 잠시 벗어나 구수 서울의 독특한 감성과 깊은 커피 향을 만끼해보세요</p>
+                        <p class="facility-subtitle" data-en="GUSU (久秀): Where time and care linger." data-ko="구수(久秀) : 시간과 정성이 머무는 곳">구수(久秀) : 시간과 정성이 머무는 곳</p>
+                        <p class="facility-body" data-en="We hope the time of care held in one dessert and one cup of tea becomes a warm, peaceful pause in your day." data-ko="한 그릇의 디저트와 한 잔의 차에 깃든 ‘정성의 시간’이 당신의 하루에 따뜻하고 평온한 휴식이 되기를 바랍니다.">한 그릇의 디저트와 한 잔의 차에 깃든 ‘정성의 시간’이 당신의 하루에 따뜻하고 평온한 휴식이 되기를 바랍니다.</p>
+                        <div class="facility-keywords" aria-label="GUSU brand mood">
+                            <span>Slow</span>
+                            <span>Deep</span>
+                            <span>Warm</span>
+                        </div>
+                        <p class="facility-body" data-en="We hope your day pauses here for a moment." data-ko="당신의 하루가 잠시 멈춰 가길 바랍니다.">당신의 하루가 잠시 멈춰 가길 바랍니다.</p>
                         <div class="facility-meta">
                             <div class="facility-meta-item">
                                 <strong data-en="Positioning" data-ko="포지션">Positioning</strong>

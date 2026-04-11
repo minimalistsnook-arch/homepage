@@ -62,6 +62,24 @@
             background: url("KakaoTalk_20260410_094944503_21.jpg") center center/cover no-repeat;
         }
 
+        .facility-mobile-screen--second,
+        .facility-mobile-screen--third,
+        .facility-mobile-screen--fourth {
+            isolation: isolate;
+        }
+
+        .facility-mobile-screen--second::before,
+        .facility-mobile-screen--third::before,
+        .facility-mobile-screen--fourth::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            filter: brightness(1.14) saturate(1.04);
+            transform: scale(1.02);
+            z-index: 0;
+        }
+
         .facility-mobile-copy {
             position: relative;
             z-index: 1;
@@ -82,6 +100,7 @@
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
+            max-width: 88%;
         }
 
         .facility-mobile-copy h1 {
@@ -98,20 +117,39 @@
 
         .facility-mobile-subtitle {
             margin: 0 0 12px;
-            font-size: 17px;
-            line-height: 1.55;
-            font-weight: 700;
-            color: rgba(255, 248, 241, 0.98);
+            font-size: clamp(26px, 8vw, 36px);
+            line-height: 1.28;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #fff8f1;
             text-shadow: 0 3px 14px rgba(0, 0, 0, 0.32);
         }
 
         .facility-mobile-body {
             margin: 0;
             font-size: 15px;
-            line-height: 1.72;
+            line-height: 1.82;
             font-weight: 500;
             color: rgba(255, 248, 241, 0.96);
             text-shadow: 0 3px 14px rgba(0, 0, 0, 0.34);
+        }
+
+        .facility-mobile-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            margin: 16px 0 18px;
+            font-family: "Montserrat", "Inter", sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 248, 241, 0.9);
+            text-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .facility-mobile-keywords span {
+            white-space: nowrap;
         }
 
         .facility-mobile-meta {
@@ -351,8 +389,14 @@
                     <h1 data-ko="WEGOINN x GUSU SEOUL" data-en="WEGOINN x GUSU SEOUL">WEGOINN x GUSU SEOUL</h1>
                 </div>
                 <div class="facility-mobile-copy-bottom">
-                    <p class="facility-mobile-subtitle" data-ko="건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다." data-en="A first-floor lounge cafe shaped by architecture, long-table rhythm, and a warm urban hospitality mood.">건축적인 구조감과 긴 테이블의 리듬, 차분한 도심형 호스피탈리티 무드로 완성한 위고인 1층 라운지 카페입니다.</p>
-                    <p class="facility-mobile-body" data-ko="구수서울은 이름처럼 구수한 풍미의 커피와 한국적인디자인의 공간으로, 도심 속에서 차분한 휴식을 제안합니다." data-en="GUSU SEOUL is a calm urban hideaway defined by mellow coffee, Korean-directed sensibility, warm modern interiors, and a photogenic atmosphere in the heart of Mapo.">구수서울은 이름처럼 구수한 풍미의 커피와 한국적인디자인의 공간으로, 도심 속에서 차분한 휴식을 제안합니다.</p>
+                    <p class="facility-mobile-subtitle" data-ko="구수(久秀) : 시간과 정성이 머무는 곳" data-en="GUSU (久秀): Where time and care linger.">구수(久秀) : 시간과 정성이 머무는 곳</p>
+                    <p class="facility-mobile-body" data-ko="한 그릇의 디저트와 한 잔의 차에 깃든 ‘정성의 시간’이 당신의 하루에 따뜻하고 평온한 휴식이 되기를 바랍니다." data-en="We hope the time of care held in one dessert and one cup of tea becomes a warm, peaceful pause in your day.">한 그릇의 디저트와 한 잔의 차에 깃든 ‘정성의 시간’이 당신의 하루에 따뜻하고 평온한 휴식이 되기를 바랍니다.</p>
+                    <div class="facility-mobile-keywords" aria-label="GUSU brand mood">
+                        <span>Slow</span>
+                        <span>Deep</span>
+                        <span>Warm</span>
+                    </div>
+                    <p class="facility-mobile-body" data-ko="당신의 하루가 잠시 멈춰 가길 바랍니다." data-en="We hope your day pauses here for a moment.">당신의 하루가 잠시 멈춰 가길 바랍니다.</p>
                     <div class="facility-mobile-meta">
                         <div>
                             <strong data-ko="포지션" data-en="Positioning">Positioning</strong>
