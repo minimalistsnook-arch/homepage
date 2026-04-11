@@ -74,7 +74,8 @@
         .facility-hero-secondary,
         .facility-hero-tertiary,
         .facility-hero-quaternary,
-        .facility-hero-quinary {
+        .facility-hero-quinary,
+        .facility-hero-senary {
             position: relative;
             min-height: 100vh;
             padding: 16px;
@@ -100,7 +101,8 @@
         .facility-hero-secondary,
         .facility-hero-tertiary,
         .facility-hero-quaternary,
-        .facility-hero-quinary {
+        .facility-hero-quinary,
+        .facility-hero-senary {
             isolation: isolate;
         }
 
@@ -111,7 +113,8 @@
         .facility-hero-secondary::before,
         .facility-hero-tertiary::before,
         .facility-hero-quaternary::before,
-        .facility-hero-quinary::before {
+        .facility-hero-quinary::before,
+        .facility-hero-senary::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -292,7 +295,8 @@
         .facility-hero-secondary .facility-actions,
         .facility-hero-tertiary .facility-actions,
         .facility-hero-quaternary .facility-actions,
-        .facility-hero-quinary .facility-actions {
+        .facility-hero-quinary .facility-actions,
+        .facility-hero-senary .facility-actions {
             flex-wrap: wrap;
             justify-content: flex-end;
         }
@@ -345,6 +349,10 @@
 
         .facility-hero-quinary {
             background: url("container5.png") center center/cover no-repeat;
+        }
+
+        .facility-hero-senary {
+            background: url("container 6.png") center center/cover no-repeat;
         }
 
         .facility-hero-copy {
@@ -801,7 +809,8 @@
             .facility-hero-secondary,
             .facility-hero-tertiary,
             .facility-hero-quaternary,
-            .facility-hero-quinary {
+            .facility-hero-quinary,
+            .facility-hero-senary {
                 min-height: 100vh;
                 border-radius: 0;
             }
@@ -858,6 +867,10 @@
 
             .facility-hero-quinary {
                 background: url("container5.png") center center/cover no-repeat;
+            }
+
+            .facility-hero-senary {
+                background: url("container 6.png") center center/cover no-repeat;
             }
 
             .facility-hero h1 {
@@ -1004,6 +1017,13 @@
                     <button class="facility-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
                 </div>
                 </section>
+                <section class="facility-hero-senary" id="facility-sixth" aria-label="Facilities sixth container">
+                <div class="facility-actions" aria-label="Facility quick actions">
+                    <a class="facility-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                    <button class="facility-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                    <button class="facility-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+                </div>
+                </section>
             </div>
         </section>
 
@@ -1086,7 +1106,7 @@
     <script src="script.js"></script>
     <script>
         (function () {
-            var sections = Array.prototype.slice.call(document.querySelectorAll(".facility-hero, .facility-hero-secondary, .facility-hero-tertiary, .facility-hero-quaternary, .facility-hero-quinary"));
+            var sections = Array.prototype.slice.call(document.querySelectorAll(".facility-hero, .facility-hero-secondary, .facility-hero-tertiary, .facility-hero-quaternary, .facility-hero-quinary, .facility-hero-senary"));
             var photoTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-facility-action="photo"]'));
             var photoOverlay = document.getElementById("facilityPhotoOverlay");
             var photoOverlayClose = document.getElementById("facilityPhotoOverlayClose");

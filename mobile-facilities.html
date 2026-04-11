@@ -66,17 +66,23 @@
             background: url("container5.png") center center/cover no-repeat;
         }
 
+        .facility-mobile-screen--sixth {
+            background: url("container 6.png") center center/cover no-repeat;
+        }
+
         .facility-mobile-screen--second,
         .facility-mobile-screen--third,
         .facility-mobile-screen--fourth,
-        .facility-mobile-screen--fifth {
+        .facility-mobile-screen--fifth,
+        .facility-mobile-screen--sixth {
             isolation: isolate;
         }
 
         .facility-mobile-screen--second::before,
         .facility-mobile-screen--third::before,
         .facility-mobile-screen--fourth::before,
-        .facility-mobile-screen--fifth::before {
+        .facility-mobile-screen--fifth::before,
+        .facility-mobile-screen--sixth::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -469,6 +475,14 @@
         </section>
 
         <section class="facility-mobile-screen facility-mobile-screen--fifth" id="mobileFacilityFifth" aria-label="Facilities fifth container">
+            <div class="facility-mobile-actions" aria-label="Facility quick actions">
+                <a class="facility-mobile-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
+                <button class="facility-mobile-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
+                <button class="facility-mobile-action" type="button" data-facility-action="menu" aria-label="Menu">Menu</button>
+            </div>
+        </section>
+
+        <section class="facility-mobile-screen facility-mobile-screen--sixth" id="mobileFacilitySixth" aria-label="Facilities sixth container">
             <div class="facility-mobile-actions" aria-label="Facility quick actions">
                 <a class="facility-mobile-action" href="https://map.naver.com/p/search/%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8/place/2018168281?placePath=/home?abtExp=NEW-PLACE-SEARCH:1&bk_query=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&entry=pll&from=map&fromNxList=true&fromPanelNum=2&timestamp=202604041609&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AC%EC%88%98%EC%84%9C%EC%9A%B8&searchType=place&c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" aria-label="Go to the map">Go to the map</a>
                 <button class="facility-mobile-action" type="button" data-facility-action="photo" aria-label="Photo more">Photo more</button>
